@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shift Request Rejected</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; background-color: #f8f8f8;">
+
+  <div
+    style="max-width: 600px; margin: 0 auto; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <!-- Logo -->
+    <div style="text-align: center;">
+      <img src="https://nurses-now-facility.solz.me/fav.png" alt="Nurses Now" style="max-width: 200px;">
+    </div>
+
+    <h2 style="color: #220eb1;">Shift Request Rejected</h2>
+    <p>You have rejected a temp's request for the following shift:</p>
+    <p>
+      <strong>Date and Time:</strong>
+      <%= new Date(shiftData.start_date).toLocaleDateString('en-US', { month: 'long' , day: 'numeric' , year: 'numeric'
+        }) %>
+        at
+        <%= new Date(shiftData.start_date + 'T' + shiftData.start_time).toLocaleTimeString('en-US', { hour: 'numeric' ,
+          minute: 'numeric' , hour12: true }) %>
+          to
+          <%= new Date(shiftData.start_date + 'T' + shiftData.end_time).toLocaleTimeString('en-US', { hour: 'numeric' ,
+            minute: 'numeric' , hour12: true }) %>
+            <br>
+            <strong>Location:</strong>
+            <%= shiftData.facility.name %><br>
+    </p>
+    <p>Thanks,<br>Nurses Now</p>
+  </div>
+
+</body>
+
+</html>

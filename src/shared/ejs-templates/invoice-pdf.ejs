@@ -1,0 +1,213 @@
+<% 
+function formatTime(timeStr) { 
+  if (!timeStr) return ''; 
+  const [hours, minutes, seconds] = timeStr.split(':').map(Number);
+  const h = hours % 12 || 12; 
+  const ampm = hours >= 12 ? 'pm' : 'am';
+  return `${h}:${String(minutes).padStart(2, '0')}${ampm}`;
+}
+
+function formatHours(seconds) {
+  const rawSecs = seconds ?? 0;
+  const secs = Number(rawSecs) || 0;
+  const totalMinutes = Math.floor(secs / 60);
+  const hh = Math.floor(totalMinutes / 60);
+  const mm = totalMinutes % 60;
+  const pad = n => String(n).padStart(2, '0');
+  return secs ? `${pad(hh)}:${pad(mm)}` : '00:00';
+}
+%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Invoice</title>
+    <style>
+      /* General reset-ish */
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; background: #fff; }
+      body { font-family: Arial, sans-serif; color: #181B25; }
+
+      /* Page container */
+      .page {
+        max-width: 700px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 0 0 24px 0; /* bottom padding so content doesn't clip */
+      }
+
+      /* Tables */
+      table { border-collapse: collapse; width: 100%; }
+      th, td { font-size: 10px; vertical-align: middle; }
+      thead th { background: #F2F5F8; text-align: left; font-weight: 600; }
+
+      /* Print friendliness */
+      @media print {
+        .timecard-table, .timecard-table thead, .timecard-table tbody, .timecard-table tr, .timecard-table td, .timecard-table th {
+          page-break-inside: avoid;
+        }
+        .summary-wrap { page-break-inside: avoid; }
+      }
+
+      /* Utilities */
+      .mt-8 { margin-top: 8px; }
+      .mt-12 { margin-top: 12px; }
+      .mt-16 { margin-top: 16px; }
+      .mt-20 { margin-top: 20px; }
+      .mb-0 { margin-bottom: 0; }
+      .text-sm { font-size: 10px; }
+      .text-xs { font-size: 9px; }
+      .text-right { text-align: right; }
+      .text-center { text-align: center; }
+      .muted { color: #5B6271; }
+
+      /* Sections */
+      .header { padding: 10px 0; }
+      .billto { padding: 20px 0 8px; }
+      .period-terms table td { background: #FFFFFF; padding: 8px 10px; }
+      .period-terms table th { padding: 10px; }
+
+      /* Timecard table */
+      .timecard-table th, .timecard-table td { padding: 8px 4px; }
+      .timecard-table thead tr { background: #F2F5F8; }
+      .timecard-table { table-layout: fixed; }
+
+
+      .thanks { margin-top: 12px; font-size: 10px; color: #5B6271; }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <!-- Header -->
+      <div class="header">
+        <table>
+          <tr>
+            <td>
+              <img src="https://assets.nursesnow.com/default/logo.png" alt="Company Logo" style="height: 40px;" />
+              <div class="mt-8 text-sm">
+                <p class="mb-0">PO Box 2530</p>
+                <span>Blue Ridge, GA 30513</span>
+              </div>
+            </td>
+            <td class="text-right text-sm">
+              <p style="margin: 5px 0;">
+                <strong>Invoice #:</strong>
+                <%= data?.invoice_number || '-' %>
+              </p>
+              <p style="margin: 5px 0;">
+                <strong>Issue Date:</strong>
+                <%= data?.issue_date ? new Date(data.issue_date).toLocaleDateString("en-US") : '-' %>
+              </p>
+              <p style="margin: 5px 0;">
+                <strong>Due Date:</strong>
+                <%= data?.due_date ? new Date(data.due_date).toLocaleDateString("en-US") : '-' %>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Bill To Section -->
+      <div class="billto">
+        <p class="text-sm"><strong>Bill To</strong></p>
+        <p class="text-sm" style="margin: 5px 0;">
+          <%= data?.facility_name || '-' %>
+        </p>
+        <p class="text-sm" style="margin: 5px 0;">
+          <%= data?.street_address || '' %>
+        </p>
+        <p class="text-sm" style="margin: 5px 0;">
+          <%= [data?.city, data?.state].filter(Boolean).join(', ') %> <%= data?.zip_code || '' %>
+        </p>
+      </div>
+
+      <!-- Billing Period and Terms -->
+      <div class="period-terms mt-12">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 50%;">Billing Period</th>
+              <th style="width: 50%;">Terms</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="text-sm">
+                  <%= data?.billing_cycle_start_date ? new Date(data.billing_cycle_start_date).toLocaleDateString('en-US') : '-' %> –
+                  <%= data?.billing_cycle_end_date ? new Date(data.billing_cycle_end_date).toLocaleDateString('en-US') : '-' %>
+                </span>
+              </td>
+              <td>
+                <span class="text-sm">NET <%= data?.payment_terms || '30' %></span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Timecard Table -->
+      <% if (data?.timecards && data.timecards.length > 0) { %>
+      <div class="mt-20">
+        <table class="timecard-table" cellpadding="0" cellspacing="0">
+          <thead>
+            <tr>
+              <th style="width: 10%;">Date</th>
+              <th style="width: 10%;">License</th>
+              <th style="width: 12%;">Specialty</th>
+              <th style="width: 16%;">Shift Ordered</th>
+              <th style="width: 16%;">Shift Worked</th>
+              <th style="width: 8%;">Breaks</th>
+              <th style="width: 8%;">Hours</th>
+              <th style="width: 10%;">Rate</th>
+              <th style="width: 10%;">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% data.timecards.forEach(item => { %>
+              <tr>
+                <td><%= item?.date ? new Date(item.date).toLocaleDateString("en-US") : '-' %></td>
+                <td><%= item?.certificate || '-' %></td>
+                <td><%= item?.speciality || '-' %></td>
+                <td><%= formatTime(item?.start_time) %> – <%= formatTime(item?.end_time) %></td>
+                <td><%= formatTime(item?.clock_in) %> – <%= formatTime(item?.clock_out) %></td>
+                <td><%= formatHours(item?.break_duration) %></td>
+                <td><%= formatHours(item?.hours) %></td>
+                <td>$<%= Number(item?.rate ?? 0).toFixed(2) %></td>
+                <td>$<%= Number(item?.total ?? 0).toFixed(2) %></td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Summary Section (flows naturally; no absolute positioning) -->
+
+      <div style="position: absolute; bottom: 80px; right: 20px;">
+        <table align="right" cellpadding="4" cellspacing="0" style="background: #F2F5F8; font-size: 12px; color:#181B25;">
+          <tr>
+            <td style="font-size: 12px; font-weight: bold; padding: 10px 12px; text-align: right;">Subtotal</td>
+            <td style="font-size: 12px; padding: 10px 12px; text-align: right;">$<%= Number(data?.subtotal ?? 0).toFixed(2) %></td>
+          </tr>
+          <tr>
+            <td style="font-size: 12px; font-weight: bold; padding: 6px 12px; text-align: right;">Tax</td>
+            <td style="font-size: 12px; padding: 6px 12px; text-align: right;">$<%= Number(data?.tax ?? 0).toFixed(2) %></td>
+          </tr>
+          <tr>
+            <td style="font-size: 12px; font-weight: bold; padding: 10px 12px; text-align: right;">Amount Due</td>
+            <td style="font-size: 12px; padding: 10px 12px; text-align: right;">$<%= Number(data?.total ?? 0).toFixed(2) %></td>
+          </tr>
+        </table>
+      </div>
+
+
+      <div style="position: absolute; bottom: 20px; left: 0; right: 0; text-align: center; font-size: 8px; color: #5B6271; font-weight: 500;">
+          Thank you for your business!
+      </div>
+      <% } else { %>
+        <div class="text-center" style="padding: 40px; font-size: 14px;">No timecard data available</div>
+      <% } %>
+    </div>
+  </body>
+</html>

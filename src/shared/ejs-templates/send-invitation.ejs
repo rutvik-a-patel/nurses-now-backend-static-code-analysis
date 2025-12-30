@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet" />
+    <title>You're Invited</title>
+  </head>
+
+  <body
+    style="
+      font-family: sans-serif;
+      background-color: #f5f5ff;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    "
+  >
+    <div style="max-width: 600px; margin: 0 auto; padding: 20px">
+      <!-- Logo -->
+      <div style="text-align: center; margin-bottom: 40px">
+        <img
+          src="https://d10bbzwoasv4gs.cloudfront.net/default/logo.png"
+          alt="NursesNow Logo"
+          style="width: 186px; height: auto"
+        />
+      </div>
+
+      <!-- Main Card -->
+      <div
+        style="
+          background-color: #ffffff;
+          border-radius: 10px;
+          padding: 25px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        "
+      >
+        <div
+          style="
+            font-size: 20px;
+            color: #2a2a2b;
+            font-weight: bold;
+            margin-bottom: 15px;
+          "
+        >
+          You're Invited to Join <%= authority %>!
+        </div>
+
+        <div
+          style="
+            font-size: 14px;
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 25px;
+          "
+        >
+          Hi <%= name %>,<br />
+          You’ve been invited to join our platform. To complete your
+          registration and get started, please set up your password using the
+          secure link below:
+        </div>
+
+        <!-- CTA Button -->
+        <a
+          href="<%= redirectUrl || '#' %>"
+          style="
+            display: block;
+            background-color: #7715e3;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 900;
+            margin: 0 auto;
+            width: 80%;
+            max-width: 200px;
+          "
+        >
+          Accept Invitation
+        </a>
+
+        <div
+          style="
+            font-size: 14px;
+            color: #444;
+            margin-top: 25px;
+            line-height: 1.4;
+          "
+        >
+          This link will expire in <%= hours || '2' %> hour for security
+          reasons. If it expires, you can request a new one directly from the
+          login screen.
+        </div>
+        <div
+          style="
+            font-size: 14px;
+            color: #444;
+            margin-top: 15px;
+            line-height: 1.4;
+          "
+        >
+          Once your password is set, you’ll be able to log in and access your
+          account right away.
+        </div>
+        <div style="font-size: 14px; color: #444; line-height: 1.4">
+          If you have any questions or need help getting started, feel free to
+          reply to this email or reach out to our support team at
+          <a
+            href="mailto:<%= supportEmail %>"
+            style="color: #7715e3; text-decoration: none"
+            ><%= supportEmail %></a
+          >.
+        </div>
+        <div
+          style="
+            font-size: 14px;
+            color: #707070;
+            margin-top: 15px;
+            line-height: 1.4;
+          "
+        >
+          <div style="font-size: 14px; color: #444; line-height: 1.4">
+            Looking forward to having you on board!<br />
+          </div>
+          Best regards,<br />
+          NursesNow
+        </div>
+        <!-- Info Text -->
+        <div
+          style="
+            font-size: 12px;
+            color: #717171;
+            margin-top: 25px;
+            text-align: center;
+          "
+        >
+          If you didn’t expect this invitation, feel free to ignore this email.
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div
+        style="
+          text-align: center;
+          font-size: 12px;
+          color: #717171;
+          margin-top: 20px;
+        "
+      >
+        <p>© <%= new Date().getFullYear() %> NursesNow</p>
+      </div>
+
+      <div style="text-align: center; margin-top: 10px">
+        <p style="color: #303030; font-size: 12px">Unsubscribe</p>
+      </div>
+    </div>
+  </body>
+</html>

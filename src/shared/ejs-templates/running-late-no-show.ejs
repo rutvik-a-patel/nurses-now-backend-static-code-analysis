@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shift - Temp Not Present, AI Searching for Replacement</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; background-color: #f8f8f8;">
+
+  <div
+  style="max-width: 600px; margin: 0 auto; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+  <!-- Logo -->
+  <div style="text-align: center; margin-bottom: 40px">
+   <img
+     src="https://d10bbzwoasv4gs.cloudfront.net/default/logo.png"
+     alt="NursesNow Logo"
+     style="width: 186px; height: auto"
+   />
+ </div>
+
+
+    <h2 style="color: #220eb1;">Temp Not Present, AI Searching for Replacement</h2>
+    <p>
+      We would like to inform you that the temp for the shift scheduled on
+      <strong>
+        <%= new Date(shiftData.start_date).toLocaleDateString('en-US', { month: 'long' , day: 'numeric' ,
+          year: 'numeric' }) %>
+      </strong>
+      at
+      <strong>
+        <%= new Date(shiftData.start_date + 'T' + shiftData.start_time).toLocaleTimeString('en-US', { hour: 'numeric' ,
+          minute: 'numeric' , hour12: true }) %>
+      </strong>
+      at <strong>
+        <%= shiftData.facility.name %>
+      </strong> did not show up.
+    </p>
+
+    <p>AI has already begun searching for an available replacement temp to ensure your shift is covered.</p>
+
+    <p>You will receive further updates as soon as a new temp is identified and confirmed.</p>
+
+    <p style="margin-top: 20px;">We appreciate your patience.</p>
+
+    <p>Kind regards,<br><strong>Nurses Now</strong><br>Support Team</p>
+  </div>
+
+</body>
+
+</html>

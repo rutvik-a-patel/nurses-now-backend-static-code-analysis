@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONT FAMILY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amarante&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Professional Reference Request</title>
+  </head>
+  <body
+    style="
+      font-family: 'DM Sans', Arial, sans-serif;
+      background-color: #f5f5ff;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    "
+  >
+    <div style="max-width: 600px; margin: 0 auto; padding: 20px">
+      <!-- Logo -->
+      <div style="text-align: center; margin-bottom: 40px">
+        <img
+          src="https://d10bbzwoasv4gs.cloudfront.net/default/logo.png"
+          alt="NursesNow Logo"
+          style="width: 186px; height: auto"
+        />
+      </div>
+      <!-- Main Card -->
+      <div
+        style="
+          background-color: #ffffff;
+          border-radius: 10px;
+          padding: 25px;
+          box-shadow: 0 2px 5px #0000000d;
+        "
+      >
+        <div
+          style="
+            font-size: 20px;
+            color: #2a2a2b;
+            font-weight: bold;
+            margin-bottom: 15px;
+          "
+        >
+          Request for Professional Reference – <%= shiftData.provider.first_name
+          %> <%= shiftData.provider.last_name %>
+        </div>
+        <div
+          style="
+            font-size: 14px;
+            color: #68696c;
+            line-height: 1.6;
+            margin-bottom: 25px;
+          "
+        >
+          Dear <%= name %>,<br /><br />
+          The NursesNow team is in the process of verifying the professional
+          credentials of
+          <br /><b style="color: #000"
+            ><%= shiftData.provider.first_name %> <%=
+            shiftData.provider.last_name %></b
+          >, who has listed your facility as a previous workplace. To assist
+          with this process, we kindly request you to complete a short reference
+          form regarding their professional conduct and performance.
+        </div>
+
+        <div
+          style="
+            font-size: 14px;
+            color: #68696c;
+            line-height: 1.6;
+            margin-bottom: 25px;
+          "
+        >
+          Your feedback is highly valuable in ensuring we maintain quality and
+          trust within our staffing network.
+        </div>
+        <div
+          style="
+            font-size: 14px;
+            color: #68696c;
+            line-height: 1.6;
+            margin-bottom: 24px;
+          "
+        >
+          Please click the Fill Reference Form button below to complete the
+          reference form:
+        </div>
+        <!-- CTA Button -->
+        <table
+          role="presentation"
+          cellspacing="0"
+          cellpadding="0"
+          border="0"
+          width="100%"
+          style="margin-top: 24px; table-layout: fixed"
+        >
+          <tr>
+            <td
+              align="center"
+              valign="top"
+              style="width: 50%; padding-right: 12px"
+            >
+              <a
+                href="<%= redirectUrl ? redirectUrl + '&is_decline=true' : '#' %>"
+                style="
+                  display: table;
+                  background-color: #ffffff;
+                  border: 1px solid #d3d3d3;
+                  color: #515151;
+                  font-size: 16px;
+                  font-weight: 500;
+                  line-height: 25px;
+                  text-align: center;
+                  text-decoration: none;
+                  border-radius: 12px;
+                  padding: 12px 0;
+                  width: 100%;
+                "
+              >
+                Decline Form
+              </a>
+            </td>
+            <td
+              align="center"
+              valign="top"
+              style="width: 50%; padding-left: 12px"
+            >
+              <a
+                href="<%= redirectUrl ? redirectUrl + '&is_decline=false' : '#' %>"
+                style="
+                  display: table;
+                  background-color: #8a28ff;
+                  color: white;
+                  font-size: 16px;
+                  font-weight: 500;
+                  line-height: 25px;
+                  text-align: center;
+                  text-decoration: none;
+                  border-radius: 12px;
+                  padding: 12px 0;
+                  width: 100%;
+                "
+              >
+                Fill Reference Form
+              </a>
+            </td>
+          </tr>
+        </table>
+        <div
+          style="
+            font-size: 14px;
+            color: #68696c;
+            line-height: 1.6;
+            margin-top: 25px;
+          "
+        >
+          If you have any questions or require further information, feel free to
+          reach out to us.
+          <br />
+          Thank you for your time and support in helping us maintain high
+          standards of care.
+        </div>
+        <div
+          style="
+            font-size: 14px;
+            color: #68696c;
+            line-height: 1.6;
+            margin-top: 24px;
+          "
+        >
+          Kind regards,
+          <br />NursesNow Team
+        </div>
+      </div>
+      <!-- Footer -->
+      <div
+        style="
+          text-align: center;
+          font-size: 12px;
+          color: #717171;
+          margin-top: 20px;
+        "
+      >
+        <p>© <%= new Date().getFullYear() %> NursesNow</p>
+      </div>
+      <div style="text-align: center; margin-top: 10px">
+        <p style="color: #303030; font-size: 12px">Unsubscribe</p>
+      </div>
+    </div>
+  </body>
+</html>

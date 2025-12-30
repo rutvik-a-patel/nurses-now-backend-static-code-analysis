@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet" />
+    <title>Your Provider is Running Late</title>
+  </head>
+
+  <body
+    style="
+      font-family: sans-serif;
+      background-color: #F7F5FE;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    "
+  >
+    <div style="max-width: 600px; margin: 0 auto; padding: 20px">
+      <!-- Logo -->
+      <div style="text-align: center; margin-bottom: 40px">
+        <img
+          src="https://d10bbzwoasv4gs.cloudfront.net/default/logo.png"
+          alt="NursesNow Logo"
+          style="width: 186px; height: auto"
+        />
+      </div>
+
+      <!-- Main Card -->
+      <div
+        style="
+          background-color: #ffffff;
+          border-radius: 16px;
+          padding: 25px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        "
+      >
+        <div
+          style="
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 24px;
+          "
+        >
+          <div
+            style="
+              font-size: 10px;
+              color: #515151;
+              font-weight: 500;
+              text-transform: uppercase;
+              margin-bottom: 5px;
+            "
+          >
+            FACILITY
+          </div>
+          <div
+            style="
+              font-size: 20px;
+              color: #303030;
+              font-weight: 700;
+              margin-bottom: 15px;
+            "
+          >
+            <%= shiftData.facility.name %>
+          </div>
+
+          <table
+            style="width: 100%; border-collapse: collapse; margin-bottom: 20px"
+          >
+            <tr>
+              <th
+                style="
+                  text-align: left;
+                  font-size: 10px;
+                  font-weight: 500;
+                  color: #515151;
+                  text-transform: uppercase;
+                  padding-bottom: 5px;
+                "
+              >
+                DATE
+              </th>
+              <th
+                style="
+                  text-align: left;
+                  font-size: 10px;
+                  font-weight: 500;
+                  color: #515151;
+                  text-transform: uppercase;
+                  padding-bottom: 5px;
+                "
+              >
+                TIME
+              </th>
+              <th
+                style="
+                  text-align: left;
+                  font-size: 10px;
+                  font-weight: 500;
+                  color: #515151;
+                  text-transform: uppercase;
+                  padding-bottom: 5px;
+                "
+              >
+                ORDER ID
+              </th>
+            </tr>
+            <tr>
+              <td
+                style="
+                  font-size: 14px;
+                  color: #303030;
+                  font-weight: 450;
+                  padding-bottom: 15px;
+                "
+              >
+                <%= new Date(shiftData.start_date).toLocaleDateString('en-US', {
+                weekday: 'short', day: 'numeric', month: 'short', year:
+                'numeric' }) %>
+              </td>
+              <td
+                style="
+                  font-size: 14px;
+                  color: #303030;
+                  font-weight: 450;
+                  padding-bottom: 15px;
+                "
+              >
+                <%= new Date(shiftData.start_date + 'T' +
+                shiftData.start_time).toLocaleTimeString('en-US', { hour:
+                'numeric', minute: 'numeric', hour12: true }) %> - <%= new
+                Date(shiftData.start_date + 'T' +
+                shiftData.end_time).toLocaleTimeString('en-US', { hour:
+                'numeric', minute: 'numeric', hour12: true }) %>
+              </td>
+              <td
+                style="
+                  font-size: 14px;
+                  color: #303030;
+                  font-weight: 450;
+                  padding-bottom: 15px;
+                "
+              >
+                <%= shiftData.shift_id %>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Your Provider running late  -->
+        <div
+          style="
+            font-size: 20px;
+            color: #2a2a2b;
+            font-weight: 600;
+            margin-bottom: 24px;
+          "
+        >
+          Your Provider is Running Late ⏳
+        </div>
+
+        <div
+          style="
+            font-size: 12px;
+            color: #68696c;
+            line-height: 20px;
+            font-weight: 500;
+            margin-bottom: 24px;
+          "
+        >
+          The provider
+          <strong
+            ><%= shiftData.provider.first_name + ' ' +
+            shiftData.provider.last_name %></strong
+          >
+          for this shift is running late. Do you want AI to find another
+          provider?
+        </div>
+
+        <!-- Action Buttons -->
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-top: 24px; table-layout: fixed;">
+          <tr>
+            <td align="center" valign="top" style="width: 50%; padding-right: 12px;">
+              <a
+              href="<%= redirectUrl ? redirectUrl + '&trigger_ai=false' : '#' %>"
+                style="
+                  display: table;
+                  background-color: #ffffff;
+                  border: 1px solid #d3d3d3;
+                  color: #515151;
+                  font-size: 16px;
+                  font-weight: 500;
+                  line-height: 25px;
+                  text-align: center;
+                  text-decoration: none;
+                  border-radius: 12px;
+                  padding: 12px 0;
+                  width: 100%;
+                "
+              >
+                No Thanks
+              </a>
+            </td>
+            <td align="center" valign="top" style="width: 50%; padding-left: 12px;">
+              <a
+              href="<%= redirectUrl ? redirectUrl + '&trigger_ai=true' : '#' %>"
+                style="
+                  display: table;
+                  background-color: #8a28ff;
+                  color: white;
+                  font-size: 16px;
+                  font-weight: 500;
+                  line-height: 25px;
+                  text-align: center;
+                  text-decoration: none;
+                  border-radius: 12px;
+                  padding: 12px 0;
+                  width: 100%;
+                "
+              >
+                Yes, Find Provider
+              </a>
+            </td>
+          </tr>
+        </table>
+        
+
+
+        
+      </div>
+
+      <!-- Footer -->
+      <div
+        style="
+          text-align: center;
+          font-size: 12px;
+          color: #717171;
+          margin-top: 20px;
+        "
+      >
+        <p>© <%= new Date().getFullYear() %> NursesNow</p>
+      </div>
+
+      <div style="text-align: center; margin-top: 10px">
+        <p style="color: #303030; font-size: 12px">Unsubscribe</p>
+      </div>
+    </div>
+  </body>
+</html>

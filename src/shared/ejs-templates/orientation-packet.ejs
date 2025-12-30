@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orientation Packet</title>
+    <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet" />
+
+    <style>
+      @media only screen and (max-width: 600px) {
+        .email-card {
+          margin: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body
+    style="
+      margin: 0 auto;
+      background-color: #f5f3ff;
+      padding: 40px 0;
+      font-family: 'Google Sans', sans-serif;
+    "
+  >
+    <!-- Logo -->
+    <div style="text-align: center; margin-bottom: 40px">
+      <img
+        src="https://d10bbzwoasv4gs.cloudfront.net/default/logo.png"
+        alt="NursesNow Logo"
+        style="width: 186px; height: auto"
+      />
+    </div>
+
+    <!-- Card (with responsive margin) -->
+    <div
+      class="email-card"
+      style="
+        max-width: 540px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 16px;
+        padding: 24px;
+        box-sizing: border-box;
+        width: calc(100% - 20px);
+      "
+    >
+      <!-- Title -->
+      <h2
+        style="
+          color: #2a2a2b;
+          font-size: 18px;
+          margin: 0 0 16px;
+          font-weight: 600;
+          line-height: 28px;
+        "
+      >
+        Orientation Packet for <%= authority %>
+      </h2>
+
+      <!-- Greeting -->
+      <p
+        style="
+          color: #68696c;
+          font-size: 12px;
+          font-weight: 500;
+          margin: 0 0 8px;
+          line-height: 20px;
+        "
+      >
+        Hi <%= name %>,
+      </p>
+
+      <!-- Welcome Text -->
+      <p
+        style="
+          color: #68696c;
+          font-size: 12px;
+          font-weight: 500;
+          margin: 0 0 8px;
+          line-height: 20px;
+        "
+      >
+        Welcome to <%= authority %>! We’re excited to have you join the team and
+        look forward to working with you.
+      </p>
+
+      <!-- Orientation Instructions -->
+      <p
+        style="
+          color: #68696c;
+          font-size: 12px;
+          font-weight: 500;
+          margin: 0 0 8px;
+          line-height: 20px;
+          margin-bottom: 24px;
+        "
+      >
+        To help you get started smoothly, please find your orientation packet
+        attached. It includes all the important information you need to prepare
+        for your first shift.
+      </p>
+
+      <!-- View Packet Button -->
+      <a
+        href="<%= redirectUrl %>"
+        style="
+          background-color: #7715e3;
+          color: #fff;
+          text-decoration: none;
+          text-align: center;
+          padding: 12px;
+          width: 80%;
+          max-width: 280px;
+          border-radius: 12px;
+          display: block;
+          font-size: 16px;
+          margin: 0 auto 24px auto;
+        "
+      >
+        View Orientation Packet
+      </a>
+
+      <!-- Closing Note -->
+      <p
+        style="
+          color: #68696c;
+          font-size: 12px;
+          font-weight: 500;
+          margin: 0 0 8px;
+          line-height: 20px;
+          margin-top: 24px;
+        "
+      >
+        We’re excited to have you on board.
+      </p>
+
+      <!-- Signature -->
+      <p
+        style="
+          color: #717171;
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 400;
+          margin-top: 24px;
+        "
+      >
+        Best regards,<br />
+        NursesNow Team
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <div
+      style="
+        text-align: center;
+        font-size: 12px;
+        color: #717171;
+        margin-top: 40px;
+      "
+    >
+      <p style="margin: 4px 0">
+        &copy; <%= new Date().getFullYear() %> NursesNow
+      </p>
+    </div>
+  </body>
+</html>

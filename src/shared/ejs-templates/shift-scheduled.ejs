@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet">  
+   <title>Shift Scheduled</title>
+</head>
+<body style="font-family: sans-serif; background-color: #f5f5ff; margin: 0; padding: 20px; color: #333;">
+
+  <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+     <!-- Logo -->
+     <div style="text-align: center; margin-bottom: 40px">
+      <img
+        src="https://d10bbzwoasv4gs.cloudfront.net/default/logo.png"
+        alt="NursesNow Logo"
+        style="width: 186px; height: auto;"
+      />
+    </div>
+    <div style="background-color: #ffffff; border-radius: 10px; padding: 25px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);">
+      <div style="font-size: 18px; color:#2A2A2B; font-weight: bold; margin-bottom: 20px;">Your Shift Has Been Scheduled</div>
+      
+      <div style="background-color: #f9f9f9; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+        <div style="font-size: 10px; color: #515151; text-transform: uppercase; margin-bottom: 5px;">FACILITY</div>
+        <div style="font-size: 20px; color:#303030; font-weight: bold; margin-bottom: 15px;"><%= shiftData.facility.name %></div>
+        
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+          <tr>
+            <th style="text-align: left; font-size: 10px; color: #515151; text-transform: uppercase; padding-bottom: 5px;">DATE</th>
+            <th style="text-align: left; font-size: 10px; color: #515151; text-transform: uppercase; padding-bottom: 5px;">TIME</th>
+            <th style="text-align: left; font-size: 10px; color: #515151; text-transform: uppercase; padding-bottom: 5px;">ORDER ID</th>
+          </tr>
+          <tr>
+            <td style="font-size: 14px; color:#303030; font-weight: 450; padding-bottom: 15px;">
+              <%= new Date(shiftData.start_date).toLocaleDateString('en-US', { 
+                weekday: 'short', 
+                day: 'numeric', 
+                month: 'short', 
+                year: 'numeric' 
+            }) %>
+            </td>
+            <td style="font-size: 14px; color:#303030; font-weight: 450; padding-bottom: 15px;">
+              <%= new Date(shiftData.start_date + 'T' + shiftData.start_time).toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }) %> 
+              - 
+              <%= new Date(shiftData.start_date + 'T' + shiftData.end_time).toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }) %>
+            </td>
+            <td style="font-size: 14px; color:#303030; font-weight: 450; padding-bottom: 15px;">
+              <%= shiftData.shift_id %>
+            </td>
+          </tr>
+          <tr>
+            <th style="text-align: left; font-size: 10px; color: #515151; text-transform: uppercase; padding-bottom: 5px;">STAFF</th>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-size: 14px; color:#303030; font-weight: 450; padding-bottom: 15px;">
+              <%= shiftData.provider.first_name %> <%= shiftData.provider.last_name %>
+            </td>
+          </tr>
+        </table>
+        
+      </div>
+            
+      <a href="<%= redirectUrl || '#' %>" style="display: block; background-color: #9333ea; color: white; text-align: center; padding: 12px; border-radius: 12px; text-decoration: none; font-weight: bold; margin: 0 auto; width: 80%; max-width: 200px;">
+        View Shift
+      </a>
+    </div>
+    
+    <div style="text-align: center; font-size: 12px; color: #717171; margin-top: 20px;">
+      <p>© <span id="currentYear"></span> NursesNow</p>
+    </div>
+  
+    <div style="text-align: center; margin-top: 10px;">
+      <p style="color: #303030; font-size: 12px; text-decoration: none;">Unsubscribe</p>
+    </div>
+  </div>
+
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var currentYear = new Date().getFullYear();
+    document.getElementById("currentYear").textContent = currentYear;
+  });
+</script>
+</html>
