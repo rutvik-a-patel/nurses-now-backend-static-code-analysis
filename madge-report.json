@@ -1,1 +1,3574 @@
-{}
+{
+  "../config/configuration.ts": [],
+  "../config/database.ts": [],
+  "../config/validation.ts": [],
+  "activity/activity.controller.spec.ts": [
+    "activity/activity.controller.ts",
+    "activity/activity.service.ts"
+  ],
+  "activity/activity.controller.ts": [
+    "activity/activity.service.ts",
+    "activity/dto/activity-query.dto.ts"
+  ],
+  "activity/activity.module.ts": [
+    "activity/activity.controller.ts",
+    "activity/activity.service.ts",
+    "activity/entities/activity.entity.ts"
+  ],
+  "activity/activity.service.spec.ts": [
+    "activity/activity.service.ts",
+    "activity/dto/activity-query.dto.ts",
+    "activity/entities/activity.entity.ts"
+  ],
+  "activity/activity.service.ts": [
+    "activity/dto/activity-query.dto.ts",
+    "activity/entities/activity.entity.ts"
+  ],
+  "activity/dto/activity-query.dto.ts": [],
+  "activity/dto/create-activity.dto.ts": [],
+  "activity/dto/update-activity.dto.ts": [
+    "activity/dto/create-activity.dto.ts"
+  ],
+  "activity/entities/activity.entity.ts": [],
+  "adapters/redis-io.adapter.ts": [],
+  "admin-document/admin-document.controller.spec.ts": [
+    "admin-document/admin-document.controller.ts",
+    "admin-document/admin-document.service.ts",
+    "admin-document/dto/create-admin-document.dto.ts",
+    "admin-document/dto/update-admin-document.dto.ts",
+    "admin-document/entities/admin-document.entity.ts"
+  ],
+  "admin-document/admin-document.controller.ts": [
+    "admin-document/admin-document.service.ts",
+    "admin-document/dto/create-admin-document.dto.ts",
+    "admin-document/dto/update-admin-document.dto.ts"
+  ],
+  "admin-document/admin-document.module.ts": [
+    "admin-document/admin-document.controller.ts",
+    "admin-document/admin-document.service.ts",
+    "admin-document/entities/admin-document.entity.ts"
+  ],
+  "admin-document/admin-document.service.spec.ts": [
+    "admin-document/admin-document.service.ts",
+    "admin-document/dto/create-admin-document.dto.ts",
+    "admin-document/dto/update-admin-document.dto.ts",
+    "admin-document/entities/admin-document.entity.ts"
+  ],
+  "admin-document/admin-document.service.ts": [
+    "admin-document/dto/create-admin-document.dto.ts",
+    "admin-document/dto/update-admin-document.dto.ts",
+    "admin-document/entities/admin-document.entity.ts"
+  ],
+  "admin-document/dto/create-admin-document.dto.ts": [],
+  "admin-document/dto/update-admin-document.dto.ts": [
+    "admin-document/dto/create-admin-document.dto.ts"
+  ],
+  "admin-document/entities/admin-document.entity.ts": [],
+  "admin/admin.controller.spec.ts": [
+    "admin/admin.controller.ts",
+    "admin/admin.service.ts",
+    "admin/dto/filter-facility.dto.ts",
+    "admin/entities/admin.entity.ts"
+  ],
+  "admin/admin.controller.ts": [
+    "admin/admin.service.ts",
+    "admin/dto/create-admin.dto.ts",
+    "admin/dto/filter-facility.dto.ts",
+    "admin/dto/update-admin.dto.ts"
+  ],
+  "admin/admin.module.ts": [
+    "admin/admin.controller.ts",
+    "admin/admin.service.ts",
+    "admin/entities/admin.entity.ts"
+  ],
+  "admin/admin.service.spec.ts": [
+    "admin/admin.service.ts",
+    "admin/dto/create-admin.dto.ts",
+    "admin/dto/filter-facility.dto.ts",
+    "admin/dto/update-admin.dto.ts",
+    "admin/entities/admin.entity.ts"
+  ],
+  "admin/admin.service.ts": [
+    "admin/dto/create-admin.dto.ts",
+    "admin/dto/filter-facility.dto.ts",
+    "admin/dto/update-admin.dto.ts",
+    "admin/entities/admin.entity.ts"
+  ],
+  "admin/dto/create-admin.dto.ts": [],
+  "admin/dto/filter-facility.dto.ts": [],
+  "admin/dto/update-admin.dto.ts": [
+    "admin/dto/create-admin.dto.ts"
+  ],
+  "admin/entities/admin.entity.ts": [],
+  "app.controller.spec.ts": [
+    "app.controller.ts",
+    "app.service.ts"
+  ],
+  "app.controller.ts": [
+    "app.service.ts"
+  ],
+  "app.module.ts": [
+    "../config/configuration.ts",
+    "../config/database.ts",
+    "../config/validation.ts",
+    "activity/activity.module.ts",
+    "admin-document/admin-document.module.ts",
+    "admin/admin.module.ts",
+    "app.controller.ts",
+    "app.service.ts",
+    "assigned-credentials/assigned-credentials.module.ts",
+    "auth/auth.module.ts",
+    "auto-scheduling-setting/auto-scheduling-setting.module.ts",
+    "badge-setting/badge-setting.module.ts",
+    "branch-app/branch-app.service.ts",
+    "certificate/certificate.module.ts",
+    "chat/chat.module.ts",
+    "columns-preference/columns-preference.module.ts",
+    "competency-test-option/competency-test-option.module.ts",
+    "competency-test-question/competency-test-question.module.ts",
+    "competency-test-response/competency-test-response.module.ts",
+    "competency-test-setting/competency-test-setting.module.ts",
+    "credential-reject-reason/credential-reject-reason.module.ts",
+    "credentials-category/credentials-category.module.ts",
+    "credentials/credentials.module.ts",
+    "dashboard/dashboard.module.ts",
+    "department/department.module.ts",
+    "disbursement/disbursement.module.ts",
+    "dnr-reason/dnr-reason.module.ts",
+    "documents/documents.module.ts",
+    "dropdown/dropdown.module.ts",
+    "e-doc-response/e-doc-response.module.ts",
+    "e-docs-group/e-docs-group.module.ts",
+    "e-docs/e-docs.module.ts",
+    "facility-document/facility-document.module.ts",
+    "facility-general-setting/facility-general-setting.module.ts",
+    "facility-holiday/facility-holiday.module.ts",
+    "facility-note/facility-note.module.ts",
+    "facility-profile-setting/facility-profile-setting.module.ts",
+    "facility-provider/facility-provider.module.ts",
+    "facility-reject-reason/facility-reject-reason.module.ts",
+    "facility-shift-setting/facility-shift-setting.module.ts",
+    "facility-user/facility-user.module.ts",
+    "facility/facility.module.ts",
+    "flag-setting/flag-setting.module.ts",
+    "floor-detail/floor-detail.module.ts",
+    "holiday-group/holiday-group.module.ts",
+    "invoices/invoices.module.ts",
+    "jobs/jobs.module.ts",
+    "line-of-business/line-of-business.module.ts",
+    "media/media.module.ts",
+    "notification/notification.module.ts",
+    "orientation-reject-reason/orientation-reject-reason.module.ts",
+    "otp/otp.module.ts",
+    "payments/payments.module.ts",
+    "permission/permission.module.ts",
+    "professional-reference-reject-reason/professional-reference-reject-reason.module.ts",
+    "professional-reference-response/professional-reference-response.module.ts",
+    "provider-acknowledgement/provider-acknowledgement.module.ts",
+    "provider-address/provider-address.module.ts",
+    "provider-analytics/provider-analytics.module.ts",
+    "provider-credentials/provider-credentials.module.ts",
+    "provider-education-history/provider-education-history.module.ts",
+    "provider-evaluations/provider-evaluations.module.ts",
+    "provider-general-setting/provider-general-setting.module.ts",
+    "provider-orientation/provider-orientation.module.ts",
+    "provider-professional-reference/provider-professional-reference.module.ts",
+    "provider-profile-setting/provider-profile-setting.module.ts",
+    "provider-reject-reason/provider-reject-reason.module.ts",
+    "provider-saved-facility/provider-saved-facility.module.ts",
+    "provider-work-history/provider-work-history.module.ts",
+    "provider/provider.module.ts",
+    "rate-groups/rate-groups.module.ts",
+    "refer-facility/refer-facility.module.ts",
+    "refer-friend/refer-friend.module.ts",
+    "reference-form-design/reference-form-design.module.ts",
+    "reference-form-global-setting/reference-form-global-setting.module.ts",
+    "reference-form-option/reference-form-option.module.ts",
+    "reports/reports.module.ts",
+    "role-section-permission/role-section-permission.module.ts",
+    "role/role.module.ts",
+    "room/room.module.ts",
+    "schedule-request-settings/schedule-request-settings.module.ts",
+    "scheduler/scheduler.module.ts",
+    "section/section.module.ts",
+    "shared/helpers/response-interceptor.ts",
+    "shared/helpers/set-ip-interceptor.ts",
+    "shared/helpers/throttler-exception.ts",
+    "shared/helpers/unauthorized-exception.ts",
+    "shift-cancel-reason/shift-cancel-reason.module.ts",
+    "shift-invitation/shift-invitation.module.ts",
+    "shift-note/shift-note.module.ts",
+    "shift-request/shift-request.module.ts",
+    "shift-type/shift-type.module.ts",
+    "shift/shift.module.ts",
+    "site-access-setting/site-access-setting.module.ts",
+    "skill-checklist-module/skill-checklist-module.module.ts",
+    "skill-checklist-template/skill-checklist-template.module.ts",
+    "speciality/speciality.module.ts",
+    "status-setting/status-setting.module.ts",
+    "sub-section/sub-section.module.ts",
+    "tags/tags.module.ts",
+    "test-faqs/test-faqs.module.ts",
+    "time-entry-approval/time-entry-approval.module.ts",
+    "timecard-reject-reason/timecard-reject-reason.module.ts",
+    "timecards/timecards.module.ts",
+    "upload/upload.module.ts",
+    "user-notification/user-notification.module.ts",
+    "webhooks/webhooks.module.ts"
+  ],
+  "app.service.ts": [],
+  "assigned-credentials/assigned-credentials.controller.spec.ts": [
+    "assigned-credentials/assigned-credentials.controller.ts",
+    "assigned-credentials/assigned-credentials.service.ts",
+    "assigned-credentials/dto/create-assigned-credential.dto.ts",
+    "assigned-credentials/entities/assigned-credential.entity.ts"
+  ],
+  "assigned-credentials/assigned-credentials.controller.ts": [
+    "assigned-credentials/assigned-credentials.service.ts",
+    "assigned-credentials/dto/create-assigned-credential.dto.ts"
+  ],
+  "assigned-credentials/assigned-credentials.module.ts": [
+    "assigned-credentials/assigned-credentials.controller.ts",
+    "assigned-credentials/assigned-credentials.service.ts",
+    "assigned-credentials/entities/assigned-credential.entity.ts"
+  ],
+  "assigned-credentials/assigned-credentials.service.spec.ts": [
+    "assigned-credentials/assigned-credentials.service.ts",
+    "assigned-credentials/dto/create-assigned-credential.dto.ts",
+    "assigned-credentials/entities/assigned-credential.entity.ts"
+  ],
+  "assigned-credentials/assigned-credentials.service.ts": [
+    "assigned-credentials/dto/create-assigned-credential.dto.ts",
+    "assigned-credentials/entities/assigned-credential.entity.ts"
+  ],
+  "assigned-credentials/dto/create-assigned-credential.dto.ts": [],
+  "assigned-credentials/dto/update-assigned-credential.dto.ts": [
+    "assigned-credentials/dto/create-assigned-credential.dto.ts"
+  ],
+  "assigned-credentials/entities/assigned-credential.entity.ts": [],
+  "auth/auth.controller.spec.ts": [
+    "auth/auth.controller.ts",
+    "auth/auth.service.ts",
+    "auth/dto/accept-invitation.dto.ts",
+    "auth/dto/apple-signup.dto.ts",
+    "auth/dto/change-password.dto.ts",
+    "auth/dto/email-login.dto.ts",
+    "auth/dto/provider-email-signup.dto.ts",
+    "auth/dto/provider-mobile-login.dto.ts",
+    "auth/dto/resend-otp.dto.ts",
+    "auth/dto/reset-password.dto.ts",
+    "auth/dto/send-otp.dto.ts",
+    "auth/dto/signup-facility-user.dto.ts",
+    "auth/dto/signup-facility.dto.ts",
+    "auth/dto/social-signup.dto.ts",
+    "auth/dto/verify-email.dto.ts",
+    "auth/dto/verify-otp.dto.ts"
+  ],
+  "auth/auth.controller.ts": [
+    "auth/auth.service.ts",
+    "auth/dto/accept-invitation.dto.ts",
+    "auth/dto/apple-signup.dto.ts",
+    "auth/dto/change-password.dto.ts",
+    "auth/dto/email-login.dto.ts",
+    "auth/dto/provider-email-signup.dto.ts",
+    "auth/dto/provider-mobile-login.dto.ts",
+    "auth/dto/provider-mobile-signup.dto.ts",
+    "auth/dto/resend-otp.dto.ts",
+    "auth/dto/reset-password.dto.ts",
+    "auth/dto/send-otp.dto.ts",
+    "auth/dto/signup-facility-user.dto.ts",
+    "auth/dto/signup-facility.dto.ts",
+    "auth/dto/social-signup.dto.ts",
+    "auth/dto/verify-email.dto.ts",
+    "auth/dto/verify-otp.dto.ts"
+  ],
+  "auth/auth.module.ts": [
+    "auth/auth.controller.ts",
+    "auth/auth.service.ts"
+  ],
+  "auth/auth.service.spec.ts": [
+    "auth/auth.service.ts",
+    "auth/dto/send-otp.dto.ts"
+  ],
+  "auth/auth.service.ts": [
+    "auth/dto/email-login.dto.ts",
+    "auth/dto/provider-email-signup.dto.ts",
+    "auth/dto/provider-mobile-login.dto.ts",
+    "auth/dto/provider-mobile-signup.dto.ts",
+    "auth/dto/resend-otp.dto.ts",
+    "auth/dto/send-otp.dto.ts",
+    "auth/dto/social-signup.dto.ts",
+    "auth/dto/verify-email.dto.ts",
+    "auth/dto/verify-otp.dto.ts"
+  ],
+  "auth/dto/accept-invitation.dto.ts": [],
+  "auth/dto/apple-signup.dto.ts": [],
+  "auth/dto/change-password.dto.ts": [],
+  "auth/dto/email-login.dto.ts": [],
+  "auth/dto/provider-email-signup.dto.ts": [],
+  "auth/dto/provider-mobile-login.dto.ts": [],
+  "auth/dto/provider-mobile-signup.dto.ts": [],
+  "auth/dto/resend-otp.dto.ts": [],
+  "auth/dto/reset-password.dto.ts": [],
+  "auth/dto/send-otp.dto.ts": [],
+  "auth/dto/signup-facility-user.dto.ts": [],
+  "auth/dto/signup-facility.dto.ts": [],
+  "auth/dto/social-signup.dto.ts": [],
+  "auth/dto/verify-email.dto.ts": [],
+  "auth/dto/verify-otp.dto.ts": [],
+  "auto-scheduling-setting/auto-scheduling-setting.controller.spec.ts": [
+    "auto-scheduling-setting/auto-scheduling-setting.controller.ts",
+    "auto-scheduling-setting/auto-scheduling-setting.service.ts",
+    "auto-scheduling-setting/dto/update-auto-scheduling-setting.dto.ts",
+    "auto-scheduling-setting/entities/auto-scheduling-setting.entity.ts"
+  ],
+  "auto-scheduling-setting/auto-scheduling-setting.controller.ts": [
+    "auto-scheduling-setting/auto-scheduling-setting.service.ts",
+    "auto-scheduling-setting/dto/update-auto-scheduling-setting.dto.ts"
+  ],
+  "auto-scheduling-setting/auto-scheduling-setting.module.ts": [
+    "auto-scheduling-setting/auto-scheduling-setting.controller.ts",
+    "auto-scheduling-setting/auto-scheduling-setting.service.ts",
+    "auto-scheduling-setting/entities/auto-scheduling-setting.entity.ts"
+  ],
+  "auto-scheduling-setting/auto-scheduling-setting.service.spec.ts": [
+    "auto-scheduling-setting/auto-scheduling-setting.service.ts",
+    "auto-scheduling-setting/dto/update-auto-scheduling-setting.dto.ts",
+    "auto-scheduling-setting/entities/auto-scheduling-setting.entity.ts"
+  ],
+  "auto-scheduling-setting/auto-scheduling-setting.service.ts": [
+    "auto-scheduling-setting/dto/update-auto-scheduling-setting.dto.ts",
+    "auto-scheduling-setting/entities/auto-scheduling-setting.entity.ts"
+  ],
+  "auto-scheduling-setting/dto/create-auto-scheduling-setting.dto.ts": [],
+  "auto-scheduling-setting/dto/update-auto-scheduling-setting.dto.ts": [],
+  "auto-scheduling-setting/entities/auto-scheduling-setting.entity.ts": [],
+  "badge-setting/badge-setting.controller.spec.ts": [
+    "badge-setting/badge-setting.controller.ts",
+    "badge-setting/badge-setting.service.ts"
+  ],
+  "badge-setting/badge-setting.controller.ts": [],
+  "badge-setting/badge-setting.module.ts": [
+    "badge-setting/badge-setting.controller.ts",
+    "badge-setting/badge-setting.service.ts"
+  ],
+  "badge-setting/badge-setting.service.spec.ts": [
+    "badge-setting/badge-setting.service.ts"
+  ],
+  "badge-setting/badge-setting.service.ts": [],
+  "badge-setting/entities/badge-setting.entity.ts": [],
+  "branch-app/branch-app.service.spec.ts": [
+    "branch-app/branch-app.service.ts"
+  ],
+  "branch-app/branch-app.service.ts": [],
+  "bull.config.ts": [],
+  "certificate/certificate.controller.spec.ts": [
+    "certificate/certificate.controller.ts",
+    "certificate/certificate.service.ts",
+    "certificate/dto/create-certificate.dto.ts",
+    "certificate/dto/update-certificate.dto.ts",
+    "certificate/entities/certificate.entity.ts"
+  ],
+  "certificate/certificate.controller.ts": [
+    "certificate/certificate.service.ts",
+    "certificate/dto/certificate-filter.dto.ts",
+    "certificate/dto/create-certificate.dto.ts",
+    "certificate/dto/update-certificate.dto.ts"
+  ],
+  "certificate/certificate.module.ts": [
+    "certificate/certificate.controller.ts",
+    "certificate/certificate.service.ts",
+    "certificate/entities/certificate.entity.ts"
+  ],
+  "certificate/certificate.service.spec.ts": [
+    "certificate/certificate.service.ts",
+    "certificate/dto/create-certificate.dto.ts",
+    "certificate/dto/update-certificate.dto.ts",
+    "certificate/entities/certificate.entity.ts"
+  ],
+  "certificate/certificate.service.ts": [
+    "certificate/dto/certificate-filter.dto.ts",
+    "certificate/dto/create-certificate.dto.ts",
+    "certificate/dto/update-certificate.dto.ts",
+    "certificate/entities/certificate.entity.ts"
+  ],
+  "certificate/dto/certificate-filter.dto.ts": [],
+  "certificate/dto/create-certificate.dto.ts": [],
+  "certificate/dto/update-certificate.dto.ts": [
+    "certificate/dto/create-certificate.dto.ts"
+  ],
+  "certificate/entities/certificate.entity.ts": [],
+  "chat/chat.controller.spec.ts": [
+    "chat/chat.controller.ts",
+    "chat/chat.service.ts",
+    "chat/entities/chat.entity.ts"
+  ],
+  "chat/chat.controller.ts": [
+    "chat/chat.service.ts"
+  ],
+  "chat/chat.gateway.ts": [
+    "chat/chat.service.ts",
+    "chat/dto/clock-out.dto.ts",
+    "chat/dto/create-chat.dto.ts",
+    "chat/dto/join.dto.ts",
+    "chat/dto/read-message.dto.ts",
+    "chat/dto/send-message.dto.ts",
+    "chat/dto/typing.dto.ts",
+    "chat/dto/unread-notification.dto.ts",
+    "chat/dto/update-chat.dto.ts",
+    "chat/dto/update-location.dto.ts"
+  ],
+  "chat/chat.module.ts": [
+    "chat/chat.controller.ts",
+    "chat/chat.gateway.ts",
+    "chat/chat.service.ts",
+    "chat/entities/chat.entity.ts"
+  ],
+  "chat/chat.service.spec.ts": [
+    "chat/chat.service.ts",
+    "chat/dto/join.dto.ts",
+    "chat/entities/chat.entity.ts"
+  ],
+  "chat/chat.service.ts": [
+    "chat/dto/clock-out.dto.ts",
+    "chat/dto/create-chat.dto.ts",
+    "chat/dto/join.dto.ts",
+    "chat/dto/send-message.dto.ts",
+    "chat/dto/update-location.dto.ts",
+    "chat/entities/chat.entity.ts"
+  ],
+  "chat/dto/clock-out.dto.ts": [],
+  "chat/dto/create-chat.dto.ts": [],
+  "chat/dto/join.dto.ts": [],
+  "chat/dto/read-message.dto.ts": [],
+  "chat/dto/send-message.dto.ts": [],
+  "chat/dto/typing.dto.ts": [],
+  "chat/dto/unread-notification.dto.ts": [],
+  "chat/dto/update-chat.dto.ts": [
+    "chat/dto/create-chat.dto.ts"
+  ],
+  "chat/dto/update-location.dto.ts": [],
+  "chat/entities/chat.entity.ts": [],
+  "city/city.controller.spec.ts": [
+    "city/city.controller.ts",
+    "city/city.service.ts"
+  ],
+  "city/city.controller.ts": [],
+  "city/city.module.ts": [
+    "city/city.controller.ts",
+    "city/city.service.ts"
+  ],
+  "city/city.service.spec.ts": [
+    "city/city.service.ts"
+  ],
+  "city/city.service.ts": [],
+  "city/dto/create-city.dto.ts": [],
+  "city/dto/update-city.dto.ts": [
+    "city/dto/create-city.dto.ts"
+  ],
+  "city/entities/city.entity.ts": [],
+  "columns-preference/columns-preference.controller.spec.ts": [
+    "columns-preference/columns-preference.controller.ts",
+    "columns-preference/columns-preference.service.ts",
+    "columns-preference/dto/update-columns-preference.dto.ts",
+    "columns-preference/entities/columns-preference.entity.ts"
+  ],
+  "columns-preference/columns-preference.controller.ts": [
+    "columns-preference/columns-preference.service.ts"
+  ],
+  "columns-preference/columns-preference.module.ts": [
+    "columns-preference/columns-preference.controller.ts",
+    "columns-preference/columns-preference.service.ts",
+    "columns-preference/entities/columns-preference.entity.ts"
+  ],
+  "columns-preference/columns-preference.service.spec.ts": [
+    "columns-preference/columns-preference.service.ts",
+    "columns-preference/entities/columns-preference.entity.ts"
+  ],
+  "columns-preference/columns-preference.service.ts": [
+    "columns-preference/entities/columns-preference.entity.ts"
+  ],
+  "columns-preference/dto/update-columns-preference.dto.ts": [],
+  "columns-preference/entities/columns-preference.entity.ts": [],
+  "competency-test-option/competency-test-option.controller.spec.ts": [
+    "competency-test-option/competency-test-option.controller.ts",
+    "competency-test-option/competency-test-option.service.ts"
+  ],
+  "competency-test-option/competency-test-option.controller.ts": [],
+  "competency-test-option/competency-test-option.module.ts": [
+    "competency-test-option/competency-test-option.controller.ts",
+    "competency-test-option/competency-test-option.service.ts"
+  ],
+  "competency-test-option/competency-test-option.service.spec.ts": [
+    "competency-test-option/competency-test-option.service.ts"
+  ],
+  "competency-test-option/competency-test-option.service.ts": [],
+  "competency-test-option/dto/create-competency-test-option.dto.ts": [],
+  "competency-test-option/dto/update-competency-test-option.dto.ts": [],
+  "competency-test-option/entities/competency-test-option.entity.ts": [],
+  "competency-test-question/competency-test-question.controller.spec.ts": [
+    "competency-test-question/competency-test-question.controller.ts",
+    "competency-test-question/competency-test-question.service.ts"
+  ],
+  "competency-test-question/competency-test-question.controller.ts": [],
+  "competency-test-question/competency-test-question.module.ts": [
+    "competency-test-question/competency-test-question.controller.ts",
+    "competency-test-question/competency-test-question.service.ts"
+  ],
+  "competency-test-question/competency-test-question.service.spec.ts": [
+    "competency-test-question/competency-test-question.service.ts"
+  ],
+  "competency-test-question/competency-test-question.service.ts": [],
+  "competency-test-question/dto/create-competency-test-question.dto.ts": [],
+  "competency-test-question/dto/update-competency-test-question.dto.ts": [],
+  "competency-test-question/entities/competency-test-question.entity.ts": [],
+  "competency-test-response/competency-test-response.controller.spec.ts": [
+    "competency-test-response/competency-test-response.controller.ts",
+    "competency-test-response/competency-test-response.service.ts"
+  ],
+  "competency-test-response/competency-test-response.controller.ts": [
+    "competency-test-response/competency-test-response.service.ts",
+    "competency-test-response/dto/create-competency-test-response.dto.ts"
+  ],
+  "competency-test-response/competency-test-response.module.ts": [
+    "competency-test-response/competency-test-response.controller.ts",
+    "competency-test-response/competency-test-response.service.ts",
+    "competency-test-response/entities/competency-test-response.entity.ts",
+    "competency-test-response/entities/competency-test-score.entity.ts"
+  ],
+  "competency-test-response/competency-test-response.service.spec.ts": [
+    "competency-test-response/competency-test-response.service.ts",
+    "competency-test-response/dto/create-competency-test-response.dto.ts",
+    "competency-test-response/dto/create-competency-test-score.dto.ts",
+    "competency-test-response/entities/competency-test-response.entity.ts",
+    "competency-test-response/entities/competency-test-score.entity.ts"
+  ],
+  "competency-test-response/competency-test-response.service.ts": [
+    "competency-test-response/dto/create-competency-test-response.dto.ts",
+    "competency-test-response/dto/create-competency-test-score.dto.ts",
+    "competency-test-response/entities/competency-test-response.entity.ts",
+    "competency-test-response/entities/competency-test-score.entity.ts"
+  ],
+  "competency-test-response/dto/create-competency-test-response.dto.ts": [],
+  "competency-test-response/dto/create-competency-test-score.dto.ts": [],
+  "competency-test-response/dto/update-competency-test-response.dto.ts": [
+    "competency-test-response/dto/create-competency-test-response.dto.ts"
+  ],
+  "competency-test-response/entities/competency-test-response.entity.ts": [
+    "competency-test-response/entities/competency-test-score.entity.ts"
+  ],
+  "competency-test-response/entities/competency-test-score.entity.ts": [
+    "competency-test-response/entities/competency-test-response.entity.ts"
+  ],
+  "competency-test-setting/competency-test-setting.controller.spec.ts": [
+    "competency-test-setting/competency-test-setting.controller.ts",
+    "competency-test-setting/competency-test-setting.service.ts",
+    "competency-test-setting/dto/create-competency-test-setting.dto.ts",
+    "competency-test-setting/dto/update-competency-test-setting.dto.ts",
+    "competency-test-setting/entities/competency-test-global-setting.entity.ts",
+    "competency-test-setting/entities/competency-test-setting.entity.ts"
+  ],
+  "competency-test-setting/competency-test-setting.controller.ts": [
+    "competency-test-setting/competency-test-setting.service.ts",
+    "competency-test-setting/dto/competency-filter.dto.ts",
+    "competency-test-setting/dto/create-competency-test-setting.dto.ts",
+    "competency-test-setting/dto/update-competency-test-setting.dto.ts"
+  ],
+  "competency-test-setting/competency-test-setting.module.ts": [
+    "competency-test-setting/competency-test-setting.controller.ts",
+    "competency-test-setting/competency-test-setting.service.ts",
+    "competency-test-setting/entities/competency-test-global-setting.entity.ts",
+    "competency-test-setting/entities/competency-test-setting.entity.ts"
+  ],
+  "competency-test-setting/competency-test-setting.service.spec.ts": [],
+  "competency-test-setting/competency-test-setting.service.ts": [
+    "competency-test-setting/dto/competency-filter.dto.ts",
+    "competency-test-setting/dto/create-competency-test-setting.dto.ts",
+    "competency-test-setting/dto/update-competency-test-setting.dto.ts",
+    "competency-test-setting/entities/competency-test-global-setting.entity.ts",
+    "competency-test-setting/entities/competency-test-setting.entity.ts"
+  ],
+  "competency-test-setting/dto/competency-filter.dto.ts": [],
+  "competency-test-setting/dto/create-competency-test-setting.dto.ts": [],
+  "competency-test-setting/dto/update-competency-test-setting.dto.ts": [],
+  "competency-test-setting/entities/competency-test-global-setting.entity.ts": [
+    "competency-test-setting/entities/competency-test-setting.entity.ts"
+  ],
+  "competency-test-setting/entities/competency-test-setting.entity.ts": [
+    "competency-test-setting/entities/competency-test-global-setting.entity.ts"
+  ],
+  "country/country.controller.spec.ts": [
+    "country/country.controller.ts",
+    "country/country.service.ts"
+  ],
+  "country/country.controller.ts": [],
+  "country/country.module.ts": [
+    "country/country.controller.ts",
+    "country/country.service.ts"
+  ],
+  "country/country.service.spec.ts": [
+    "country/country.service.ts"
+  ],
+  "country/country.service.ts": [],
+  "country/dto/create-country.dto.ts": [],
+  "country/dto/update-country.dto.ts": [
+    "country/dto/create-country.dto.ts"
+  ],
+  "country/entities/country.entity.ts": [],
+  "credential-reject-reason/credential-reject-reason.controller.spec.ts": [
+    "credential-reject-reason/credential-reject-reason.controller.ts",
+    "credential-reject-reason/credential-reject-reason.service.ts"
+  ],
+  "credential-reject-reason/credential-reject-reason.controller.ts": [
+    "credential-reject-reason/credential-reject-reason.service.ts",
+    "credential-reject-reason/dto/create-credential-reject-reason.dto.ts",
+    "credential-reject-reason/dto/update-credential-reject-reason.dto.ts"
+  ],
+  "credential-reject-reason/credential-reject-reason.module.ts": [
+    "credential-reject-reason/credential-reject-reason.controller.ts",
+    "credential-reject-reason/credential-reject-reason.service.ts",
+    "credential-reject-reason/entities/credential-reject-reason.entity.ts"
+  ],
+  "credential-reject-reason/credential-reject-reason.service.spec.ts": [
+    "credential-reject-reason/credential-reject-reason.service.ts"
+  ],
+  "credential-reject-reason/credential-reject-reason.service.ts": [
+    "credential-reject-reason/dto/create-credential-reject-reason.dto.ts",
+    "credential-reject-reason/dto/update-credential-reject-reason.dto.ts",
+    "credential-reject-reason/entities/credential-reject-reason.entity.ts"
+  ],
+  "credential-reject-reason/dto/create-credential-reject-reason.dto.ts": [],
+  "credential-reject-reason/dto/update-credential-reject-reason.dto.ts": [
+    "credential-reject-reason/dto/create-credential-reject-reason.dto.ts"
+  ],
+  "credential-reject-reason/entities/credential-reject-reason.entity.ts": [],
+  "credentials-category/credentials-category.controller.spec.ts": [
+    "credentials-category/credentials-category.controller.ts",
+    "credentials-category/credentials-category.service.ts",
+    "credentials-category/dto/create-credentials-category.dto.ts",
+    "credentials-category/dto/update-credentials-category.dto.ts",
+    "credentials-category/entities/credentials-category.entity.ts"
+  ],
+  "credentials-category/credentials-category.controller.ts": [
+    "credentials-category/credentials-category.service.ts",
+    "credentials-category/dto/create-credentials-category.dto.ts",
+    "credentials-category/dto/filter-credentials.dto.ts",
+    "credentials-category/dto/update-credentials-category.dto.ts"
+  ],
+  "credentials-category/credentials-category.module.ts": [
+    "credentials-category/credentials-category.controller.ts",
+    "credentials-category/credentials-category.service.ts",
+    "credentials-category/entities/credentials-category.entity.ts"
+  ],
+  "credentials-category/credentials-category.service.spec.ts": [
+    "credentials-category/credentials-category.service.ts",
+    "credentials-category/dto/create-credentials-category.dto.ts",
+    "credentials-category/dto/filter-credentials.dto.ts",
+    "credentials-category/dto/update-credentials-category.dto.ts",
+    "credentials-category/entities/credentials-category.entity.ts"
+  ],
+  "credentials-category/credentials-category.service.ts": [
+    "credentials-category/dto/create-credentials-category.dto.ts",
+    "credentials-category/dto/filter-credentials.dto.ts",
+    "credentials-category/dto/update-credentials-category.dto.ts",
+    "credentials-category/entities/credentials-category.entity.ts"
+  ],
+  "credentials-category/dto/create-credentials-category.dto.ts": [],
+  "credentials-category/dto/filter-credentials.dto.ts": [],
+  "credentials-category/dto/update-credentials-category.dto.ts": [
+    "credentials-category/dto/create-credentials-category.dto.ts"
+  ],
+  "credentials-category/entities/credentials-category.entity.ts": [],
+  "credentials/credentials.controller.spec.ts": [
+    "credentials/credentials.controller.ts",
+    "credentials/credentials.service.ts"
+  ],
+  "credentials/credentials.controller.ts": [
+    "credentials/credentials.service.ts",
+    "credentials/dto/create-credential.dto.ts",
+    "credentials/dto/update-credential.dto.ts"
+  ],
+  "credentials/credentials.module.ts": [
+    "credentials/credentials.controller.ts",
+    "credentials/credentials.service.ts",
+    "credentials/entities/credential.entity.ts"
+  ],
+  "credentials/credentials.service.spec.ts": [
+    "credentials/credentials.service.ts",
+    "credentials/entities/credential.entity.ts"
+  ],
+  "credentials/credentials.service.ts": [
+    "credentials/dto/create-credential.dto.ts",
+    "credentials/dto/update-credential.dto.ts",
+    "credentials/entities/credential.entity.ts"
+  ],
+  "credentials/dto/create-credential.dto.ts": [],
+  "credentials/dto/update-credential.dto.ts": [
+    "credentials/dto/create-credential.dto.ts"
+  ],
+  "credentials/entities/credential.entity.ts": [],
+  "dashboard/dashboard.controller.spec.ts": [
+    "dashboard/dashboard.controller.ts",
+    "dashboard/dashboard.service.ts"
+  ],
+  "dashboard/dashboard.controller.ts": [
+    "dashboard/dashboard.service.ts",
+    "dashboard/dto/filter-earnings.dto.ts"
+  ],
+  "dashboard/dashboard.module.ts": [
+    "dashboard/dashboard.controller.ts",
+    "dashboard/dashboard.service.ts"
+  ],
+  "dashboard/dashboard.service.spec.ts": [
+    "dashboard/dashboard.service.ts"
+  ],
+  "dashboard/dashboard.service.ts": [
+    "dashboard/dto/filter-earnings.dto.ts"
+  ],
+  "dashboard/dto/create-dashboard.dto.ts": [],
+  "dashboard/dto/filter-earnings.dto.ts": [],
+  "dashboard/dto/update-dashboard.dto.ts": [
+    "dashboard/dto/create-dashboard.dto.ts"
+  ],
+  "department/department.controller.spec.ts": [
+    "department/department.controller.ts",
+    "department/department.service.ts",
+    "department/dto/create-department.dto.ts",
+    "department/entities/department.entity.ts"
+  ],
+  "department/department.controller.ts": [
+    "department/department.service.ts",
+    "department/dto/create-department.dto.ts"
+  ],
+  "department/department.module.ts": [
+    "department/department.controller.ts",
+    "department/department.service.ts",
+    "department/entities/department.entity.ts"
+  ],
+  "department/department.service.spec.ts": [
+    "department/department.service.ts",
+    "department/dto/create-department.dto.ts",
+    "department/entities/department.entity.ts"
+  ],
+  "department/department.service.ts": [
+    "department/dto/create-department.dto.ts",
+    "department/entities/department.entity.ts"
+  ],
+  "department/dto/create-department.dto.ts": [],
+  "department/dto/update-department.dto.ts": [
+    "department/dto/create-department.dto.ts"
+  ],
+  "department/entities/department.entity.ts": [],
+  "disbursement/disbursement.controller.spec.ts": [
+    "disbursement/disbursement.controller.ts",
+    "disbursement/disbursement.service.ts"
+  ],
+  "disbursement/disbursement.controller.ts": [
+    "disbursement/disbursement.service.ts"
+  ],
+  "disbursement/disbursement.module.ts": [
+    "disbursement/disbursement.controller.ts",
+    "disbursement/disbursement.service.ts"
+  ],
+  "disbursement/disbursement.service.spec.ts": [
+    "disbursement/disbursement.service.ts"
+  ],
+  "disbursement/disbursement.service.ts": [],
+  "disbursement/dto/create-disbursement.dto.ts": [],
+  "disbursement/dto/update-disbursement.dto.ts": [
+    "disbursement/dto/create-disbursement.dto.ts"
+  ],
+  "disbursement/entities/disbursement.entity.ts": [],
+  "dnr-reason/dnr-reason.controller.spec.ts": [
+    "dnr-reason/dnr-reason.controller.ts",
+    "dnr-reason/dnr-reason.service.ts",
+    "dnr-reason/dto/create-dnr-reason.dto.ts",
+    "dnr-reason/dto/dnr-reason-filter.dto.ts",
+    "dnr-reason/dto/update-dnr-reason.dto.ts",
+    "dnr-reason/entities/dnr-reason.entity.ts"
+  ],
+  "dnr-reason/dnr-reason.controller.ts": [
+    "dnr-reason/dnr-reason.service.ts",
+    "dnr-reason/dto/create-dnr-reason.dto.ts",
+    "dnr-reason/dto/dnr-reason-filter.dto.ts",
+    "dnr-reason/dto/update-dnr-reason.dto.ts"
+  ],
+  "dnr-reason/dnr-reason.module.ts": [
+    "dnr-reason/dnr-reason.controller.ts",
+    "dnr-reason/dnr-reason.service.ts",
+    "dnr-reason/entities/dnr-reason.entity.ts"
+  ],
+  "dnr-reason/dnr-reason.service.spec.ts": [
+    "dnr-reason/dnr-reason.service.ts",
+    "dnr-reason/dto/create-dnr-reason.dto.ts",
+    "dnr-reason/dto/update-dnr-reason.dto.ts",
+    "dnr-reason/entities/dnr-reason.entity.ts"
+  ],
+  "dnr-reason/dnr-reason.service.ts": [
+    "dnr-reason/dto/create-dnr-reason.dto.ts",
+    "dnr-reason/dto/update-dnr-reason.dto.ts",
+    "dnr-reason/entities/dnr-reason.entity.ts"
+  ],
+  "dnr-reason/dto/create-dnr-reason.dto.ts": [],
+  "dnr-reason/dto/dnr-reason-filter.dto.ts": [],
+  "dnr-reason/dto/update-dnr-reason.dto.ts": [
+    "dnr-reason/dto/create-dnr-reason.dto.ts"
+  ],
+  "dnr-reason/entities/dnr-reason.entity.ts": [],
+  "documents/documents.controller.spec.ts": [
+    "documents/documents.controller.ts",
+    "documents/documents.service.ts",
+    "documents/entities/documents.entity.ts"
+  ],
+  "documents/documents.controller.ts": [
+    "documents/documents.service.ts",
+    "documents/dto/create-document.dto.ts",
+    "documents/dto/document-filter.dto.ts",
+    "documents/dto/update-document.dto.ts"
+  ],
+  "documents/documents.module.ts": [
+    "documents/documents.controller.ts",
+    "documents/documents.service.ts",
+    "documents/entities/documents.entity.ts"
+  ],
+  "documents/documents.service.spec.ts": [
+    "documents/documents.service.ts",
+    "documents/entities/documents.entity.ts"
+  ],
+  "documents/documents.service.ts": [
+    "documents/dto/create-document.dto.ts",
+    "documents/dto/document-filter.dto.ts",
+    "documents/dto/update-document.dto.ts",
+    "documents/entities/documents.entity.ts"
+  ],
+  "documents/dto/create-document.dto.ts": [],
+  "documents/dto/document-filter.dto.ts": [],
+  "documents/dto/update-document.dto.ts": [
+    "documents/dto/create-document.dto.ts"
+  ],
+  "documents/entities/documents.entity.ts": [],
+  "dropdown/dropdown.controller.spec.ts": [
+    "dropdown/dropdown.controller.ts",
+    "dropdown/dropdown.service.ts",
+    "dropdown/dto/filter-provider.dto.ts",
+    "dropdown/dto/filter.dropdown.dto.ts"
+  ],
+  "dropdown/dropdown.controller.ts": [
+    "dropdown/dropdown.service.ts",
+    "dropdown/dto/filter-provider.dto.ts",
+    "dropdown/dto/filter.dropdown.dto.ts"
+  ],
+  "dropdown/dropdown.module.ts": [
+    "dropdown/dropdown.controller.ts",
+    "dropdown/dropdown.service.ts"
+  ],
+  "dropdown/dropdown.service.spec.ts": [
+    "dropdown/dropdown.service.ts",
+    "dropdown/dto/filter.dropdown.dto.ts"
+  ],
+  "dropdown/dropdown.service.ts": [
+    "dropdown/dto/filter-provider.dto.ts",
+    "dropdown/dto/filter.dropdown.dto.ts"
+  ],
+  "dropdown/dto/filter-provider.dto.ts": [],
+  "dropdown/dto/filter.dropdown.dto.ts": [],
+  "e-doc-response/dto/create-e-doc-response.dto.ts": [],
+  "e-doc-response/dto/update-e-doc-response.dto.ts": [],
+  "e-doc-response/e-doc-response.controller.spec.ts": [
+    "e-doc-response/dto/create-e-doc-response.dto.ts",
+    "e-doc-response/dto/update-e-doc-response.dto.ts",
+    "e-doc-response/e-doc-response.controller.ts",
+    "e-doc-response/e-doc-response.service.ts",
+    "e-doc-response/entities/e-doc-response.entity.ts"
+  ],
+  "e-doc-response/e-doc-response.controller.ts": [
+    "e-doc-response/dto/create-e-doc-response.dto.ts",
+    "e-doc-response/dto/update-e-doc-response.dto.ts",
+    "e-doc-response/e-doc-response.service.ts"
+  ],
+  "e-doc-response/e-doc-response.module.ts": [
+    "e-doc-response/e-doc-response.controller.ts",
+    "e-doc-response/e-doc-response.service.ts",
+    "e-doc-response/entities/e-doc-response.entity.ts"
+  ],
+  "e-doc-response/e-doc-response.service.spec.ts": [
+    "e-doc-response/dto/create-e-doc-response.dto.ts",
+    "e-doc-response/dto/update-e-doc-response.dto.ts",
+    "e-doc-response/e-doc-response.service.ts",
+    "e-doc-response/entities/e-doc-response.entity.ts"
+  ],
+  "e-doc-response/e-doc-response.service.ts": [
+    "e-doc-response/dto/create-e-doc-response.dto.ts",
+    "e-doc-response/dto/update-e-doc-response.dto.ts",
+    "e-doc-response/entities/e-doc-response.entity.ts"
+  ],
+  "e-doc-response/entities/e-doc-response.entity.ts": [],
+  "e-docs-group/dto/create-e-docs-group.dto.ts": [],
+  "e-docs-group/dto/update-e-docs-group.dto.ts": [
+    "e-docs-group/dto/create-e-docs-group.dto.ts"
+  ],
+  "e-docs-group/e-docs-group.controller.spec.ts": [
+    "e-docs-group/dto/create-e-docs-group.dto.ts",
+    "e-docs-group/dto/update-e-docs-group.dto.ts",
+    "e-docs-group/e-docs-group.controller.ts",
+    "e-docs-group/e-docs-group.service.ts",
+    "e-docs-group/entities/e-docs-group.entity.ts"
+  ],
+  "e-docs-group/e-docs-group.controller.ts": [
+    "e-docs-group/dto/create-e-docs-group.dto.ts",
+    "e-docs-group/dto/update-e-docs-group.dto.ts",
+    "e-docs-group/e-docs-group.service.ts"
+  ],
+  "e-docs-group/e-docs-group.module.ts": [
+    "e-docs-group/e-docs-group.controller.ts",
+    "e-docs-group/e-docs-group.service.ts",
+    "e-docs-group/entities/e-docs-group.entity.ts"
+  ],
+  "e-docs-group/e-docs-group.service.spec.ts": [
+    "e-docs-group/dto/create-e-docs-group.dto.ts",
+    "e-docs-group/dto/update-e-docs-group.dto.ts",
+    "e-docs-group/e-docs-group.service.ts",
+    "e-docs-group/entities/e-docs-group.entity.ts"
+  ],
+  "e-docs-group/e-docs-group.service.ts": [
+    "e-docs-group/dto/create-e-docs-group.dto.ts",
+    "e-docs-group/dto/update-e-docs-group.dto.ts",
+    "e-docs-group/entities/e-docs-group.entity.ts"
+  ],
+  "e-docs-group/entities/e-docs-group.entity.ts": [],
+  "e-docs/dto/create-e-doc.dto.ts": [],
+  "e-docs/dto/update-e-doc.dto.ts": [
+    "e-docs/dto/create-e-doc.dto.ts"
+  ],
+  "e-docs/e-docs.controller.spec.ts": [
+    "e-docs/dto/create-e-doc.dto.ts",
+    "e-docs/dto/update-e-doc.dto.ts",
+    "e-docs/e-docs.controller.ts",
+    "e-docs/e-docs.service.ts",
+    "e-docs/entities/e-doc.entity.ts"
+  ],
+  "e-docs/e-docs.controller.ts": [
+    "e-docs/dto/create-e-doc.dto.ts",
+    "e-docs/dto/update-e-doc.dto.ts",
+    "e-docs/e-docs.service.ts"
+  ],
+  "e-docs/e-docs.module.ts": [
+    "e-docs/e-docs.controller.ts",
+    "e-docs/e-docs.service.ts",
+    "e-docs/entities/e-doc.entity.ts"
+  ],
+  "e-docs/e-docs.service.spec.ts": [
+    "e-docs/dto/create-e-doc.dto.ts",
+    "e-docs/dto/update-e-doc.dto.ts",
+    "e-docs/e-docs.service.ts",
+    "e-docs/entities/e-doc.entity.ts"
+  ],
+  "e-docs/e-docs.service.ts": [
+    "e-docs/dto/create-e-doc.dto.ts",
+    "e-docs/dto/update-e-doc.dto.ts",
+    "e-docs/entities/e-doc.entity.ts"
+  ],
+  "e-docs/entities/e-doc.entity.ts": [],
+  "facility-document/dto/create-facility-document-category.dto.ts": [],
+  "facility-document/dto/create-facility-document.dto.ts": [],
+  "facility-document/dto/update-facility-document-category.dto.ts": [
+    "facility-document/dto/create-facility-document-category.dto.ts"
+  ],
+  "facility-document/dto/update-facility-document.dto.ts": [
+    "facility-document/dto/create-facility-document.dto.ts"
+  ],
+  "facility-document/entities/facility-document-category.entity.ts": [
+    "facility-document/entities/facility-document.entity.ts"
+  ],
+  "facility-document/entities/facility-document.entity.ts": [
+    "facility-document/entities/facility-document-category.entity.ts"
+  ],
+  "facility-document/facility-document.controller.spec.ts": [
+    "facility-document/dto/create-facility-document-category.dto.ts",
+    "facility-document/dto/create-facility-document.dto.ts",
+    "facility-document/dto/update-facility-document-category.dto.ts",
+    "facility-document/dto/update-facility-document.dto.ts",
+    "facility-document/entities/facility-document-category.entity.ts",
+    "facility-document/entities/facility-document.entity.ts",
+    "facility-document/facility-document.controller.ts",
+    "facility-document/facility-document.service.ts"
+  ],
+  "facility-document/facility-document.controller.ts": [
+    "facility-document/dto/create-facility-document-category.dto.ts",
+    "facility-document/dto/create-facility-document.dto.ts",
+    "facility-document/dto/update-facility-document-category.dto.ts",
+    "facility-document/dto/update-facility-document.dto.ts",
+    "facility-document/facility-document.service.ts"
+  ],
+  "facility-document/facility-document.module.ts": [
+    "facility-document/entities/facility-document-category.entity.ts",
+    "facility-document/entities/facility-document.entity.ts",
+    "facility-document/facility-document.controller.ts",
+    "facility-document/facility-document.service.ts"
+  ],
+  "facility-document/facility-document.service.spec.ts": [
+    "facility-document/dto/create-facility-document-category.dto.ts",
+    "facility-document/dto/create-facility-document.dto.ts",
+    "facility-document/dto/update-facility-document-category.dto.ts",
+    "facility-document/dto/update-facility-document.dto.ts",
+    "facility-document/entities/facility-document-category.entity.ts",
+    "facility-document/entities/facility-document.entity.ts",
+    "facility-document/facility-document.service.ts"
+  ],
+  "facility-document/facility-document.service.ts": [
+    "facility-document/dto/create-facility-document-category.dto.ts",
+    "facility-document/dto/create-facility-document.dto.ts",
+    "facility-document/dto/update-facility-document-category.dto.ts",
+    "facility-document/dto/update-facility-document.dto.ts",
+    "facility-document/entities/facility-document-category.entity.ts",
+    "facility-document/entities/facility-document.entity.ts"
+  ],
+  "facility-general-setting/dto/update-facility-general-setting.dto.ts": [],
+  "facility-general-setting/entities/facility-general-setting.entity.ts": [],
+  "facility-general-setting/facility-general-setting.controller.spec.ts": [
+    "facility-general-setting/dto/update-facility-general-setting.dto.ts",
+    "facility-general-setting/entities/facility-general-setting.entity.ts",
+    "facility-general-setting/facility-general-setting.controller.ts",
+    "facility-general-setting/facility-general-setting.service.ts"
+  ],
+  "facility-general-setting/facility-general-setting.controller.ts": [
+    "facility-general-setting/dto/update-facility-general-setting.dto.ts",
+    "facility-general-setting/facility-general-setting.service.ts"
+  ],
+  "facility-general-setting/facility-general-setting.module.ts": [
+    "facility-general-setting/entities/facility-general-setting.entity.ts",
+    "facility-general-setting/facility-general-setting.controller.ts",
+    "facility-general-setting/facility-general-setting.service.ts"
+  ],
+  "facility-general-setting/facility-general-setting.service.spec.ts": [
+    "facility-general-setting/dto/update-facility-general-setting.dto.ts",
+    "facility-general-setting/entities/facility-general-setting.entity.ts",
+    "facility-general-setting/facility-general-setting.service.ts"
+  ],
+  "facility-general-setting/facility-general-setting.service.ts": [
+    "facility-general-setting/dto/update-facility-general-setting.dto.ts",
+    "facility-general-setting/entities/facility-general-setting.entity.ts"
+  ],
+  "facility-holiday/dto/create-facility-holiday.dto.ts": [],
+  "facility-holiday/dto/get-facility-holiday.dto.ts": [],
+  "facility-holiday/dto/update-facility-holiday.dto.ts": [
+    "facility-holiday/dto/create-facility-holiday.dto.ts"
+  ],
+  "facility-holiday/entities/facility-holiday.entity.ts": [],
+  "facility-holiday/facility-holiday.controller.spec.ts": [
+    "facility-holiday/facility-holiday.controller.ts",
+    "facility-holiday/facility-holiday.service.ts"
+  ],
+  "facility-holiday/facility-holiday.controller.ts": [
+    "facility-holiday/dto/create-facility-holiday.dto.ts",
+    "facility-holiday/dto/get-facility-holiday.dto.ts",
+    "facility-holiday/dto/update-facility-holiday.dto.ts",
+    "facility-holiday/facility-holiday.service.ts"
+  ],
+  "facility-holiday/facility-holiday.module.ts": [
+    "facility-holiday/entities/facility-holiday.entity.ts",
+    "facility-holiday/facility-holiday.controller.ts",
+    "facility-holiday/facility-holiday.service.ts"
+  ],
+  "facility-holiday/facility-holiday.service.spec.ts": [
+    "facility-holiday/entities/facility-holiday.entity.ts",
+    "facility-holiday/facility-holiday.service.ts"
+  ],
+  "facility-holiday/facility-holiday.service.ts": [
+    "facility-holiday/dto/create-facility-holiday.dto.ts",
+    "facility-holiday/dto/update-facility-holiday.dto.ts",
+    "facility-holiday/entities/facility-holiday.entity.ts"
+  ],
+  "facility-note/dto/create-facility-note.dto.ts": [],
+  "facility-note/dto/queryFilter.dto.ts": [],
+  "facility-note/dto/update-facility-note.dto.ts": [
+    "facility-note/dto/create-facility-note.dto.ts"
+  ],
+  "facility-note/entities/facility-note.entity.ts": [],
+  "facility-note/facility-note.controller.spec.ts": [
+    "facility-note/facility-note.controller.ts",
+    "facility-note/facility-note.service.ts"
+  ],
+  "facility-note/facility-note.controller.ts": [
+    "facility-note/dto/create-facility-note.dto.ts",
+    "facility-note/dto/queryFilter.dto.ts",
+    "facility-note/dto/update-facility-note.dto.ts",
+    "facility-note/facility-note.service.ts"
+  ],
+  "facility-note/facility-note.module.ts": [
+    "facility-note/entities/facility-note.entity.ts",
+    "facility-note/facility-note.controller.ts",
+    "facility-note/facility-note.service.ts"
+  ],
+  "facility-note/facility-note.service.spec.ts": [
+    "facility-note/facility-note.service.ts"
+  ],
+  "facility-note/facility-note.service.ts": [
+    "facility-note/dto/create-facility-note.dto.ts",
+    "facility-note/dto/queryFilter.dto.ts",
+    "facility-note/dto/update-facility-note.dto.ts",
+    "facility-note/entities/facility-note.entity.ts"
+  ],
+  "facility-profile-setting/dto/update-facility-profile-setting.dto.ts": [],
+  "facility-profile-setting/entities/facility-profile-setting.entity.ts": [],
+  "facility-profile-setting/facility-profile-setting.controller.spec.ts": [
+    "facility-profile-setting/dto/update-facility-profile-setting.dto.ts",
+    "facility-profile-setting/entities/facility-profile-setting.entity.ts",
+    "facility-profile-setting/facility-profile-setting.controller.ts",
+    "facility-profile-setting/facility-profile-setting.service.ts"
+  ],
+  "facility-profile-setting/facility-profile-setting.controller.ts": [
+    "facility-profile-setting/dto/update-facility-profile-setting.dto.ts",
+    "facility-profile-setting/facility-profile-setting.service.ts"
+  ],
+  "facility-profile-setting/facility-profile-setting.module.ts": [
+    "facility-profile-setting/entities/facility-profile-setting.entity.ts",
+    "facility-profile-setting/facility-profile-setting.controller.ts",
+    "facility-profile-setting/facility-profile-setting.service.ts"
+  ],
+  "facility-profile-setting/facility-profile-setting.service.spec.ts": [
+    "facility-profile-setting/dto/update-facility-profile-setting.dto.ts",
+    "facility-profile-setting/entities/facility-profile-setting.entity.ts",
+    "facility-profile-setting/facility-profile-setting.service.ts"
+  ],
+  "facility-profile-setting/facility-profile-setting.service.ts": [
+    "facility-profile-setting/dto/update-facility-profile-setting.dto.ts",
+    "facility-profile-setting/entities/facility-profile-setting.entity.ts"
+  ],
+  "facility-provider/dto/create-facility-provider.dto.ts": [],
+  "facility-provider/dto/filter-facility-provider.dto.ts": [],
+  "facility-provider/dto/filter-shift.dto.ts": [],
+  "facility-provider/dto/flag-dnr.dto.ts": [],
+  "facility-provider/dto/update-facility-provider.dto.ts": [],
+  "facility-provider/entities/facility-provider.entity.ts": [],
+  "facility-provider/facility-provider.controller.spec.ts": [
+    "facility-provider/dto/filter-facility-provider.dto.ts",
+    "facility-provider/dto/flag-dnr.dto.ts",
+    "facility-provider/dto/update-facility-provider.dto.ts",
+    "facility-provider/entities/facility-provider.entity.ts",
+    "facility-provider/facility-provider.controller.ts",
+    "facility-provider/facility-provider.service.ts"
+  ],
+  "facility-provider/facility-provider.controller.ts": [
+    "facility-provider/dto/filter-facility-provider.dto.ts",
+    "facility-provider/dto/filter-shift.dto.ts",
+    "facility-provider/dto/flag-dnr.dto.ts",
+    "facility-provider/dto/update-facility-provider.dto.ts",
+    "facility-provider/facility-provider.service.ts"
+  ],
+  "facility-provider/facility-provider.module.ts": [
+    "facility-provider/entities/facility-provider.entity.ts",
+    "facility-provider/facility-provider.controller.ts",
+    "facility-provider/facility-provider.service.ts"
+  ],
+  "facility-provider/facility-provider.service.spec.ts": [
+    "facility-provider/dto/create-facility-provider.dto.ts",
+    "facility-provider/dto/filter-facility-provider.dto.ts",
+    "facility-provider/dto/flag-dnr.dto.ts",
+    "facility-provider/dto/update-facility-provider.dto.ts",
+    "facility-provider/entities/facility-provider.entity.ts",
+    "facility-provider/facility-provider.service.ts"
+  ],
+  "facility-provider/facility-provider.service.ts": [
+    "facility-provider/dto/create-facility-provider.dto.ts",
+    "facility-provider/dto/filter-facility-provider.dto.ts",
+    "facility-provider/dto/filter-shift.dto.ts",
+    "facility-provider/dto/flag-dnr.dto.ts",
+    "facility-provider/dto/update-facility-provider.dto.ts",
+    "facility-provider/entities/facility-provider.entity.ts"
+  ],
+  "facility-reject-reason/dto/create-facility-reject-reason.dto.ts": [],
+  "facility-reject-reason/dto/update-facility-reject-reason.dto.ts": [
+    "facility-reject-reason/dto/create-facility-reject-reason.dto.ts"
+  ],
+  "facility-reject-reason/entities/facility-reject-reason.entity.ts": [],
+  "facility-reject-reason/facility-reject-reason.controller.spec.ts": [
+    "facility-reject-reason/dto/create-facility-reject-reason.dto.ts",
+    "facility-reject-reason/dto/update-facility-reject-reason.dto.ts",
+    "facility-reject-reason/entities/facility-reject-reason.entity.ts",
+    "facility-reject-reason/facility-reject-reason.controller.ts",
+    "facility-reject-reason/facility-reject-reason.service.ts"
+  ],
+  "facility-reject-reason/facility-reject-reason.controller.ts": [
+    "facility-reject-reason/dto/create-facility-reject-reason.dto.ts",
+    "facility-reject-reason/dto/update-facility-reject-reason.dto.ts",
+    "facility-reject-reason/facility-reject-reason.service.ts"
+  ],
+  "facility-reject-reason/facility-reject-reason.module.ts": [
+    "facility-reject-reason/entities/facility-reject-reason.entity.ts",
+    "facility-reject-reason/facility-reject-reason.controller.ts",
+    "facility-reject-reason/facility-reject-reason.service.ts"
+  ],
+  "facility-reject-reason/facility-reject-reason.service.spec.ts": [
+    "facility-reject-reason/dto/create-facility-reject-reason.dto.ts",
+    "facility-reject-reason/dto/update-facility-reject-reason.dto.ts",
+    "facility-reject-reason/entities/facility-reject-reason.entity.ts",
+    "facility-reject-reason/facility-reject-reason.service.ts"
+  ],
+  "facility-reject-reason/facility-reject-reason.service.ts": [
+    "facility-reject-reason/dto/create-facility-reject-reason.dto.ts",
+    "facility-reject-reason/dto/update-facility-reject-reason.dto.ts",
+    "facility-reject-reason/entities/facility-reject-reason.entity.ts"
+  ],
+  "facility-shift-setting/dto/create-facility-shift-setting.dto.ts": [],
+  "facility-shift-setting/dto/facility-setting-filter.dto.ts": [],
+  "facility-shift-setting/dto/update-facility-shift-setting.dto.ts": [
+    "facility-shift-setting/dto/create-facility-shift-setting.dto.ts"
+  ],
+  "facility-shift-setting/entities/facility-shift-setting.entity.ts": [],
+  "facility-shift-setting/facility-shift-setting.controller.spec.ts": [
+    "facility-shift-setting/dto/create-facility-shift-setting.dto.ts",
+    "facility-shift-setting/dto/facility-setting-filter.dto.ts",
+    "facility-shift-setting/dto/update-facility-shift-setting.dto.ts",
+    "facility-shift-setting/entities/facility-shift-setting.entity.ts",
+    "facility-shift-setting/facility-shift-setting.controller.ts",
+    "facility-shift-setting/facility-shift-setting.service.ts"
+  ],
+  "facility-shift-setting/facility-shift-setting.controller.ts": [
+    "facility-shift-setting/dto/create-facility-shift-setting.dto.ts",
+    "facility-shift-setting/dto/facility-setting-filter.dto.ts",
+    "facility-shift-setting/dto/update-facility-shift-setting.dto.ts",
+    "facility-shift-setting/facility-shift-setting.service.ts"
+  ],
+  "facility-shift-setting/facility-shift-setting.module.ts": [
+    "facility-shift-setting/entities/facility-shift-setting.entity.ts",
+    "facility-shift-setting/facility-shift-setting.controller.ts",
+    "facility-shift-setting/facility-shift-setting.service.ts"
+  ],
+  "facility-shift-setting/facility-shift-setting.service.spec.ts": [
+    "facility-shift-setting/dto/create-facility-shift-setting.dto.ts",
+    "facility-shift-setting/dto/update-facility-shift-setting.dto.ts",
+    "facility-shift-setting/entities/facility-shift-setting.entity.ts",
+    "facility-shift-setting/facility-shift-setting.service.ts"
+  ],
+  "facility-shift-setting/facility-shift-setting.service.ts": [
+    "facility-shift-setting/dto/create-facility-shift-setting.dto.ts",
+    "facility-shift-setting/dto/facility-setting-filter.dto.ts",
+    "facility-shift-setting/dto/update-facility-shift-setting.dto.ts",
+    "facility-shift-setting/entities/facility-shift-setting.entity.ts"
+  ],
+  "facility-user/dto/contact-filter.dto.ts": [],
+  "facility-user/dto/create-facility-user-permission.dto.ts": [
+    "facility-user/entities/facility-permission.entity.ts",
+    "facility-user/entities/facility-user.entity.ts"
+  ],
+  "facility-user/dto/create-facility-user.dto.ts": [],
+  "facility-user/dto/update-facility-user.dto.ts": [
+    "facility-user/dto/create-facility-user.dto.ts"
+  ],
+  "facility-user/dto/update-profile.dto.ts": [],
+  "facility-user/entities/facility-permission.entity.ts": [
+    "facility-user/entities/facility-user-permission.entity.ts"
+  ],
+  "facility-user/entities/facility-user-permission.entity.ts": [
+    "facility-user/entities/facility-permission.entity.ts",
+    "facility-user/entities/facility-user.entity.ts"
+  ],
+  "facility-user/entities/facility-user.entity.ts": [
+    "facility-user/entities/facility-user-permission.entity.ts"
+  ],
+  "facility-user/facility-user.controller.spec.ts": [
+    "facility-user/dto/update-profile.dto.ts",
+    "facility-user/entities/facility-permission.entity.ts",
+    "facility-user/entities/facility-user-permission.entity.ts",
+    "facility-user/entities/facility-user.entity.ts",
+    "facility-user/facility-user.controller.ts",
+    "facility-user/facility-user.service.ts"
+  ],
+  "facility-user/facility-user.controller.ts": [
+    "facility-user/dto/update-profile.dto.ts",
+    "facility-user/facility-user.service.ts"
+  ],
+  "facility-user/facility-user.module.ts": [
+    "facility-user/entities/facility-permission.entity.ts",
+    "facility-user/entities/facility-user-permission.entity.ts",
+    "facility-user/entities/facility-user.entity.ts",
+    "facility-user/facility-user.controller.ts",
+    "facility-user/facility-user.service.ts"
+  ],
+  "facility-user/facility-user.service.spec.ts": [
+    "facility-user/dto/create-facility-user.dto.ts",
+    "facility-user/dto/update-facility-user.dto.ts",
+    "facility-user/entities/facility-permission.entity.ts",
+    "facility-user/entities/facility-user-permission.entity.ts",
+    "facility-user/entities/facility-user.entity.ts",
+    "facility-user/facility-user.service.ts"
+  ],
+  "facility-user/facility-user.service.ts": [
+    "facility-user/dto/contact-filter.dto.ts",
+    "facility-user/dto/create-facility-user.dto.ts",
+    "facility-user/dto/update-facility-user.dto.ts",
+    "facility-user/dto/update-profile.dto.ts",
+    "facility-user/entities/facility-permission.entity.ts",
+    "facility-user/entities/facility-user-permission.entity.ts",
+    "facility-user/entities/facility-user.entity.ts"
+  ],
+  "facility/dto/add-facility.dto.ts": [
+    "facility/entities/facility.entity.ts"
+  ],
+  "facility/dto/complete-facility-profile.dto.ts": [],
+  "facility/dto/create-facility.dto.ts": [],
+  "facility/dto/filter-facility.dto.ts": [],
+  "facility/dto/setup-facility.dto.ts": [],
+  "facility/dto/update-facility-detail.dto.ts": [
+    "facility/dto/add-facility.dto.ts"
+  ],
+  "facility/dto/update-facility-setting.dto.ts": [
+    "facility/dto/setup-facility.dto.ts"
+  ],
+  "facility/dto/update-facility.dto.ts": [
+    "facility/dto/create-facility.dto.ts"
+  ],
+  "facility/entities/accounting-setting.entity.ts": [
+    "facility/entities/facility.entity.ts"
+  ],
+  "facility/entities/facility-portal-setting.entity.ts": [
+    "facility/entities/facility.entity.ts"
+  ],
+  "facility/entities/facility.entity.ts": [
+    "facility/entities/accounting-setting.entity.ts",
+    "facility/entities/facility-portal-setting.entity.ts",
+    "facility/entities/time-entry-setting.entity.ts"
+  ],
+  "facility/entities/time-entry-setting.entity.ts": [
+    "facility/entities/facility.entity.ts"
+  ],
+  "facility/facility.controller.spec.ts": [
+    "facility/dto/add-facility.dto.ts",
+    "facility/dto/complete-facility-profile.dto.ts",
+    "facility/dto/filter-facility.dto.ts",
+    "facility/dto/setup-facility.dto.ts",
+    "facility/dto/update-facility-detail.dto.ts",
+    "facility/dto/update-facility-setting.dto.ts",
+    "facility/dto/update-facility.dto.ts",
+    "facility/entities/facility.entity.ts",
+    "facility/facility.controller.ts",
+    "facility/facility.service.ts"
+  ],
+  "facility/facility.controller.ts": [
+    "facility/dto/add-facility.dto.ts",
+    "facility/dto/complete-facility-profile.dto.ts",
+    "facility/dto/filter-facility.dto.ts",
+    "facility/dto/setup-facility.dto.ts",
+    "facility/dto/update-facility-detail.dto.ts",
+    "facility/dto/update-facility-setting.dto.ts",
+    "facility/dto/update-facility.dto.ts",
+    "facility/facility.service.ts"
+  ],
+  "facility/facility.module.ts": [
+    "facility/entities/accounting-setting.entity.ts",
+    "facility/entities/facility-portal-setting.entity.ts",
+    "facility/entities/facility.entity.ts",
+    "facility/entities/time-entry-setting.entity.ts",
+    "facility/facility.controller.ts",
+    "facility/facility.service.ts"
+  ],
+  "facility/facility.service.spec.ts": [
+    "facility/dto/create-facility.dto.ts",
+    "facility/dto/setup-facility.dto.ts",
+    "facility/dto/update-facility.dto.ts",
+    "facility/entities/accounting-setting.entity.ts",
+    "facility/entities/facility-portal-setting.entity.ts",
+    "facility/entities/facility.entity.ts",
+    "facility/entities/time-entry-setting.entity.ts",
+    "facility/facility.service.ts"
+  ],
+  "facility/facility.service.ts": [
+    "facility/dto/create-facility.dto.ts",
+    "facility/dto/filter-facility.dto.ts",
+    "facility/dto/setup-facility.dto.ts",
+    "facility/entities/accounting-setting.entity.ts",
+    "facility/entities/facility-portal-setting.entity.ts",
+    "facility/entities/facility.entity.ts",
+    "facility/entities/time-entry-setting.entity.ts"
+  ],
+  "flag-setting/dto/create-flag-setting.dto.ts": [],
+  "flag-setting/dto/update-flag-setting.dto.ts": [
+    "flag-setting/dto/create-flag-setting.dto.ts"
+  ],
+  "flag-setting/entities/flag-setting.entity.ts": [],
+  "flag-setting/flag-setting.controller.spec.ts": [
+    "flag-setting/dto/create-flag-setting.dto.ts",
+    "flag-setting/dto/update-flag-setting.dto.ts",
+    "flag-setting/entities/flag-setting.entity.ts",
+    "flag-setting/flag-setting.controller.ts",
+    "flag-setting/flag-setting.service.ts"
+  ],
+  "flag-setting/flag-setting.controller.ts": [
+    "flag-setting/dto/create-flag-setting.dto.ts",
+    "flag-setting/dto/update-flag-setting.dto.ts",
+    "flag-setting/flag-setting.service.ts"
+  ],
+  "flag-setting/flag-setting.module.ts": [
+    "flag-setting/entities/flag-setting.entity.ts",
+    "flag-setting/flag-setting.controller.ts",
+    "flag-setting/flag-setting.service.ts"
+  ],
+  "flag-setting/flag-setting.service.spec.ts": [
+    "flag-setting/dto/create-flag-setting.dto.ts",
+    "flag-setting/dto/update-flag-setting.dto.ts",
+    "flag-setting/entities/flag-setting.entity.ts",
+    "flag-setting/flag-setting.service.ts"
+  ],
+  "flag-setting/flag-setting.service.ts": [
+    "flag-setting/dto/create-flag-setting.dto.ts",
+    "flag-setting/dto/update-flag-setting.dto.ts",
+    "flag-setting/entities/flag-setting.entity.ts"
+  ],
+  "floor-detail/dto/create-floor-detail.dto.ts": [],
+  "floor-detail/dto/update-floor-detail.dto.ts": [
+    "floor-detail/dto/create-floor-detail.dto.ts"
+  ],
+  "floor-detail/entities/floor-detail.entity.ts": [],
+  "floor-detail/floor-detail.controller.spec.ts": [
+    "floor-detail/dto/create-floor-detail.dto.ts",
+    "floor-detail/dto/update-floor-detail.dto.ts",
+    "floor-detail/entities/floor-detail.entity.ts",
+    "floor-detail/floor-detail.controller.ts",
+    "floor-detail/floor-detail.service.ts"
+  ],
+  "floor-detail/floor-detail.controller.ts": [
+    "floor-detail/dto/create-floor-detail.dto.ts",
+    "floor-detail/dto/update-floor-detail.dto.ts",
+    "floor-detail/floor-detail.service.ts"
+  ],
+  "floor-detail/floor-detail.module.ts": [
+    "floor-detail/entities/floor-detail.entity.ts",
+    "floor-detail/floor-detail.controller.ts",
+    "floor-detail/floor-detail.service.ts"
+  ],
+  "floor-detail/floor-detail.service.spec.ts": [
+    "floor-detail/dto/create-floor-detail.dto.ts",
+    "floor-detail/dto/update-floor-detail.dto.ts",
+    "floor-detail/entities/floor-detail.entity.ts",
+    "floor-detail/floor-detail.service.ts"
+  ],
+  "floor-detail/floor-detail.service.ts": [
+    "floor-detail/dto/create-floor-detail.dto.ts",
+    "floor-detail/dto/update-floor-detail.dto.ts",
+    "floor-detail/entities/floor-detail.entity.ts"
+  ],
+  "holiday-group/dto/create-holiday-group.dto.ts": [],
+  "holiday-group/dto/get-holiday-group.dto.ts": [],
+  "holiday-group/dto/update-holiday-group.dto.ts": [
+    "holiday-group/dto/create-holiday-group.dto.ts"
+  ],
+  "holiday-group/entities/holiday-group.entity.ts": [],
+  "holiday-group/holiday-group.controller.spec.ts": [
+    "holiday-group/holiday-group.controller.ts",
+    "holiday-group/holiday-group.service.ts"
+  ],
+  "holiday-group/holiday-group.controller.ts": [
+    "holiday-group/dto/create-holiday-group.dto.ts",
+    "holiday-group/dto/get-holiday-group.dto.ts",
+    "holiday-group/dto/update-holiday-group.dto.ts",
+    "holiday-group/holiday-group.service.ts"
+  ],
+  "holiday-group/holiday-group.module.ts": [
+    "holiday-group/entities/holiday-group.entity.ts",
+    "holiday-group/holiday-group.controller.ts",
+    "holiday-group/holiday-group.service.ts"
+  ],
+  "holiday-group/holiday-group.service.spec.ts": [
+    "holiday-group/entities/holiday-group.entity.ts",
+    "holiday-group/holiday-group.service.ts"
+  ],
+  "holiday-group/holiday-group.service.ts": [
+    "holiday-group/dto/create-holiday-group.dto.ts",
+    "holiday-group/dto/get-holiday-group.dto.ts",
+    "holiday-group/dto/update-holiday-group.dto.ts",
+    "holiday-group/entities/holiday-group.entity.ts"
+  ],
+  "invite/entities/invite.entity.ts": [],
+  "invoices/dto/create-invoice.dto.ts": [],
+  "invoices/dto/share-invoice.dto.ts": [],
+  "invoices/dto/unbilled-invoice-filter.dto.ts": [],
+  "invoices/dto/update-invoice.dto.ts": [
+    "invoices/dto/create-invoice.dto.ts"
+  ],
+  "invoices/entities/invoice-timecards.entity.ts": [
+    "invoices/entities/invoice.entity.ts"
+  ],
+  "invoices/entities/invoice.entity.ts": [
+    "invoices/entities/invoice-timecards.entity.ts"
+  ],
+  "invoices/invoices.controller.spec.ts": [
+    "invoices/invoices.controller.ts",
+    "invoices/invoices.service.ts"
+  ],
+  "invoices/invoices.controller.ts": [
+    "invoices/dto/share-invoice.dto.ts",
+    "invoices/dto/unbilled-invoice-filter.dto.ts",
+    "invoices/invoices.service.ts"
+  ],
+  "invoices/invoices.module.ts": [
+    "invoices/entities/invoice-timecards.entity.ts",
+    "invoices/entities/invoice.entity.ts",
+    "invoices/invoices.controller.ts",
+    "invoices/invoices.service.ts"
+  ],
+  "invoices/invoices.service.spec.ts": [
+    "invoices/entities/invoice-timecards.entity.ts",
+    "invoices/entities/invoice.entity.ts",
+    "invoices/invoices.service.ts"
+  ],
+  "invoices/invoices.service.ts": [
+    "invoices/dto/share-invoice.dto.ts",
+    "invoices/dto/unbilled-invoice-filter.dto.ts",
+    "invoices/entities/invoice-timecards.entity.ts",
+    "invoices/entities/invoice.entity.ts"
+  ],
+  "jobs/jobs.module.ts": [
+    "jobs/jobs.processor.ts",
+    "jobs/jobs.service.ts"
+  ],
+  "jobs/jobs.processor.spec.ts": [
+    "jobs/jobs.processor.ts"
+  ],
+  "jobs/jobs.processor.ts": [],
+  "jobs/jobs.service.ts": [],
+  "jobs/queue-debug.service.ts": [],
+  "line-of-business/dto/create-line-of-business.dto.ts": [],
+  "line-of-business/dto/update-line-of-business.dto.ts": [
+    "line-of-business/dto/create-line-of-business.dto.ts"
+  ],
+  "line-of-business/entities/line-of-business.entity.ts": [],
+  "line-of-business/line-of-business.controller.spec.ts": [
+    "line-of-business/dto/create-line-of-business.dto.ts",
+    "line-of-business/dto/update-line-of-business.dto.ts",
+    "line-of-business/entities/line-of-business.entity.ts",
+    "line-of-business/line-of-business.controller.ts",
+    "line-of-business/line-of-business.service.ts"
+  ],
+  "line-of-business/line-of-business.controller.ts": [
+    "line-of-business/dto/create-line-of-business.dto.ts",
+    "line-of-business/dto/update-line-of-business.dto.ts",
+    "line-of-business/line-of-business.service.ts"
+  ],
+  "line-of-business/line-of-business.module.ts": [
+    "line-of-business/entities/line-of-business.entity.ts",
+    "line-of-business/line-of-business.controller.ts",
+    "line-of-business/line-of-business.service.ts"
+  ],
+  "line-of-business/line-of-business.service.spec.ts": [
+    "line-of-business/dto/create-line-of-business.dto.ts",
+    "line-of-business/dto/update-line-of-business.dto.ts",
+    "line-of-business/entities/line-of-business.entity.ts",
+    "line-of-business/line-of-business.service.ts"
+  ],
+  "line-of-business/line-of-business.service.ts": [
+    "line-of-business/dto/create-line-of-business.dto.ts",
+    "line-of-business/dto/update-line-of-business.dto.ts",
+    "line-of-business/entities/line-of-business.entity.ts"
+  ],
+  "main.ts": [
+    "adapters/redis-io.adapter.ts",
+    "app.module.ts"
+  ],
+  "media/dto/create-media.dto.ts": [],
+  "media/dto/update-media.dto.ts": [
+    "media/dto/create-media.dto.ts"
+  ],
+  "media/entities/media.entity.ts": [],
+  "media/media.controller.spec.ts": [
+    "media/media.controller.ts",
+    "media/media.service.ts"
+  ],
+  "media/media.controller.ts": [
+    "media/media.service.ts"
+  ],
+  "media/media.module.ts": [
+    "media/media.controller.ts",
+    "media/media.service.ts"
+  ],
+  "media/media.service.spec.ts": [
+    "media/media.service.ts"
+  ],
+  "media/media.service.ts": [],
+  "migrations/1752147120383-initial.ts": [],
+  "migrations/1752147638211-seeder.ts": [],
+  "migrations/1753075982029-facility-note-tags.ts": [],
+  "migrations/1753087868769-alter-otptype.ts": [],
+  "migrations/1753335642526-provider-list.ts": [],
+  "migrations/1753953209833-alter-column-preference.ts": [],
+  "migrations/1754293818721-refer-friend.ts": [],
+  "migrations/1754312327230-provider_notification_setting.ts": [],
+  "migrations/1754376292223-evaluations.ts": [],
+  "migrations/1754379506346-provider-preference-setting.ts": [],
+  "migrations/1754475985521-alter-credentials.ts": [],
+  "migrations/1754480589643-time-label-setting.ts": [],
+  "migrations/1754484730301-alter-shift-cancel.ts": [],
+  "migrations/1754548502020-view-skill-checklist.ts": [],
+  "migrations/1754549391970-time-label-setting.ts": [],
+  "migrations/1754557908706-alter-original-file-name.ts": [],
+  "migrations/1754634354637-calender-shift.ts": [],
+  "migrations/1754911523020-deleted-account.ts": [],
+  "migrations/1755078643437-provider-performance.ts": [],
+  "migrations/1755144348148-alter-evaluation.ts": [],
+  "migrations/1755496660679-holiday.ts": [],
+  "migrations/1755609249924-provider-shift-conflict.ts": [],
+  "migrations/1755609408879-provider-available-by-preference-setting-with-message.ts": [],
+  "migrations/1755663797948-staff-view.ts": [],
+  "migrations/1755676863105-timecard.ts": [],
+  "migrations/1755686711216-alter-provider-credential.ts": [],
+  "migrations/1755850665845-alter-provider-notes.ts": [],
+  "migrations/1755865610004-shift-view.ts": [],
+  "migrations/1756203725724-holiday-alter.ts": [],
+  "migrations/1756355229203-alter-facility-provider.ts": [],
+  "migrations/1756363096608-provider-late-shift.ts": [],
+  "migrations/1756807803422-invoice.ts": [],
+  "migrations/1756818225900-alter-provider-orientation.ts": [],
+  "migrations/1757078425715-alter-facility-holiday.ts": [],
+  "migrations/1757399819308-alter-timecard.ts": [],
+  "migrations/1757409225409-alter-provider-progress.ts": [],
+  "migrations/1757491745823-provider-analytics.ts": [],
+  "migrations/1757503050174-alter-holiday-group.ts": [],
+  "migrations/1757575495679-invite-status.ts": [],
+  "migrations/1757582607595-orientation-documents.ts": [],
+  "migrations/1757915237391-facility-invoice.ts": [],
+  "migrations/1758106261150-accounting-setting.ts": [],
+  "migrations/1758255434624-payments.ts": [],
+  "migrations/1758520072288-alter-timecard.ts": [],
+  "migrations/1758803230859-timecard-view.ts": [],
+  "migrations/1759140387452-alter-timecard.ts": [],
+  "migrations/1759750688712-shift-calendar-function.ts": [],
+  "migrations/1759811075323-invoice-aging.ts": [],
+  "migrations/1759914072065-orientation-reject-reason.ts": [],
+  "migrations/1759985277897-webhook.ts": [],
+  "migrations/1759997916746-admin-calendar.ts": [],
+  "migrations/1760338081040-alter-orientation-reject-relatation.ts": [],
+  "migrations/1760429640994-rate-groups.ts": [],
+  "migrations/1760507856949-alter-reject-reason.ts": [],
+  "migrations/1760613146512-alter-dnrtype.ts": [],
+  "migrations/1761291597872-location-map-near-by.ts": [],
+  "migrations/1761306573198-location-map-details.ts": [],
+  "migrations/1761367111067-pay-rate.ts": [],
+  "migrations/1761729172292-alter-rate-group.ts": [],
+  "migrations/1761729314307-alter-rate-group.ts": [],
+  "migrations/1761733536339-disbursement.ts": [],
+  "migrations/1761804092280-migrations.ts": [],
+  "migrations/1761817948461-facility-metrics.ts": [],
+  "migrations/1761886857765-premium-bill.ts": [],
+  "migrations/1762145411937-adjustment.ts": [],
+  "migrations/1762230939144-migrations.ts": [],
+  "migrations/1762262143578-alter-orientation-type.ts": [],
+  "migrations/1762319212381-migrations.ts": [],
+  "migrations/1762407509234-alter-dnr.ts": [],
+  "migrations/1762425631882-migrations.ts": [],
+  "migrations/1762858673915-migrations.ts": [],
+  "migrations/1762947250621-migrations.ts": [],
+  "migrations/1763023170587-migrations.ts": [],
+  "migrations/1763354078457-migrations.ts": [],
+  "migrations/1763373261261-alter-activity-type.ts": [],
+  "migrations/1763633256850-migrations.ts": [],
+  "migrations/1763639544431-create-documents.ts": [],
+  "migrations/1764133140571-migrations.ts": [],
+  "migrations/1764319571769-migrations.ts": [],
+  "migrations/1764738051913-migrations.ts": [],
+  "migrations/1764748393421-func-provider-cred-compliance.ts": [],
+  "migrations/1764758073403-migrations.ts": [],
+  "migrations/1764824136062-view-timecards-for-admin-facility.ts": [],
+  "migrations/1764911155459-migrations.ts": [],
+  "migrations/1764917705529-migrations.ts": [],
+  "migrations/1765268583497-migrations.ts": [],
+  "migrations/1765342952652-migrations.ts": [],
+  "migrations/1765352800587-alter-activity-schema.ts": [],
+  "migrations/1765352866210-alter-activity-type.ts": [],
+  "migrations/1765875377614-professional-reject-reason.ts": [],
+  "migrations/1766045897369-activity-filter-by-ids.ts": [],
+  "migrations/1766056101684-migrations.ts": [],
+  "migrations/1766125202344-migrations.ts": [],
+  "migrations/1766384303466-migrations.ts": [],
+  "migrations/1766401258908-alter-activity-and-reference-response.ts": [],
+  "notification/dto/create-notification.dto.ts": [],
+  "notification/dto/update-notification.dto.ts": [
+    "notification/dto/create-notification.dto.ts"
+  ],
+  "notification/entities/facility-notification-log.entity.ts": [],
+  "notification/entities/notification.entity.ts": [],
+  "notification/entities/shift-notification-log.entity.ts": [],
+  "notification/notification.controller.spec.ts": [
+    "notification/entities/notification.entity.ts",
+    "notification/notification.controller.ts",
+    "notification/notification.service.ts"
+  ],
+  "notification/notification.controller.ts": [],
+  "notification/notification.module.ts": [
+    "notification/entities/notification.entity.ts",
+    "notification/notification.controller.ts",
+    "notification/notification.service.ts"
+  ],
+  "notification/notification.service.spec.ts": [
+    "notification/entities/notification.entity.ts",
+    "notification/notification.service.ts"
+  ],
+  "notification/notification.service.ts": [
+    "notification/entities/notification.entity.ts"
+  ],
+  "orientation-reject-reason/dto/create-orientation-reject-reason.dto.ts": [],
+  "orientation-reject-reason/dto/update-orientation-reject-reason.dto.ts": [
+    "orientation-reject-reason/dto/create-orientation-reject-reason.dto.ts"
+  ],
+  "orientation-reject-reason/entities/orientation-reject-reason.entity.ts": [],
+  "orientation-reject-reason/orientation-reject-reason.controller.spec.ts": [
+    "orientation-reject-reason/entities/orientation-reject-reason.entity.ts",
+    "orientation-reject-reason/orientation-reject-reason.controller.ts",
+    "orientation-reject-reason/orientation-reject-reason.service.ts"
+  ],
+  "orientation-reject-reason/orientation-reject-reason.controller.ts": [
+    "orientation-reject-reason/dto/create-orientation-reject-reason.dto.ts",
+    "orientation-reject-reason/dto/update-orientation-reject-reason.dto.ts",
+    "orientation-reject-reason/orientation-reject-reason.service.ts"
+  ],
+  "orientation-reject-reason/orientation-reject-reason.module.ts": [
+    "orientation-reject-reason/entities/orientation-reject-reason.entity.ts",
+    "orientation-reject-reason/orientation-reject-reason.controller.ts",
+    "orientation-reject-reason/orientation-reject-reason.service.ts"
+  ],
+  "orientation-reject-reason/orientation-reject-reason.service.spec.ts": [
+    "orientation-reject-reason/orientation-reject-reason.service.ts"
+  ],
+  "orientation-reject-reason/orientation-reject-reason.service.ts": [
+    "orientation-reject-reason/dto/create-orientation-reject-reason.dto.ts",
+    "orientation-reject-reason/dto/update-orientation-reject-reason.dto.ts",
+    "orientation-reject-reason/entities/orientation-reject-reason.entity.ts"
+  ],
+  "otp/dto/create-otp.dto.ts": [],
+  "otp/dto/update-otp.dto.ts": [
+    "otp/dto/create-otp.dto.ts"
+  ],
+  "otp/entities/otp.entity.ts": [
+    "shared/constants/enum.ts",
+    "shared/entity/base.entity.ts"
+  ],
+  "otp/otp.controller.spec.ts": [
+    "otp/entities/otp.entity.ts",
+    "otp/otp.controller.ts",
+    "otp/otp.service.ts"
+  ],
+  "otp/otp.controller.ts": [],
+  "otp/otp.module.ts": [
+    "otp/entities/otp.entity.ts",
+    "otp/otp.controller.ts",
+    "otp/otp.service.ts"
+  ],
+  "otp/otp.service.spec.ts": [
+    "otp/dto/create-otp.dto.ts",
+    "otp/entities/otp.entity.ts",
+    "otp/otp.service.ts"
+  ],
+  "otp/otp.service.ts": [
+    "otp/dto/create-otp.dto.ts",
+    "otp/dto/update-otp.dto.ts",
+    "otp/entities/otp.entity.ts"
+  ],
+  "payments/dto/create-payment.dto.ts": [],
+  "payments/dto/filter-payment.dto.ts": [],
+  "payments/dto/update-payment.dto.ts": [
+    "payments/dto/create-payment.dto.ts"
+  ],
+  "payments/entities/payment-invoice.entity.ts": [
+    "payments/entities/payment.entity.ts"
+  ],
+  "payments/entities/payment.entity.ts": [
+    "payments/entities/payment-invoice.entity.ts"
+  ],
+  "payments/payments.controller.spec.ts": [
+    "payments/payments.controller.ts",
+    "payments/payments.service.ts"
+  ],
+  "payments/payments.controller.ts": [
+    "payments/dto/create-payment.dto.ts",
+    "payments/dto/filter-payment.dto.ts",
+    "payments/payments.service.ts"
+  ],
+  "payments/payments.module.ts": [
+    "payments/entities/payment.entity.ts",
+    "payments/payments.controller.ts",
+    "payments/payments.service.ts"
+  ],
+  "payments/payments.service.spec.ts": [
+    "payments/entities/payment.entity.ts",
+    "payments/payments.service.ts"
+  ],
+  "payments/payments.service.ts": [
+    "payments/dto/create-payment.dto.ts",
+    "payments/dto/filter-payment.dto.ts",
+    "payments/entities/payment.entity.ts"
+  ],
+  "permission/dto/create-permission.dto.ts": [],
+  "permission/dto/update-permission.dto.ts": [
+    "permission/dto/create-permission.dto.ts"
+  ],
+  "permission/entities/permission.entity.ts": [],
+  "permission/permission.controller.spec.ts": [
+    "permission/entities/permission.entity.ts",
+    "permission/permission.controller.ts",
+    "permission/permission.service.ts"
+  ],
+  "permission/permission.controller.ts": [
+    "permission/permission.service.ts"
+  ],
+  "permission/permission.module.ts": [
+    "permission/entities/permission.entity.ts",
+    "permission/permission.controller.ts",
+    "permission/permission.service.ts"
+  ],
+  "permission/permission.service.spec.ts": [
+    "permission/entities/permission.entity.ts",
+    "permission/permission.service.ts"
+  ],
+  "permission/permission.service.ts": [
+    "permission/entities/permission.entity.ts"
+  ],
+  "professional-reference-reject-reason/dto/create-professional-reference-reject-reason.dto.ts": [],
+  "professional-reference-reject-reason/dto/update-professional-reference-reject-reason.dto.ts": [
+    "professional-reference-reject-reason/dto/create-professional-reference-reject-reason.dto.ts"
+  ],
+  "professional-reference-reject-reason/entities/professional-reference-reject-reason.entity.ts": [],
+  "professional-reference-reject-reason/professional-reference-reject-reason.controller.spec.ts": [
+    "professional-reference-reject-reason/entities/professional-reference-reject-reason.entity.ts",
+    "professional-reference-reject-reason/professional-reference-reject-reason.controller.ts",
+    "professional-reference-reject-reason/professional-reference-reject-reason.service.ts"
+  ],
+  "professional-reference-reject-reason/professional-reference-reject-reason.controller.ts": [
+    "professional-reference-reject-reason/dto/create-professional-reference-reject-reason.dto.ts",
+    "professional-reference-reject-reason/dto/update-professional-reference-reject-reason.dto.ts",
+    "professional-reference-reject-reason/professional-reference-reject-reason.service.ts"
+  ],
+  "professional-reference-reject-reason/professional-reference-reject-reason.module.ts": [
+    "professional-reference-reject-reason/entities/professional-reference-reject-reason.entity.ts",
+    "professional-reference-reject-reason/professional-reference-reject-reason.controller.ts",
+    "professional-reference-reject-reason/professional-reference-reject-reason.service.ts"
+  ],
+  "professional-reference-reject-reason/professional-reference-reject-reason.service.spec.ts": [
+    "professional-reference-reject-reason/entities/professional-reference-reject-reason.entity.ts",
+    "professional-reference-reject-reason/professional-reference-reject-reason.service.ts"
+  ],
+  "professional-reference-reject-reason/professional-reference-reject-reason.service.ts": [
+    "professional-reference-reject-reason/dto/create-professional-reference-reject-reason.dto.ts",
+    "professional-reference-reject-reason/dto/update-professional-reference-reject-reason.dto.ts",
+    "professional-reference-reject-reason/entities/professional-reference-reject-reason.entity.ts"
+  ],
+  "professional-reference-response/dto/create-professional-reference-response.dto.ts": [],
+  "professional-reference-response/dto/update-professional-reference-response.dto.ts": [
+    "professional-reference-response/dto/create-professional-reference-response.dto.ts"
+  ],
+  "professional-reference-response/entities/professional-reference-response.entity.ts": [],
+  "professional-reference-response/professional-reference-response.controller.spec.ts": [
+    "professional-reference-response/professional-reference-response.controller.ts",
+    "professional-reference-response/professional-reference-response.service.ts"
+  ],
+  "professional-reference-response/professional-reference-response.controller.ts": [
+    "professional-reference-response/dto/create-professional-reference-response.dto.ts",
+    "professional-reference-response/professional-reference-response.service.ts"
+  ],
+  "professional-reference-response/professional-reference-response.module.ts": [
+    "professional-reference-response/entities/professional-reference-response.entity.ts",
+    "professional-reference-response/professional-reference-response.controller.ts",
+    "professional-reference-response/professional-reference-response.service.ts"
+  ],
+  "professional-reference-response/professional-reference-response.service.spec.ts": [
+    "professional-reference-response/entities/professional-reference-response.entity.ts",
+    "professional-reference-response/professional-reference-response.service.ts"
+  ],
+  "professional-reference-response/professional-reference-response.service.ts": [
+    "professional-reference-response/dto/create-professional-reference-response.dto.ts",
+    "professional-reference-response/entities/professional-reference-response.entity.ts"
+  ],
+  "provider-acknowledgement/dto/create-provider-acknowledgement.dto.ts": [],
+  "provider-acknowledgement/dto/update-provider-acknowledgement.dto.ts": [
+    "provider-acknowledgement/dto/create-provider-acknowledgement.dto.ts"
+  ],
+  "provider-acknowledgement/entities/provider-acknowledgement.entity.ts": [
+    "provider-acknowledgement/entities/sub-acknowledgement.entity.ts"
+  ],
+  "provider-acknowledgement/entities/sub-acknowledgement.entity.ts": [
+    "provider-acknowledgement/entities/provider-acknowledgement.entity.ts"
+  ],
+  "provider-acknowledgement/provider-acknowledgement.controller.spec.ts": [
+    "provider-acknowledgement/dto/create-provider-acknowledgement.dto.ts",
+    "provider-acknowledgement/entities/sub-acknowledgement.entity.ts",
+    "provider-acknowledgement/provider-acknowledgement.controller.ts",
+    "provider-acknowledgement/provider-acknowledgement.service.ts"
+  ],
+  "provider-acknowledgement/provider-acknowledgement.controller.ts": [
+    "provider-acknowledgement/dto/create-provider-acknowledgement.dto.ts",
+    "provider-acknowledgement/entities/sub-acknowledgement.entity.ts",
+    "provider-acknowledgement/provider-acknowledgement.service.ts"
+  ],
+  "provider-acknowledgement/provider-acknowledgement.module.ts": [
+    "provider-acknowledgement/entities/provider-acknowledgement.entity.ts",
+    "provider-acknowledgement/entities/sub-acknowledgement.entity.ts",
+    "provider-acknowledgement/provider-acknowledgement.controller.ts",
+    "provider-acknowledgement/provider-acknowledgement.service.ts"
+  ],
+  "provider-acknowledgement/provider-acknowledgement.service.spec.ts": [
+    "provider-acknowledgement/dto/create-provider-acknowledgement.dto.ts",
+    "provider-acknowledgement/entities/provider-acknowledgement.entity.ts",
+    "provider-acknowledgement/entities/sub-acknowledgement.entity.ts",
+    "provider-acknowledgement/provider-acknowledgement.service.ts"
+  ],
+  "provider-acknowledgement/provider-acknowledgement.service.ts": [
+    "provider-acknowledgement/dto/create-provider-acknowledgement.dto.ts",
+    "provider-acknowledgement/entities/provider-acknowledgement.entity.ts",
+    "provider-acknowledgement/entities/sub-acknowledgement.entity.ts"
+  ],
+  "provider-address/dto/create-provider-address.dto.ts": [],
+  "provider-address/dto/update-provider-address.dto.ts": [
+    "provider-address/dto/create-provider-address.dto.ts"
+  ],
+  "provider-address/entities/provider-address.entity.ts": [],
+  "provider-address/provider-address.controller.spec.ts": [
+    "provider-address/entities/provider-address.entity.ts",
+    "provider-address/provider-address.controller.ts",
+    "provider-address/provider-address.service.ts"
+  ],
+  "provider-address/provider-address.controller.ts": [],
+  "provider-address/provider-address.module.ts": [
+    "provider-address/entities/provider-address.entity.ts",
+    "provider-address/provider-address.controller.ts",
+    "provider-address/provider-address.service.ts"
+  ],
+  "provider-address/provider-address.service.spec.ts": [
+    "provider-address/dto/create-provider-address.dto.ts",
+    "provider-address/dto/update-provider-address.dto.ts",
+    "provider-address/entities/provider-address.entity.ts",
+    "provider-address/provider-address.service.ts"
+  ],
+  "provider-address/provider-address.service.ts": [
+    "provider-address/dto/create-provider-address.dto.ts",
+    "provider-address/dto/update-provider-address.dto.ts",
+    "provider-address/entities/provider-address.entity.ts"
+  ],
+  "provider-analytics/entities/provider-analytics.entity.ts": [],
+  "provider-analytics/provider-analytics.controller.spec.ts": [
+    "provider-analytics/provider-analytics.controller.ts",
+    "provider-analytics/provider-analytics.service.ts"
+  ],
+  "provider-analytics/provider-analytics.controller.ts": [],
+  "provider-analytics/provider-analytics.module.ts": [
+    "provider-analytics/provider-analytics.controller.ts",
+    "provider-analytics/provider-analytics.service.ts"
+  ],
+  "provider-analytics/provider-analytics.service.spec.ts": [
+    "provider-analytics/provider-analytics.service.ts"
+  ],
+  "provider-analytics/provider-analytics.service.ts": [],
+  "provider-credentials/dto/create-provider-credential.dto.ts": [],
+  "provider-credentials/dto/filter-provider-credential.dto.ts": [],
+  "provider-credentials/dto/mail-credential.dto.ts": [],
+  "provider-credentials/dto/update-provider-credential.dto.ts": [
+    "provider-credentials/dto/create-provider-credential.dto.ts"
+  ],
+  "provider-credentials/entities/provider-credential.entity.ts": [],
+  "provider-credentials/provider-credentials.controller.spec.ts": [
+    "provider-credentials/dto/create-provider-credential.dto.ts",
+    "provider-credentials/dto/update-provider-credential.dto.ts",
+    "provider-credentials/entities/provider-credential.entity.ts",
+    "provider-credentials/provider-credentials.controller.ts",
+    "provider-credentials/provider-credentials.service.ts"
+  ],
+  "provider-credentials/provider-credentials.controller.ts": [
+    "provider-credentials/dto/create-provider-credential.dto.ts",
+    "provider-credentials/dto/filter-provider-credential.dto.ts",
+    "provider-credentials/dto/mail-credential.dto.ts",
+    "provider-credentials/dto/update-provider-credential.dto.ts",
+    "provider-credentials/provider-credentials.service.ts"
+  ],
+  "provider-credentials/provider-credentials.module.ts": [
+    "provider-credentials/entities/provider-credential.entity.ts",
+    "provider-credentials/provider-credentials.controller.ts",
+    "provider-credentials/provider-credentials.service.ts"
+  ],
+  "provider-credentials/provider-credentials.service.spec.ts": [
+    "provider-credentials/dto/create-provider-credential.dto.ts",
+    "provider-credentials/dto/update-provider-credential.dto.ts",
+    "provider-credentials/entities/provider-credential.entity.ts",
+    "provider-credentials/provider-credentials.service.ts"
+  ],
+  "provider-credentials/provider-credentials.service.ts": [
+    "provider-credentials/dto/create-provider-credential.dto.ts",
+    "provider-credentials/dto/filter-provider-credential.dto.ts",
+    "provider-credentials/dto/update-provider-credential.dto.ts",
+    "provider-credentials/entities/provider-credential.entity.ts"
+  ],
+  "provider-education-history/dto/create-provider-education-history.dto.ts": [],
+  "provider-education-history/dto/update-provider-education-history.dto.ts": [
+    "provider-education-history/dto/create-provider-education-history.dto.ts"
+  ],
+  "provider-education-history/entities/provider-education-history.entity.ts": [],
+  "provider-education-history/provider-education-history.controller.spec.ts": [
+    "provider-education-history/dto/create-provider-education-history.dto.ts",
+    "provider-education-history/dto/update-provider-education-history.dto.ts",
+    "provider-education-history/entities/provider-education-history.entity.ts",
+    "provider-education-history/provider-education-history.controller.ts",
+    "provider-education-history/provider-education-history.service.ts"
+  ],
+  "provider-education-history/provider-education-history.controller.ts": [
+    "provider-education-history/dto/create-provider-education-history.dto.ts",
+    "provider-education-history/dto/update-provider-education-history.dto.ts",
+    "provider-education-history/provider-education-history.service.ts"
+  ],
+  "provider-education-history/provider-education-history.module.ts": [
+    "provider-education-history/entities/provider-education-history.entity.ts",
+    "provider-education-history/provider-education-history.controller.ts",
+    "provider-education-history/provider-education-history.service.ts"
+  ],
+  "provider-education-history/provider-education-history.service.spec.ts": [
+    "provider-education-history/dto/create-provider-education-history.dto.ts",
+    "provider-education-history/dto/update-provider-education-history.dto.ts",
+    "provider-education-history/entities/provider-education-history.entity.ts",
+    "provider-education-history/provider-education-history.service.ts"
+  ],
+  "provider-education-history/provider-education-history.service.ts": [
+    "provider-education-history/dto/create-provider-education-history.dto.ts",
+    "provider-education-history/dto/update-provider-education-history.dto.ts",
+    "provider-education-history/entities/provider-education-history.entity.ts"
+  ],
+  "provider-evaluations/dto/create-provider-evaluation.dto.ts": [
+    "provider-evaluations/entities/provider-evaluation.entity.ts"
+  ],
+  "provider-evaluations/dto/filter.evaluation.dto.ts": [],
+  "provider-evaluations/dto/update-provider-evaluation.dto.ts": [
+    "provider-evaluations/dto/create-provider-evaluation.dto.ts"
+  ],
+  "provider-evaluations/entities/evaluation-response.entity.ts": [
+    "provider-evaluations/entities/provider-evaluation.entity.ts"
+  ],
+  "provider-evaluations/entities/provider-evaluation.entity.ts": [
+    "provider-evaluations/entities/evaluation-response.entity.ts"
+  ],
+  "provider-evaluations/provider-evaluations.controller.spec.ts": [
+    "provider-evaluations/provider-evaluations.controller.ts",
+    "provider-evaluations/provider-evaluations.service.ts"
+  ],
+  "provider-evaluations/provider-evaluations.controller.ts": [
+    "provider-evaluations/dto/create-provider-evaluation.dto.ts",
+    "provider-evaluations/dto/filter.evaluation.dto.ts",
+    "provider-evaluations/dto/update-provider-evaluation.dto.ts",
+    "provider-evaluations/provider-evaluations.service.ts"
+  ],
+  "provider-evaluations/provider-evaluations.module.ts": [
+    "provider-evaluations/entities/evaluation-response.entity.ts",
+    "provider-evaluations/entities/provider-evaluation.entity.ts",
+    "provider-evaluations/provider-evaluations.controller.ts",
+    "provider-evaluations/provider-evaluations.service.ts"
+  ],
+  "provider-evaluations/provider-evaluations.service.spec.ts": [
+    "provider-evaluations/entities/evaluation-response.entity.ts",
+    "provider-evaluations/entities/provider-evaluation.entity.ts",
+    "provider-evaluations/provider-evaluations.service.ts"
+  ],
+  "provider-evaluations/provider-evaluations.service.ts": [
+    "provider-evaluations/dto/create-provider-evaluation.dto.ts",
+    "provider-evaluations/dto/filter.evaluation.dto.ts",
+    "provider-evaluations/dto/update-provider-evaluation.dto.ts",
+    "provider-evaluations/entities/evaluation-response.entity.ts",
+    "provider-evaluations/entities/provider-evaluation.entity.ts"
+  ],
+  "provider-general-setting/dto/create-provider-general-setting.dto.ts": [],
+  "provider-general-setting/dto/create-source.dto.ts": [],
+  "provider-general-setting/dto/update-provider-general-setting.dto.ts": [
+    "provider-general-setting/dto/create-provider-general-setting.dto.ts"
+  ],
+  "provider-general-setting/dto/update-setting.dto.ts": [],
+  "provider-general-setting/entities/provider-general-setting-section.entity.ts": [
+    "provider-general-setting/entities/provider-general-setting-sub-section.entity.ts",
+    "provider-general-setting/entities/provider-general-setting.entity.ts"
+  ],
+  "provider-general-setting/entities/provider-general-setting-sub-section.entity.ts": [
+    "provider-general-setting/entities/provider-general-setting-section.entity.ts"
+  ],
+  "provider-general-setting/entities/provider-general-setting.entity.ts": [
+    "provider-general-setting/entities/provider-general-setting-section.entity.ts"
+  ],
+  "provider-general-setting/provider-general-setting.controller.spec.ts": [
+    "provider-general-setting/dto/create-source.dto.ts",
+    "provider-general-setting/dto/update-setting.dto.ts",
+    "provider-general-setting/entities/provider-general-setting-section.entity.ts",
+    "provider-general-setting/entities/provider-general-setting-sub-section.entity.ts",
+    "provider-general-setting/entities/provider-general-setting.entity.ts",
+    "provider-general-setting/provider-general-setting.controller.ts",
+    "provider-general-setting/provider-general-setting.service.ts"
+  ],
+  "provider-general-setting/provider-general-setting.controller.ts": [
+    "provider-general-setting/dto/create-source.dto.ts",
+    "provider-general-setting/dto/update-setting.dto.ts",
+    "provider-general-setting/provider-general-setting.service.ts"
+  ],
+  "provider-general-setting/provider-general-setting.module.ts": [
+    "provider-general-setting/entities/provider-general-setting-section.entity.ts",
+    "provider-general-setting/entities/provider-general-setting-sub-section.entity.ts",
+    "provider-general-setting/provider-general-setting.controller.ts",
+    "provider-general-setting/provider-general-setting.service.ts"
+  ],
+  "provider-general-setting/provider-general-setting.service.spec.ts": [
+    "provider-general-setting/dto/create-source.dto.ts",
+    "provider-general-setting/dto/update-setting.dto.ts",
+    "provider-general-setting/entities/provider-general-setting-section.entity.ts",
+    "provider-general-setting/entities/provider-general-setting-sub-section.entity.ts",
+    "provider-general-setting/provider-general-setting.service.ts"
+  ],
+  "provider-general-setting/provider-general-setting.service.ts": [
+    "provider-general-setting/dto/create-source.dto.ts",
+    "provider-general-setting/dto/update-setting.dto.ts",
+    "provider-general-setting/entities/provider-general-setting-section.entity.ts",
+    "provider-general-setting/entities/provider-general-setting-sub-section.entity.ts"
+  ],
+  "provider-orientation/dto/create-provider-orientation.dto.ts": [],
+  "provider-orientation/dto/filter-provider-orientation.dto.ts": [],
+  "provider-orientation/dto/orientation-action.dto.ts": [],
+  "provider-orientation/dto/update-provider-orientation.dto.ts": [
+    "provider-orientation/dto/create-provider-orientation.dto.ts"
+  ],
+  "provider-orientation/entities/provider-orientation.entity.ts": [],
+  "provider-orientation/provider-orientation.controller.spec.ts": [
+    "documents/entities/documents.entity.ts",
+    "provider-orientation/entities/provider-orientation.entity.ts",
+    "provider-orientation/provider-orientation.controller.ts",
+    "provider-orientation/provider-orientation.service.ts"
+  ],
+  "provider-orientation/provider-orientation.controller.ts": [
+    "provider-orientation/dto/create-provider-orientation.dto.ts",
+    "provider-orientation/dto/filter-provider-orientation.dto.ts",
+    "provider-orientation/dto/orientation-action.dto.ts",
+    "provider-orientation/entities/provider-orientation.entity.ts",
+    "provider-orientation/provider-orientation.service.ts"
+  ],
+  "provider-orientation/provider-orientation.module.ts": [
+    "documents/entities/documents.entity.ts",
+    "provider-orientation/entities/provider-orientation.entity.ts",
+    "provider-orientation/provider-orientation.controller.ts",
+    "provider-orientation/provider-orientation.service.ts"
+  ],
+  "provider-orientation/provider-orientation.service.spec.ts": [
+    "documents/entities/documents.entity.ts",
+    "provider-orientation/entities/provider-orientation.entity.ts",
+    "provider-orientation/provider-orientation.service.ts"
+  ],
+  "provider-orientation/provider-orientation.service.ts": [
+    "documents/entities/documents.entity.ts",
+    "provider-orientation/dto/create-provider-orientation.dto.ts",
+    "provider-orientation/dto/filter-provider-orientation.dto.ts",
+    "provider-orientation/entities/provider-orientation.entity.ts"
+  ],
+  "provider-professional-reference/dto/create-provider-professional-reference.dto.ts": [],
+  "provider-professional-reference/dto/update-provider-professional-reference.dto.ts": [
+    "provider-professional-reference/dto/create-provider-professional-reference.dto.ts"
+  ],
+  "provider-professional-reference/entities/provider-professional-reference.entity.ts": [],
+  "provider-professional-reference/provider-professional-reference.controller.spec.ts": [
+    "provider-professional-reference/dto/create-provider-professional-reference.dto.ts",
+    "provider-professional-reference/dto/update-provider-professional-reference.dto.ts",
+    "provider-professional-reference/entities/provider-professional-reference.entity.ts",
+    "provider-professional-reference/provider-professional-reference.controller.ts",
+    "provider-professional-reference/provider-professional-reference.service.ts"
+  ],
+  "provider-professional-reference/provider-professional-reference.controller.ts": [
+    "provider-professional-reference/dto/create-provider-professional-reference.dto.ts",
+    "provider-professional-reference/dto/update-provider-professional-reference.dto.ts",
+    "provider-professional-reference/entities/provider-professional-reference.entity.ts",
+    "provider-professional-reference/provider-professional-reference.service.ts"
+  ],
+  "provider-professional-reference/provider-professional-reference.module.ts": [
+    "provider-professional-reference/entities/provider-professional-reference.entity.ts",
+    "provider-professional-reference/provider-professional-reference.controller.ts",
+    "provider-professional-reference/provider-professional-reference.service.ts"
+  ],
+  "provider-professional-reference/provider-professional-reference.service.spec.ts": [
+    "provider-professional-reference/dto/create-provider-professional-reference.dto.ts",
+    "provider-professional-reference/dto/update-provider-professional-reference.dto.ts",
+    "provider-professional-reference/entities/provider-professional-reference.entity.ts",
+    "provider-professional-reference/provider-professional-reference.service.ts"
+  ],
+  "provider-professional-reference/provider-professional-reference.service.ts": [
+    "provider-professional-reference/dto/create-provider-professional-reference.dto.ts",
+    "provider-professional-reference/dto/update-provider-professional-reference.dto.ts",
+    "provider-professional-reference/entities/provider-professional-reference.entity.ts"
+  ],
+  "provider-profile-setting/dto/create-provider-profile-setting.dto.ts": [],
+  "provider-profile-setting/dto/update-provider-profile-setting.dto.ts": [
+    "provider-profile-setting/dto/create-provider-profile-setting.dto.ts"
+  ],
+  "provider-profile-setting/dto/update-setting.dto.ts": [],
+  "provider-profile-setting/entities/provider-profile-setting-section.entity.ts": [
+    "provider-profile-setting/entities/provider-profile-setting-sub-section.entity.ts",
+    "provider-profile-setting/entities/provider-profile-setting.entity.ts"
+  ],
+  "provider-profile-setting/entities/provider-profile-setting-sub-section.entity.ts": [
+    "provider-profile-setting/entities/provider-profile-setting-section.entity.ts"
+  ],
+  "provider-profile-setting/entities/provider-profile-setting.entity.ts": [
+    "provider-profile-setting/entities/provider-profile-setting-section.entity.ts"
+  ],
+  "provider-profile-setting/provider-profile-setting.controller.spec.ts": [
+    "provider-profile-setting/dto/update-setting.dto.ts",
+    "provider-profile-setting/entities/provider-profile-setting.entity.ts",
+    "provider-profile-setting/provider-profile-setting.controller.ts",
+    "provider-profile-setting/provider-profile-setting.service.ts"
+  ],
+  "provider-profile-setting/provider-profile-setting.controller.ts": [
+    "provider-profile-setting/dto/update-setting.dto.ts",
+    "provider-profile-setting/provider-profile-setting.service.ts"
+  ],
+  "provider-profile-setting/provider-profile-setting.module.ts": [
+    "provider-profile-setting/entities/provider-profile-setting-sub-section.entity.ts",
+    "provider-profile-setting/entities/provider-profile-setting.entity.ts",
+    "provider-profile-setting/provider-profile-setting.controller.ts",
+    "provider-profile-setting/provider-profile-setting.service.ts"
+  ],
+  "provider-profile-setting/provider-profile-setting.service.spec.ts": [
+    "provider-profile-setting/dto/update-setting.dto.ts",
+    "provider-profile-setting/entities/provider-profile-setting-sub-section.entity.ts",
+    "provider-profile-setting/entities/provider-profile-setting.entity.ts",
+    "provider-profile-setting/provider-profile-setting.service.ts"
+  ],
+  "provider-profile-setting/provider-profile-setting.service.ts": [
+    "provider-profile-setting/dto/update-setting.dto.ts",
+    "provider-profile-setting/entities/provider-profile-setting-sub-section.entity.ts",
+    "provider-profile-setting/entities/provider-profile-setting.entity.ts"
+  ],
+  "provider-reject-reason/dto/create-provider-reject-reason.dto.ts": [],
+  "provider-reject-reason/dto/update-provider-reject-reason.dto.ts": [
+    "provider-reject-reason/dto/create-provider-reject-reason.dto.ts"
+  ],
+  "provider-reject-reason/entities/provider-reject-reason.entity.ts": [],
+  "provider-reject-reason/provider-reject-reason.controller.spec.ts": [
+    "provider-reject-reason/dto/create-provider-reject-reason.dto.ts",
+    "provider-reject-reason/dto/update-provider-reject-reason.dto.ts",
+    "provider-reject-reason/entities/provider-reject-reason.entity.ts",
+    "provider-reject-reason/provider-reject-reason.controller.ts",
+    "provider-reject-reason/provider-reject-reason.service.ts"
+  ],
+  "provider-reject-reason/provider-reject-reason.controller.ts": [
+    "provider-reject-reason/dto/create-provider-reject-reason.dto.ts",
+    "provider-reject-reason/dto/update-provider-reject-reason.dto.ts",
+    "provider-reject-reason/provider-reject-reason.service.ts"
+  ],
+  "provider-reject-reason/provider-reject-reason.module.ts": [
+    "provider-reject-reason/entities/provider-reject-reason.entity.ts",
+    "provider-reject-reason/provider-reject-reason.controller.ts",
+    "provider-reject-reason/provider-reject-reason.service.ts"
+  ],
+  "provider-reject-reason/provider-reject-reason.service.spec.ts": [
+    "provider-reject-reason/dto/create-provider-reject-reason.dto.ts",
+    "provider-reject-reason/dto/update-provider-reject-reason.dto.ts",
+    "provider-reject-reason/entities/provider-reject-reason.entity.ts",
+    "provider-reject-reason/provider-reject-reason.service.ts"
+  ],
+  "provider-reject-reason/provider-reject-reason.service.ts": [
+    "provider-reject-reason/dto/create-provider-reject-reason.dto.ts",
+    "provider-reject-reason/dto/update-provider-reject-reason.dto.ts",
+    "provider-reject-reason/entities/provider-reject-reason.entity.ts"
+  ],
+  "provider-saved-facility/dto/create-provider-saved-facility.dto.ts": [],
+  "provider-saved-facility/dto/update-provider-saved-facility.dto.ts": [
+    "provider-saved-facility/dto/create-provider-saved-facility.dto.ts"
+  ],
+  "provider-saved-facility/entities/provider-saved-facility.entity.ts": [],
+  "provider-saved-facility/provider-saved-facility.controller.spec.ts": [
+    "provider-saved-facility/dto/create-provider-saved-facility.dto.ts",
+    "provider-saved-facility/entities/provider-saved-facility.entity.ts",
+    "provider-saved-facility/provider-saved-facility.controller.ts",
+    "provider-saved-facility/provider-saved-facility.service.ts"
+  ],
+  "provider-saved-facility/provider-saved-facility.controller.ts": [
+    "provider-saved-facility/dto/create-provider-saved-facility.dto.ts",
+    "provider-saved-facility/provider-saved-facility.service.ts"
+  ],
+  "provider-saved-facility/provider-saved-facility.module.ts": [
+    "provider-saved-facility/entities/provider-saved-facility.entity.ts",
+    "provider-saved-facility/provider-saved-facility.controller.ts",
+    "provider-saved-facility/provider-saved-facility.service.ts"
+  ],
+  "provider-saved-facility/provider-saved-facility.service.spec.ts": [
+    "provider-saved-facility/dto/create-provider-saved-facility.dto.ts",
+    "provider-saved-facility/entities/provider-saved-facility.entity.ts",
+    "provider-saved-facility/provider-saved-facility.service.ts"
+  ],
+  "provider-saved-facility/provider-saved-facility.service.ts": [
+    "provider-saved-facility/dto/create-provider-saved-facility.dto.ts",
+    "provider-saved-facility/entities/provider-saved-facility.entity.ts"
+  ],
+  "provider-work-history/dto/create-provider-work-history.dto.ts": [],
+  "provider-work-history/dto/update-provider-work-history.dto.ts": [
+    "provider-work-history/dto/create-provider-work-history.dto.ts"
+  ],
+  "provider-work-history/entities/provider-work-history.entity.ts": [],
+  "provider-work-history/provider-work-history.controller.spec.ts": [
+    "provider-work-history/dto/create-provider-work-history.dto.ts",
+    "provider-work-history/dto/update-provider-work-history.dto.ts",
+    "provider-work-history/entities/provider-work-history.entity.ts",
+    "provider-work-history/provider-work-history.controller.ts",
+    "provider-work-history/provider-work-history.service.ts"
+  ],
+  "provider-work-history/provider-work-history.controller.ts": [
+    "provider-work-history/dto/create-provider-work-history.dto.ts",
+    "provider-work-history/dto/update-provider-work-history.dto.ts",
+    "provider-work-history/provider-work-history.service.ts"
+  ],
+  "provider-work-history/provider-work-history.module.ts": [
+    "provider-work-history/entities/provider-work-history.entity.ts",
+    "provider-work-history/provider-work-history.controller.ts",
+    "provider-work-history/provider-work-history.service.ts"
+  ],
+  "provider-work-history/provider-work-history.service.spec.ts": [
+    "provider-work-history/dto/create-provider-work-history.dto.ts",
+    "provider-work-history/dto/update-provider-work-history.dto.ts",
+    "provider-work-history/entities/provider-work-history.entity.ts",
+    "provider-work-history/provider-work-history.service.ts"
+  ],
+  "provider-work-history/provider-work-history.service.ts": [
+    "provider-work-history/dto/create-provider-work-history.dto.ts",
+    "provider-work-history/dto/update-provider-work-history.dto.ts",
+    "provider-work-history/entities/provider-work-history.entity.ts"
+  ],
+  "provider/dto/add-provider-data.dto.ts": [],
+  "provider/dto/create-provider.dto.ts": [],
+  "provider/dto/edit-provider.dto.ts": [],
+  "provider/dto/filter-provider-list.dto.ts": [],
+  "provider/dto/location-map.dto.ts": [],
+  "provider/dto/provider-availability.dto.ts": [
+    "provider/dto/update-preference-setting.dto.ts"
+  ],
+  "provider/dto/provider-signature.dto.ts": [],
+  "provider/dto/update-preference-setting.dto.ts": [
+    "provider/dto/provider-availability.dto.ts"
+  ],
+  "provider/dto/update-provider-notification-setting.ts": [],
+  "provider/dto/update-provider.dto.ts": [
+    "provider/dto/edit-provider.dto.ts"
+  ],
+  "provider/entities/provider-availability.entity.ts": [
+    "provider/entities/provider.entity.ts"
+  ],
+  "provider/entities/provider.entity.ts": [],
+  "provider/entities/time-label-setting.entity.ts": [],
+  "provider/provider.controller.spec.ts": [
+    "provider/dto/add-provider-data.dto.ts",
+    "provider/dto/edit-provider.dto.ts",
+    "provider/dto/filter-provider-list.dto.ts",
+    "provider/dto/provider-signature.dto.ts",
+    "provider/dto/update-preference-setting.dto.ts",
+    "provider/entities/provider.entity.ts",
+    "provider/provider.controller.ts",
+    "provider/provider.service.ts"
+  ],
+  "provider/provider.controller.ts": [
+    "provider/dto/add-provider-data.dto.ts",
+    "provider/dto/edit-provider.dto.ts",
+    "provider/dto/filter-provider-list.dto.ts",
+    "provider/dto/location-map.dto.ts",
+    "provider/dto/provider-signature.dto.ts",
+    "provider/dto/update-preference-setting.dto.ts",
+    "provider/dto/update-provider-notification-setting.ts",
+    "provider/dto/update-provider.dto.ts",
+    "provider/provider.service.ts"
+  ],
+  "provider/provider.module.ts": [
+    "provider/entities/provider-availability.entity.ts",
+    "provider/entities/provider.entity.ts",
+    "provider/entities/time-label-setting.entity.ts",
+    "provider/provider.controller.ts",
+    "provider/provider.service.ts"
+  ],
+  "provider/provider.service.spec.ts": [
+    "provider/dto/add-provider-data.dto.ts",
+    "provider/dto/create-provider.dto.ts",
+    "provider/dto/edit-provider.dto.ts",
+    "provider/dto/update-provider.dto.ts",
+    "provider/entities/provider-availability.entity.ts",
+    "provider/entities/provider.entity.ts",
+    "provider/entities/time-label-setting.entity.ts",
+    "provider/provider.service.ts"
+  ],
+  "provider/provider.service.ts": [
+    "provider/dto/add-provider-data.dto.ts",
+    "provider/dto/create-provider.dto.ts",
+    "provider/dto/edit-provider.dto.ts",
+    "provider/dto/filter-provider-list.dto.ts",
+    "provider/dto/location-map.dto.ts",
+    "provider/dto/provider-availability.dto.ts",
+    "provider/dto/provider-signature.dto.ts",
+    "provider/dto/update-provider-notification-setting.ts",
+    "provider/dto/update-provider.dto.ts",
+    "provider/entities/provider-availability.entity.ts",
+    "provider/entities/provider.entity.ts",
+    "provider/entities/time-label-setting.entity.ts"
+  ],
+  "rate-groups/dto/create-rate-group.dto.ts": [],
+  "rate-groups/dto/update-rate-group.dto.ts": [
+    "rate-groups/dto/create-rate-group.dto.ts"
+  ],
+  "rate-groups/entities/rate-group.entity.ts": [
+    "rate-groups/entities/rate-sheet.entity.ts"
+  ],
+  "rate-groups/entities/rate-sheet.entity.ts": [
+    "rate-groups/entities/rate-group.entity.ts"
+  ],
+  "rate-groups/rate-groups.controller.spec.ts": [
+    "rate-groups/rate-groups.controller.ts",
+    "rate-groups/rate-groups.service.ts"
+  ],
+  "rate-groups/rate-groups.controller.ts": [
+    "rate-groups/dto/create-rate-group.dto.ts",
+    "rate-groups/rate-groups.service.ts"
+  ],
+  "rate-groups/rate-groups.module.ts": [
+    "rate-groups/entities/rate-group.entity.ts",
+    "rate-groups/entities/rate-sheet.entity.ts",
+    "rate-groups/rate-groups.controller.ts",
+    "rate-groups/rate-groups.service.ts"
+  ],
+  "rate-groups/rate-groups.service.spec.ts": [
+    "rate-groups/entities/rate-group.entity.ts",
+    "rate-groups/entities/rate-sheet.entity.ts",
+    "rate-groups/rate-groups.service.ts"
+  ],
+  "rate-groups/rate-groups.service.ts": [
+    "rate-groups/dto/create-rate-group.dto.ts",
+    "rate-groups/dto/update-rate-group.dto.ts",
+    "rate-groups/entities/rate-group.entity.ts",
+    "rate-groups/entities/rate-sheet.entity.ts"
+  ],
+  "refer-facility/dto/create-refer-facility.dto.ts": [],
+  "refer-facility/dto/update-refer-facility.dto.ts": [
+    "refer-facility/dto/create-refer-facility.dto.ts"
+  ],
+  "refer-facility/entities/refer-facility.entity.ts": [],
+  "refer-facility/refer-facility.controller.spec.ts": [
+    "refer-facility/dto/create-refer-facility.dto.ts",
+    "refer-facility/entities/refer-facility.entity.ts",
+    "refer-facility/refer-facility.controller.ts",
+    "refer-facility/refer-facility.service.ts"
+  ],
+  "refer-facility/refer-facility.controller.ts": [
+    "refer-facility/dto/create-refer-facility.dto.ts",
+    "refer-facility/refer-facility.service.ts"
+  ],
+  "refer-facility/refer-facility.module.ts": [
+    "refer-facility/entities/refer-facility.entity.ts",
+    "refer-facility/refer-facility.controller.ts",
+    "refer-facility/refer-facility.service.ts"
+  ],
+  "refer-facility/refer-facility.service.spec.ts": [
+    "refer-facility/dto/create-refer-facility.dto.ts",
+    "refer-facility/entities/refer-facility.entity.ts",
+    "refer-facility/refer-facility.service.ts"
+  ],
+  "refer-facility/refer-facility.service.ts": [
+    "refer-facility/dto/create-refer-facility.dto.ts",
+    "refer-facility/entities/refer-facility.entity.ts"
+  ],
+  "refer-friend/dto/create-refer-friend.dto.ts": [],
+  "refer-friend/dto/refer-friend.dto.ts": [],
+  "refer-friend/dto/update-refer-friend.dto.ts": [
+    "refer-friend/dto/create-refer-friend.dto.ts"
+  ],
+  "refer-friend/entities/refer-friend.entity.ts": [],
+  "refer-friend/refer-friend.controller.spec.ts": [
+    "refer-friend/entities/refer-friend.entity.ts",
+    "refer-friend/refer-friend.controller.ts",
+    "refer-friend/refer-friend.service.ts"
+  ],
+  "refer-friend/refer-friend.controller.ts": [
+    "refer-friend/dto/create-refer-friend.dto.ts",
+    "refer-friend/dto/refer-friend.dto.ts",
+    "refer-friend/refer-friend.service.ts"
+  ],
+  "refer-friend/refer-friend.module.ts": [
+    "refer-friend/entities/refer-friend.entity.ts",
+    "refer-friend/refer-friend.controller.ts",
+    "refer-friend/refer-friend.service.ts"
+  ],
+  "refer-friend/refer-friend.service.spec.ts": [
+    "refer-friend/entities/refer-friend.entity.ts",
+    "refer-friend/refer-friend.service.ts"
+  ],
+  "refer-friend/refer-friend.service.ts": [
+    "refer-friend/dto/create-refer-friend.dto.ts",
+    "refer-friend/dto/refer-friend.dto.ts",
+    "refer-friend/entities/refer-friend.entity.ts"
+  ],
+  "reference-form-design/dto/create-reference-form-design.dto.ts": [],
+  "reference-form-design/dto/update-reference-form-design.dto.ts": [],
+  "reference-form-design/entities/reference-form-design.entity.ts": [
+    "reference-form-design/entities/reference-form.entity.ts"
+  ],
+  "reference-form-design/entities/reference-form.entity.ts": [
+    "reference-form-design/entities/reference-form-design.entity.ts"
+  ],
+  "reference-form-design/reference-form-design.controller.spec.ts": [
+    "reference-form-design/dto/create-reference-form-design.dto.ts",
+    "reference-form-design/dto/update-reference-form-design.dto.ts",
+    "reference-form-design/entities/reference-form-design.entity.ts",
+    "reference-form-design/entities/reference-form.entity.ts",
+    "reference-form-design/reference-form-design.controller.ts",
+    "reference-form-design/reference-form-design.service.ts"
+  ],
+  "reference-form-design/reference-form-design.controller.ts": [
+    "reference-form-design/dto/create-reference-form-design.dto.ts",
+    "reference-form-design/dto/update-reference-form-design.dto.ts",
+    "reference-form-design/reference-form-design.service.ts"
+  ],
+  "reference-form-design/reference-form-design.module.ts": [
+    "reference-form-design/entities/reference-form-design.entity.ts",
+    "reference-form-design/entities/reference-form.entity.ts",
+    "reference-form-design/reference-form-design.controller.ts",
+    "reference-form-design/reference-form-design.service.ts"
+  ],
+  "reference-form-design/reference-form-design.service.spec.ts": [
+    "reference-form-design/dto/create-reference-form-design.dto.ts",
+    "reference-form-design/dto/update-reference-form-design.dto.ts",
+    "reference-form-design/entities/reference-form-design.entity.ts",
+    "reference-form-design/entities/reference-form.entity.ts",
+    "reference-form-design/reference-form-design.service.ts"
+  ],
+  "reference-form-design/reference-form-design.service.ts": [
+    "reference-form-design/dto/create-reference-form-design.dto.ts",
+    "reference-form-design/dto/update-reference-form-design.dto.ts",
+    "reference-form-design/entities/reference-form-design.entity.ts",
+    "reference-form-design/entities/reference-form.entity.ts"
+  ],
+  "reference-form-global-setting/dto/create-reference-form-global-setting.dto.ts": [],
+  "reference-form-global-setting/dto/update-reference-form-global-setting.dto.ts": [
+    "reference-form-global-setting/dto/create-reference-form-global-setting.dto.ts"
+  ],
+  "reference-form-global-setting/entities/reference-form-global-setting.entity.ts": [],
+  "reference-form-global-setting/reference-form-global-setting.controller.spec.ts": [
+    "reference-form-global-setting/reference-form-global-setting.controller.ts",
+    "reference-form-global-setting/reference-form-global-setting.service.ts"
+  ],
+  "reference-form-global-setting/reference-form-global-setting.controller.ts": [
+    "reference-form-global-setting/dto/create-reference-form-global-setting.dto.ts",
+    "reference-form-global-setting/dto/update-reference-form-global-setting.dto.ts",
+    "reference-form-global-setting/reference-form-global-setting.service.ts"
+  ],
+  "reference-form-global-setting/reference-form-global-setting.module.ts": [
+    "reference-form-global-setting/entities/reference-form-global-setting.entity.ts",
+    "reference-form-global-setting/reference-form-global-setting.controller.ts",
+    "reference-form-global-setting/reference-form-global-setting.service.ts"
+  ],
+  "reference-form-global-setting/reference-form-global-setting.service.spec.ts": [
+    "reference-form-global-setting/entities/reference-form-global-setting.entity.ts",
+    "reference-form-global-setting/reference-form-global-setting.service.ts"
+  ],
+  "reference-form-global-setting/reference-form-global-setting.service.ts": [
+    "reference-form-global-setting/dto/create-reference-form-global-setting.dto.ts",
+    "reference-form-global-setting/dto/update-reference-form-global-setting.dto.ts",
+    "reference-form-global-setting/entities/reference-form-global-setting.entity.ts"
+  ],
+  "reference-form-option/dto/create-reference-form-option.dto.ts": [],
+  "reference-form-option/dto/update-reference-form-option.dto.ts": [
+    "reference-form-option/dto/create-reference-form-option.dto.ts"
+  ],
+  "reference-form-option/entities/reference-form-option.entity.ts": [],
+  "reference-form-option/reference-form-option.controller.spec.ts": [
+    "reference-form-option/reference-form-option.controller.ts",
+    "reference-form-option/reference-form-option.service.ts"
+  ],
+  "reference-form-option/reference-form-option.controller.ts": [],
+  "reference-form-option/reference-form-option.module.ts": [
+    "reference-form-option/reference-form-option.controller.ts",
+    "reference-form-option/reference-form-option.service.ts"
+  ],
+  "reference-form-option/reference-form-option.service.spec.ts": [
+    "reference-form-option/reference-form-option.service.ts"
+  ],
+  "reference-form-option/reference-form-option.service.ts": [],
+  "reports/dto/filter-report.dto.ts": [],
+  "reports/entities/report.entity.ts": [],
+  "reports/reports.controller.spec.ts": [
+    "reports/reports.controller.ts",
+    "reports/reports.service.ts"
+  ],
+  "reports/reports.controller.ts": [
+    "reports/dto/filter-report.dto.ts",
+    "reports/reports.service.ts"
+  ],
+  "reports/reports.module.ts": [
+    "reports/reports.controller.ts",
+    "reports/reports.service.ts"
+  ],
+  "reports/reports.service.spec.ts": [
+    "reports/reports.service.ts"
+  ],
+  "reports/reports.service.ts": [
+    "reports/dto/filter-report.dto.ts"
+  ],
+  "role-section-permission/dto/create-role-section-permission.dto.ts": [],
+  "role-section-permission/dto/update-role-section-permission.dto.ts": [
+    "role-section-permission/dto/create-role-section-permission.dto.ts"
+  ],
+  "role-section-permission/entities/role-section-permission.entity.ts": [],
+  "role-section-permission/role-section-permission.controller.spec.ts": [
+    "role-section-permission/entities/role-section-permission.entity.ts",
+    "role-section-permission/role-section-permission.controller.ts",
+    "role-section-permission/role-section-permission.service.ts"
+  ],
+  "role-section-permission/role-section-permission.controller.ts": [
+    "role-section-permission/role-section-permission.service.ts"
+  ],
+  "role-section-permission/role-section-permission.module.ts": [
+    "role-section-permission/entities/role-section-permission.entity.ts",
+    "role-section-permission/role-section-permission.controller.ts",
+    "role-section-permission/role-section-permission.service.ts"
+  ],
+  "role-section-permission/role-section-permission.service.spec.ts": [
+    "role-section-permission/entities/role-section-permission.entity.ts",
+    "role-section-permission/role-section-permission.service.ts"
+  ],
+  "role-section-permission/role-section-permission.service.ts": [
+    "role-section-permission/entities/role-section-permission.entity.ts"
+  ],
+  "role/dto/create-role.dto.ts": [],
+  "role/dto/update-role.dto.ts": [
+    "role/dto/create-role.dto.ts"
+  ],
+  "role/entities/role.entity.ts": [],
+  "role/role.controller.spec.ts": [
+    "role/dto/create-role.dto.ts",
+    "role/dto/update-role.dto.ts",
+    "role/entities/role.entity.ts",
+    "role/role.controller.ts",
+    "role/role.service.ts"
+  ],
+  "role/role.controller.ts": [
+    "role/dto/create-role.dto.ts",
+    "role/dto/update-role.dto.ts",
+    "role/role.service.ts"
+  ],
+  "role/role.module.ts": [
+    "role/entities/role.entity.ts",
+    "role/role.controller.ts",
+    "role/role.service.ts"
+  ],
+  "role/role.service.spec.ts": [
+    "role/dto/create-role.dto.ts",
+    "role/dto/update-role.dto.ts",
+    "role/entities/role.entity.ts",
+    "role/role.service.ts"
+  ],
+  "role/role.service.ts": [
+    "role/dto/create-role.dto.ts",
+    "role/dto/update-role.dto.ts",
+    "role/entities/role.entity.ts"
+  ],
+  "room/dto/create-room.dto.ts": [],
+  "room/dto/update-room.dto.ts": [
+    "room/dto/create-room.dto.ts"
+  ],
+  "room/entities/room.entity.ts": [],
+  "room/room.controller.ts": [
+    "room/dto/create-room.dto.ts",
+    "room/room.service.ts"
+  ],
+  "room/room.module.ts": [
+    "room/entities/room.entity.ts",
+    "room/room.controller.ts",
+    "room/room.service.ts"
+  ],
+  "room/room.service.ts": [
+    "room/dto/create-room.dto.ts",
+    "room/entities/room.entity.ts"
+  ],
+  "schedule-request-settings/dto/create-schedule-request-setting.dto.ts": [],
+  "schedule-request-settings/dto/update-schedule-request-setting.dto.ts": [],
+  "schedule-request-settings/entities/schedule-request-setting.entity.ts": [],
+  "schedule-request-settings/schedule-request-settings.controller.spec.ts": [
+    "schedule-request-settings/dto/update-schedule-request-setting.dto.ts",
+    "schedule-request-settings/entities/schedule-request-setting.entity.ts",
+    "schedule-request-settings/schedule-request-settings.controller.ts",
+    "schedule-request-settings/schedule-request-settings.service.ts"
+  ],
+  "schedule-request-settings/schedule-request-settings.controller.ts": [
+    "schedule-request-settings/dto/update-schedule-request-setting.dto.ts",
+    "schedule-request-settings/schedule-request-settings.service.ts"
+  ],
+  "schedule-request-settings/schedule-request-settings.module.ts": [
+    "schedule-request-settings/entities/schedule-request-setting.entity.ts",
+    "schedule-request-settings/schedule-request-settings.controller.ts",
+    "schedule-request-settings/schedule-request-settings.service.ts"
+  ],
+  "schedule-request-settings/schedule-request-settings.service.spec.ts": [
+    "schedule-request-settings/dto/update-schedule-request-setting.dto.ts",
+    "schedule-request-settings/entities/schedule-request-setting.entity.ts",
+    "schedule-request-settings/schedule-request-settings.service.ts"
+  ],
+  "schedule-request-settings/schedule-request-settings.service.ts": [
+    "schedule-request-settings/dto/update-schedule-request-setting.dto.ts",
+    "schedule-request-settings/entities/schedule-request-setting.entity.ts"
+  ],
+  "scheduler/scheduler.module.ts": [
+    "scheduler/scheduler.service.ts"
+  ],
+  "scheduler/scheduler.service.spec.ts": [
+    "scheduler/scheduler.service.ts"
+  ],
+  "scheduler/scheduler.service.ts": [],
+  "section/dto/create-section.dto.ts": [],
+  "section/dto/update-section.dto.ts": [
+    "section/dto/create-section.dto.ts"
+  ],
+  "section/entities/section.entity.ts": [],
+  "section/section.controller.spec.ts": [
+    "section/entities/section.entity.ts",
+    "section/section.controller.ts",
+    "section/section.service.ts"
+  ],
+  "section/section.controller.ts": [
+    "section/section.service.ts"
+  ],
+  "section/section.module.ts": [
+    "section/entities/section.entity.ts",
+    "section/section.controller.ts",
+    "section/section.service.ts"
+  ],
+  "section/section.service.spec.ts": [
+    "section/entities/section.entity.ts",
+    "section/section.service.ts"
+  ],
+  "section/section.service.ts": [
+    "section/entities/section.entity.ts"
+  ],
+  "shared/constants/constant.ts": [
+    "shared/constants/enum.ts"
+  ],
+  "shared/constants/default-column-preference.ts": [],
+  "shared/constants/enum.ts": [],
+  "shared/constants/message.ts": [],
+  "shared/constants/types.ts": [
+    "shared/constants/enum.ts"
+  ],
+  "shared/decorator/access-control.decorator.ts": [
+    "shared/constants/enum.ts"
+  ],
+  "shared/decorator/is-after-date.decorator.ts": [],
+  "shared/decorator/is-after-time.decorator.ts": [],
+  "shared/decorator/is-before-date.decorator.ts": [],
+  "shared/decorator/is-before-time.decorator.ts": [],
+  "shared/decorator/role.decorator.ts": [],
+  "shared/dto/delete.dto.ts": [],
+  "shared/dto/query-params.dto.ts": [
+    "shared/constants/constant.ts",
+    "shared/constants/enum.ts",
+    "shared/constants/types.ts"
+  ],
+  "shared/entity/base.entity.ts": [],
+  "shared/guard/access-control.guard.ts": [
+    "shared/constants/enum.ts"
+  ],
+  "shared/guard/role.guard.ts": [
+    "shared/constants/message.ts"
+  ],
+  "shared/guard/verify-firebase-token.guard.ts": [
+    "shared/constants/message.ts"
+  ],
+  "shared/guard/verify-static-token.guard.ts": [
+    "shared/constants/message.ts"
+  ],
+  "shared/helpers/ai-service.ts": [
+    "shared/helpers/logger.ts"
+  ],
+  "shared/helpers/auto-scheduling.ts": [
+    "shared/constants/enum.ts",
+    "shared/constants/message.ts",
+    "shared/constants/types.ts",
+    "shared/helpers/firebase-notification.ts",
+    "shared/helpers/logger.ts",
+    "shared/helpers/send-email-helper.ts"
+  ],
+  "shared/helpers/credential-rule.ts": [
+    "shared/constants/constant.ts"
+  ],
+  "shared/helpers/distance-matrix.ts": [
+    "shared/helpers/logger.ts"
+  ],
+  "shared/helpers/encrypt-decrypt.ts": [],
+  "shared/helpers/firebase-notification.ts": [
+    "shared/constants/enum.ts",
+    "shared/constants/types.ts",
+    "shared/helpers/logger.ts"
+  ],
+  "shared/helpers/firebase-service.ts": [],
+  "shared/helpers/generate-otp.ts": [],
+  "shared/helpers/generate-token.ts": [
+    "shared/constants/types.ts"
+  ],
+  "shared/helpers/get-default-images.ts": [
+    "shared/constants/enum.ts"
+  ],
+  "shared/helpers/get-ip.ts": [],
+  "shared/helpers/get-updated-fields.ts": [],
+  "shared/helpers/logger.ts": [],
+  "shared/helpers/parse-search-keyword.ts": [],
+  "shared/helpers/pdf-service.ts": [],
+  "shared/helpers/response-interceptor.ts": [
+    "shared/constants/message.ts"
+  ],
+  "shared/helpers/s3-delete-file.ts": [],
+  "shared/helpers/s3-get-file.ts": [],
+  "shared/helpers/s3-upload-file.ts": [],
+  "shared/helpers/send-email-helper.ts": [
+    "shared/constants/types.ts",
+    "shared/helpers/get-default-images.ts",
+    "shared/helpers/send-mail.ts"
+  ],
+  "shared/helpers/send-mail.ts": [
+    "shared/constants/enum.ts",
+    "shared/helpers/logger.ts"
+  ],
+  "shared/helpers/send-sms.ts": [
+    "shared/helpers/logger.ts"
+  ],
+  "shared/helpers/set-ip-interceptor.ts": [],
+  "shared/helpers/shift-notifications.ts": [
+    "shared/constants/constant.ts",
+    "shared/constants/types.ts",
+    "shared/helpers/firebase-notification.ts",
+    "shared/helpers/logger.ts",
+    "shared/helpers/send-email-helper.ts"
+  ],
+  "shared/helpers/shift-transformation.ts": [],
+  "shared/helpers/throttler-exception.ts": [
+    "shared/constants/message.ts"
+  ],
+  "shared/helpers/time-code.ts": [],
+  "shared/helpers/timezone-offset.ts": [
+    "shared/helpers/logger.ts"
+  ],
+  "shared/helpers/transform-activity.ts": [
+    "shared/constants/enum.ts",
+    "shared/constants/types.ts"
+  ],
+  "shared/helpers/unauthorized-exception.ts": [],
+  "shared/helpers/zip-code-centroid.ts": [
+    "shared/helpers/logger.ts"
+  ],
+  "shared/pipe/uuid.validation.pipe.ts": [],
+  "shared/queues/queue-scheduler.service.ts": [
+    "shared/helpers/logger.ts"
+  ],
+  "shared/queues/redis-lock.service.ts": [],
+  "shared/response.ts": [
+    "shared/constants/message.ts",
+    "shared/helpers/logger.ts"
+  ],
+  "shift-cancel-reason/dto/create-shift-cancel-reason.dto.ts": [],
+  "shift-cancel-reason/dto/filter-shift-cancel-reason.dto.ts": [],
+  "shift-cancel-reason/dto/update-shift-cancel-reason.dto.ts": [
+    "shift-cancel-reason/dto/create-shift-cancel-reason.dto.ts"
+  ],
+  "shift-cancel-reason/entities/shift-cancel-reason.entity.ts": [],
+  "shift-cancel-reason/shift-cancel-reason.controller.spec.ts": [
+    "shift-cancel-reason/dto/create-shift-cancel-reason.dto.ts",
+    "shift-cancel-reason/dto/filter-shift-cancel-reason.dto.ts",
+    "shift-cancel-reason/dto/update-shift-cancel-reason.dto.ts",
+    "shift-cancel-reason/entities/shift-cancel-reason.entity.ts",
+    "shift-cancel-reason/shift-cancel-reason.controller.ts",
+    "shift-cancel-reason/shift-cancel-reason.service.ts"
+  ],
+  "shift-cancel-reason/shift-cancel-reason.controller.ts": [
+    "shift-cancel-reason/dto/create-shift-cancel-reason.dto.ts",
+    "shift-cancel-reason/dto/filter-shift-cancel-reason.dto.ts",
+    "shift-cancel-reason/dto/update-shift-cancel-reason.dto.ts",
+    "shift-cancel-reason/shift-cancel-reason.service.ts"
+  ],
+  "shift-cancel-reason/shift-cancel-reason.module.ts": [
+    "shift-cancel-reason/entities/shift-cancel-reason.entity.ts",
+    "shift-cancel-reason/shift-cancel-reason.controller.ts",
+    "shift-cancel-reason/shift-cancel-reason.service.ts"
+  ],
+  "shift-cancel-reason/shift-cancel-reason.service.spec.ts": [
+    "shift-cancel-reason/dto/create-shift-cancel-reason.dto.ts",
+    "shift-cancel-reason/dto/update-shift-cancel-reason.dto.ts",
+    "shift-cancel-reason/entities/shift-cancel-reason.entity.ts",
+    "shift-cancel-reason/shift-cancel-reason.service.ts"
+  ],
+  "shift-cancel-reason/shift-cancel-reason.service.ts": [
+    "shift-cancel-reason/dto/create-shift-cancel-reason.dto.ts",
+    "shift-cancel-reason/dto/update-shift-cancel-reason.dto.ts",
+    "shift-cancel-reason/entities/shift-cancel-reason.entity.ts"
+  ],
+  "shift-invitation/dto/create-shift-invitation.dto.ts": [],
+  "shift-invitation/dto/filter-shift-invitation.dto.ts": [],
+  "shift-invitation/dto/update-shift-invitation.dto.ts": [
+    "shift-invitation/dto/create-shift-invitation.dto.ts"
+  ],
+  "shift-invitation/entities/shift-invitation.entity.ts": [],
+  "shift-invitation/shift-invitation.controller.spec.ts": [
+    "shift-invitation/shift-invitation.controller.ts",
+    "shift-invitation/shift-invitation.service.ts"
+  ],
+  "shift-invitation/shift-invitation.controller.ts": [
+    "shift-invitation/dto/filter-shift-invitation.dto.ts",
+    "shift-invitation/shift-invitation.service.ts"
+  ],
+  "shift-invitation/shift-invitation.module.ts": [
+    "shift-invitation/entities/shift-invitation.entity.ts",
+    "shift-invitation/shift-invitation.controller.ts",
+    "shift-invitation/shift-invitation.service.ts"
+  ],
+  "shift-invitation/shift-invitation.service.spec.ts": [
+    "shift-invitation/dto/create-shift-invitation.dto.ts",
+    "shift-invitation/dto/update-shift-invitation.dto.ts",
+    "shift-invitation/entities/shift-invitation.entity.ts",
+    "shift-invitation/shift-invitation.service.ts"
+  ],
+  "shift-invitation/shift-invitation.service.ts": [
+    "shift-invitation/dto/create-shift-invitation.dto.ts",
+    "shift-invitation/dto/filter-shift-invitation.dto.ts",
+    "shift-invitation/dto/update-shift-invitation.dto.ts",
+    "shift-invitation/entities/shift-invitation.entity.ts"
+  ],
+  "shift-note/dto/create-shift-note.dto.ts": [],
+  "shift-note/dto/update-shift-note.dto.ts": [],
+  "shift-note/entities/shift-note.entity.ts": [],
+  "shift-note/shift-note.controller.spec.ts": [
+    "shift-note/dto/create-shift-note.dto.ts",
+    "shift-note/entities/shift-note.entity.ts",
+    "shift-note/shift-note.controller.ts",
+    "shift-note/shift-note.service.ts"
+  ],
+  "shift-note/shift-note.controller.ts": [
+    "shift-note/dto/create-shift-note.dto.ts",
+    "shift-note/dto/update-shift-note.dto.ts",
+    "shift-note/shift-note.service.ts"
+  ],
+  "shift-note/shift-note.module.ts": [
+    "shift-note/entities/shift-note.entity.ts",
+    "shift-note/shift-note.controller.ts",
+    "shift-note/shift-note.service.ts"
+  ],
+  "shift-note/shift-note.service.spec.ts": [
+    "shift-note/dto/create-shift-note.dto.ts",
+    "shift-note/entities/shift-note.entity.ts",
+    "shift-note/shift-note.service.ts"
+  ],
+  "shift-note/shift-note.service.ts": [
+    "shift-note/dto/create-shift-note.dto.ts",
+    "shift-note/dto/update-shift-note.dto.ts",
+    "shift-note/entities/shift-note.entity.ts"
+  ],
+  "shift-request/dto/create-shift-request.dto.ts": [],
+  "shift-request/dto/update-shift-request.dto.ts": [
+    "shift-request/dto/create-shift-request.dto.ts"
+  ],
+  "shift-request/entities/shift-request.entity.ts": [],
+  "shift-request/shift-request.controller.spec.ts": [
+    "shift-request/entities/shift-request.entity.ts",
+    "shift-request/shift-request.controller.ts",
+    "shift-request/shift-request.service.ts"
+  ],
+  "shift-request/shift-request.controller.ts": [
+    "shift-request/shift-request.service.ts"
+  ],
+  "shift-request/shift-request.module.ts": [
+    "shift-request/entities/shift-request.entity.ts",
+    "shift-request/shift-request.controller.ts",
+    "shift-request/shift-request.service.ts"
+  ],
+  "shift-request/shift-request.service.spec.ts": [
+    "shift-request/dto/create-shift-request.dto.ts",
+    "shift-request/dto/update-shift-request.dto.ts",
+    "shift-request/entities/shift-request.entity.ts",
+    "shift-request/shift-request.service.ts"
+  ],
+  "shift-request/shift-request.service.ts": [
+    "shift-request/dto/create-shift-request.dto.ts",
+    "shift-request/dto/update-shift-request.dto.ts",
+    "shift-request/entities/shift-request.entity.ts"
+  ],
+  "shift-type/dto/create-shift-type.dto.ts": [],
+  "shift-type/dto/update-shift-type.dto.ts": [
+    "shift-type/dto/create-shift-type.dto.ts"
+  ],
+  "shift-type/entities/shift-type.entity.ts": [],
+  "shift-type/shift-type.controller.spec.ts": [
+    "shift-type/dto/create-shift-type.dto.ts",
+    "shift-type/dto/update-shift-type.dto.ts",
+    "shift-type/entities/shift-type.entity.ts",
+    "shift-type/shift-type.controller.ts",
+    "shift-type/shift-type.service.ts"
+  ],
+  "shift-type/shift-type.controller.ts": [
+    "shift-type/dto/create-shift-type.dto.ts",
+    "shift-type/dto/update-shift-type.dto.ts",
+    "shift-type/shift-type.service.ts"
+  ],
+  "shift-type/shift-type.module.ts": [
+    "shift-type/entities/shift-type.entity.ts",
+    "shift-type/shift-type.controller.ts",
+    "shift-type/shift-type.service.ts"
+  ],
+  "shift-type/shift-type.service.spec.ts": [
+    "shift-type/dto/create-shift-type.dto.ts",
+    "shift-type/dto/update-shift-type.dto.ts",
+    "shift-type/entities/shift-type.entity.ts",
+    "shift-type/shift-type.service.ts"
+  ],
+  "shift-type/shift-type.service.ts": [
+    "shift-type/dto/create-shift-type.dto.ts",
+    "shift-type/dto/update-shift-type.dto.ts",
+    "shift-type/entities/shift-type.entity.ts"
+  ],
+  "shift/dto/all-shift-filter.dto.ts": [],
+  "shift/dto/approve-multiple-timecard.dto.ts": [],
+  "shift/dto/approve-timecard.dto.ts": [],
+  "shift/dto/calendar-shift.dto.ts": [],
+  "shift/dto/cancel-shift.dto.ts": [],
+  "shift/dto/clone-shift.dto.ts": [],
+  "shift/dto/create-shift-batch.dto.ts": [],
+  "shift/dto/create-shift.dto.ts": [],
+  "shift/dto/delete-unposted.dto.ts": [],
+  "shift/dto/facility-shift-filter.dto.ts": [],
+  "shift/dto/filter-shift-dashboard.dto.ts": [],
+  "shift/dto/filter-timecard.dto.ts": [],
+  "shift/dto/initial-shift.dto.ts": [],
+  "shift/dto/post-shift.dto.ts": [],
+  "shift/dto/provider-scheduled-shift-filter.dto.ts": [],
+  "shift/dto/provider-shift-filter.dto.ts": [],
+  "shift/dto/reject-timecard.dto.ts": [],
+  "shift/dto/request-work.dto.ts": [],
+  "shift/dto/submit-report.dto.ts": [],
+  "shift/dto/update-shift.dto.ts": [
+    "shift/dto/create-shift.dto.ts"
+  ],
+  "shift/entities/provider-cancelled-shift.entity.ts": [
+    "shift/entities/shift.entity.ts"
+  ],
+  "shift/entities/provider-late-shift.entity.ts": [
+    "shift/entities/shift.entity.ts"
+  ],
+  "shift/entities/shift.entity.ts": [
+    "shift/entities/provider-cancelled-shift.entity.ts",
+    "shift/entities/void-shift.entity.ts"
+  ],
+  "shift/entities/void-shift.entity.ts": [
+    "shift/entities/shift.entity.ts"
+  ],
+  "shift/shift.controller.spec.ts": [
+    "shift/dto/all-shift-filter.dto.ts",
+    "shift/dto/approve-timecard.dto.ts",
+    "shift/dto/cancel-shift.dto.ts",
+    "shift/dto/create-shift.dto.ts",
+    "shift/dto/delete-unposted.dto.ts",
+    "shift/dto/facility-shift-filter.dto.ts",
+    "shift/dto/initial-shift.dto.ts",
+    "shift/dto/post-shift.dto.ts",
+    "shift/dto/provider-scheduled-shift-filter.dto.ts",
+    "shift/dto/provider-shift-filter.dto.ts",
+    "shift/dto/reject-timecard.dto.ts",
+    "shift/dto/request-work.dto.ts",
+    "shift/dto/submit-report.dto.ts",
+    "shift/dto/update-shift.dto.ts",
+    "shift/entities/provider-cancelled-shift.entity.ts",
+    "shift/entities/shift.entity.ts",
+    "shift/shift.controller.ts",
+    "shift/shift.service.ts"
+  ],
+  "shift/shift.controller.ts": [
+    "shift/dto/all-shift-filter.dto.ts",
+    "shift/dto/approve-timecard.dto.ts",
+    "shift/dto/calendar-shift.dto.ts",
+    "shift/dto/cancel-shift.dto.ts",
+    "shift/dto/create-shift-batch.dto.ts",
+    "shift/dto/create-shift.dto.ts",
+    "shift/dto/delete-unposted.dto.ts",
+    "shift/dto/facility-shift-filter.dto.ts",
+    "shift/dto/filter-shift-dashboard.dto.ts",
+    "shift/dto/initial-shift.dto.ts",
+    "shift/dto/post-shift.dto.ts",
+    "shift/dto/provider-scheduled-shift-filter.dto.ts",
+    "shift/dto/provider-shift-filter.dto.ts",
+    "shift/dto/reject-timecard.dto.ts",
+    "shift/dto/request-work.dto.ts",
+    "shift/dto/submit-report.dto.ts",
+    "shift/dto/update-shift.dto.ts",
+    "shift/entities/shift.entity.ts",
+    "shift/shift.service.ts"
+  ],
+  "shift/shift.module.ts": [
+    "shift/entities/provider-cancelled-shift.entity.ts",
+    "shift/entities/provider-late-shift.entity.ts",
+    "shift/entities/shift.entity.ts",
+    "shift/entities/void-shift.entity.ts",
+    "shift/shift.controller.ts",
+    "shift/shift.service.ts"
+  ],
+  "shift/shift.service.spec.ts": [
+    "shift/dto/all-shift-filter.dto.ts",
+    "shift/dto/create-shift.dto.ts",
+    "shift/dto/facility-shift-filter.dto.ts",
+    "shift/dto/provider-scheduled-shift-filter.dto.ts",
+    "shift/dto/provider-shift-filter.dto.ts",
+    "shift/dto/update-shift.dto.ts",
+    "shift/entities/provider-cancelled-shift.entity.ts",
+    "shift/entities/provider-late-shift.entity.ts",
+    "shift/entities/shift.entity.ts",
+    "shift/shift.service.ts"
+  ],
+  "shift/shift.service.ts": [
+    "shift/dto/all-shift-filter.dto.ts",
+    "shift/dto/approve-timecard.dto.ts",
+    "shift/dto/calendar-shift.dto.ts",
+    "shift/dto/create-shift-batch.dto.ts",
+    "shift/dto/create-shift.dto.ts",
+    "shift/dto/facility-shift-filter.dto.ts",
+    "shift/dto/filter-shift-dashboard.dto.ts",
+    "shift/dto/provider-scheduled-shift-filter.dto.ts",
+    "shift/dto/provider-shift-filter.dto.ts",
+    "shift/dto/reject-timecard.dto.ts",
+    "shift/dto/submit-report.dto.ts",
+    "shift/dto/update-shift.dto.ts",
+    "shift/entities/provider-cancelled-shift.entity.ts",
+    "shift/entities/provider-late-shift.entity.ts",
+    "shift/entities/shift.entity.ts"
+  ],
+  "site-access-setting/dto/create-site-access-setting.dto.ts": [],
+  "site-access-setting/entities/site-access-setting.entity.ts": [],
+  "site-access-setting/site-access-setting.controller.spec.ts": [
+    "site-access-setting/dto/create-site-access-setting.dto.ts",
+    "site-access-setting/entities/site-access-setting.entity.ts",
+    "site-access-setting/site-access-setting.controller.ts",
+    "site-access-setting/site-access-setting.service.ts"
+  ],
+  "site-access-setting/site-access-setting.controller.ts": [
+    "site-access-setting/dto/create-site-access-setting.dto.ts",
+    "site-access-setting/site-access-setting.service.ts"
+  ],
+  "site-access-setting/site-access-setting.module.ts": [
+    "site-access-setting/entities/site-access-setting.entity.ts",
+    "site-access-setting/site-access-setting.controller.ts",
+    "site-access-setting/site-access-setting.service.ts"
+  ],
+  "site-access-setting/site-access-setting.service.spec.ts": [
+    "site-access-setting/dto/create-site-access-setting.dto.ts",
+    "site-access-setting/entities/site-access-setting.entity.ts",
+    "site-access-setting/site-access-setting.service.ts"
+  ],
+  "site-access-setting/site-access-setting.service.ts": [
+    "site-access-setting/dto/create-site-access-setting.dto.ts",
+    "site-access-setting/entities/site-access-setting.entity.ts"
+  ],
+  "skill-checklist-module/dto/create-skill-checklist-module.dto.ts": [],
+  "skill-checklist-module/dto/skill-checklist-response.dto.ts": [],
+  "skill-checklist-module/dto/update-skill-checklist-module.dto.ts": [],
+  "skill-checklist-module/entities/skill-checklist-answer-module.entity.ts": [
+    "skill-checklist-module/entities/skill-checklist-answers.entity.ts",
+    "skill-checklist-module/entities/skill-checklist-question-answer.entity.ts"
+  ],
+  "skill-checklist-module/entities/skill-checklist-answers.entity.ts": [
+    "skill-checklist-module/entities/skill-checklist-answer-module.entity.ts",
+    "skill-checklist-module/entities/skill-checklist-response.entity.ts"
+  ],
+  "skill-checklist-module/entities/skill-checklist-module.entity.ts": [
+    "skill-checklist-module/entities/skill-checklist-sub-module.entity.ts"
+  ],
+  "skill-checklist-module/entities/skill-checklist-question-answer.entity.ts": [
+    "skill-checklist-module/entities/skill-checklist-answer-module.entity.ts"
+  ],
+  "skill-checklist-module/entities/skill-checklist-question.entity.ts": [],
+  "skill-checklist-module/entities/skill-checklist-response.entity.ts": [
+    "skill-checklist-module/entities/skill-checklist-answers.entity.ts"
+  ],
+  "skill-checklist-module/entities/skill-checklist-sub-module.entity.ts": [
+    "skill-checklist-module/entities/skill-checklist-module.entity.ts"
+  ],
+  "skill-checklist-module/skill-checklist-module.controller.spec.ts": [
+    "skill-checklist-module/skill-checklist-module.controller.ts",
+    "skill-checklist-module/skill-checklist-module.service.ts"
+  ],
+  "skill-checklist-module/skill-checklist-module.controller.ts": [
+    "skill-checklist-module/dto/skill-checklist-response.dto.ts",
+    "skill-checklist-module/skill-checklist-module.service.ts"
+  ],
+  "skill-checklist-module/skill-checklist-module.module.ts": [
+    "skill-checklist-module/entities/skill-checklist-answer-module.entity.ts",
+    "skill-checklist-module/entities/skill-checklist-answers.entity.ts",
+    "skill-checklist-module/entities/skill-checklist-module.entity.ts",
+    "skill-checklist-module/entities/skill-checklist-question-answer.entity.ts",
+    "skill-checklist-module/skill-checklist-module.controller.ts",
+    "skill-checklist-module/skill-checklist-module.service.ts"
+  ],
+  "skill-checklist-module/skill-checklist-module.service.spec.ts": [
+    "skill-checklist-module/dto/skill-checklist-response.dto.ts",
+    "skill-checklist-module/entities/skill-checklist-answer-module.entity.ts",
+    "skill-checklist-module/entities/skill-checklist-answers.entity.ts",
+    "skill-checklist-module/entities/skill-checklist-question-answer.entity.ts",
+    "skill-checklist-module/skill-checklist-module.service.ts"
+  ],
+  "skill-checklist-module/skill-checklist-module.service.ts": [
+    "skill-checklist-module/dto/skill-checklist-response.dto.ts",
+    "skill-checklist-module/entities/skill-checklist-answer-module.entity.ts",
+    "skill-checklist-module/entities/skill-checklist-answers.entity.ts",
+    "skill-checklist-module/entities/skill-checklist-question-answer.entity.ts",
+    "skill-checklist-module/entities/skill-checklist-response.entity.ts"
+  ],
+  "skill-checklist-template/dto/create-skill-checklist-question.dto.ts": [],
+  "skill-checklist-template/dto/create-skill-checklist-template.dto.ts": [],
+  "skill-checklist-template/dto/update-skill-checklist-question.dto.ts": [],
+  "skill-checklist-template/dto/update-skill-checklist-template.dto.ts": [],
+  "skill-checklist-template/entities/skill-checklist-template.entity.ts": [],
+  "skill-checklist-template/skill-checklist-template.controller.spec.ts": [
+    "skill-checklist-template/dto/create-skill-checklist-template.dto.ts",
+    "skill-checklist-template/dto/update-skill-checklist-template.dto.ts",
+    "skill-checklist-template/entities/skill-checklist-template.entity.ts",
+    "skill-checklist-template/skill-checklist-template.controller.ts",
+    "skill-checklist-template/skill-checklist-template.service.ts"
+  ],
+  "skill-checklist-template/skill-checklist-template.controller.ts": [
+    "skill-checklist-template/dto/create-skill-checklist-template.dto.ts",
+    "skill-checklist-template/dto/update-skill-checklist-template.dto.ts",
+    "skill-checklist-template/skill-checklist-template.service.ts"
+  ],
+  "skill-checklist-template/skill-checklist-template.module.ts": [
+    "skill-checklist-template/entities/skill-checklist-template.entity.ts",
+    "skill-checklist-template/skill-checklist-template.controller.ts",
+    "skill-checklist-template/skill-checklist-template.service.ts"
+  ],
+  "skill-checklist-template/skill-checklist-template.service.spec.ts": [
+    "skill-checklist-template/dto/create-skill-checklist-template.dto.ts",
+    "skill-checklist-template/dto/update-skill-checklist-template.dto.ts",
+    "skill-checklist-template/entities/skill-checklist-template.entity.ts",
+    "skill-checklist-template/skill-checklist-template.service.ts"
+  ],
+  "skill-checklist-template/skill-checklist-template.service.ts": [
+    "skill-checklist-template/dto/create-skill-checklist-template.dto.ts",
+    "skill-checklist-template/dto/update-skill-checklist-template.dto.ts",
+    "skill-checklist-template/entities/skill-checklist-template.entity.ts"
+  ],
+  "speciality/dto/create-speciality.dto.ts": [],
+  "speciality/dto/update-speciality.dto.ts": [
+    "speciality/dto/create-speciality.dto.ts"
+  ],
+  "speciality/entities/speciality.entity.ts": [],
+  "speciality/speciality.controller.spec.ts": [
+    "shared/response.ts",
+    "speciality/dto/create-speciality.dto.ts",
+    "speciality/entities/speciality.entity.ts",
+    "speciality/speciality.controller.ts",
+    "speciality/speciality.service.ts"
+  ],
+  "speciality/speciality.controller.ts": [
+    "speciality/dto/create-speciality.dto.ts",
+    "speciality/dto/update-speciality.dto.ts",
+    "speciality/speciality.service.ts"
+  ],
+  "speciality/speciality.module.ts": [
+    "speciality/entities/speciality.entity.ts",
+    "speciality/speciality.controller.ts",
+    "speciality/speciality.service.ts"
+  ],
+  "speciality/speciality.service.spec.ts": [
+    "speciality/dto/create-speciality.dto.ts",
+    "speciality/entities/speciality.entity.ts",
+    "speciality/speciality.service.ts"
+  ],
+  "speciality/speciality.service.ts": [
+    "speciality/dto/create-speciality.dto.ts",
+    "speciality/dto/update-speciality.dto.ts",
+    "speciality/entities/speciality.entity.ts"
+  ],
+  "state/dto/create-state.dto.ts": [],
+  "state/dto/update-state.dto.ts": [
+    "state/dto/create-state.dto.ts"
+  ],
+  "state/entities/state.entity.ts": [],
+  "state/state.controller.spec.ts": [
+    "state/state.controller.ts",
+    "state/state.service.ts"
+  ],
+  "state/state.controller.ts": [],
+  "state/state.module.ts": [
+    "state/state.controller.ts",
+    "state/state.service.ts"
+  ],
+  "state/state.service.spec.ts": [
+    "state/state.service.ts"
+  ],
+  "state/state.service.ts": [],
+  "status-setting/dto/create-status-setting.dto.ts": [],
+  "status-setting/dto/filter-status-setting.dto.ts": [],
+  "status-setting/dto/update-status-setting.dto.ts": [
+    "status-setting/dto/create-status-setting.dto.ts"
+  ],
+  "status-setting/entities/status-setting.entity.ts": [],
+  "status-setting/status-setting.controller.spec.ts": [
+    "status-setting/dto/create-status-setting.dto.ts",
+    "status-setting/dto/filter-status-setting.dto.ts",
+    "status-setting/dto/update-status-setting.dto.ts",
+    "status-setting/entities/status-setting.entity.ts",
+    "status-setting/status-setting.controller.ts",
+    "status-setting/status-setting.service.ts"
+  ],
+  "status-setting/status-setting.controller.ts": [
+    "status-setting/dto/create-status-setting.dto.ts",
+    "status-setting/dto/filter-status-setting.dto.ts",
+    "status-setting/dto/update-status-setting.dto.ts",
+    "status-setting/status-setting.service.ts"
+  ],
+  "status-setting/status-setting.module.ts": [
+    "status-setting/entities/status-setting.entity.ts",
+    "status-setting/status-setting.controller.ts",
+    "status-setting/status-setting.service.ts"
+  ],
+  "status-setting/status-setting.service.spec.ts": [
+    "status-setting/dto/create-status-setting.dto.ts",
+    "status-setting/dto/update-status-setting.dto.ts",
+    "status-setting/entities/status-setting.entity.ts",
+    "status-setting/status-setting.service.ts"
+  ],
+  "status-setting/status-setting.service.ts": [
+    "status-setting/dto/create-status-setting.dto.ts",
+    "status-setting/dto/update-status-setting.dto.ts",
+    "status-setting/entities/status-setting.entity.ts"
+  ],
+  "strategy/jwt.strategy.ts": [],
+  "strategy/refresh-jwt.strategy.ts": [],
+  "sub-section/dto/create-sub-section.dto.ts": [],
+  "sub-section/dto/update-sub-section.dto.ts": [
+    "sub-section/dto/create-sub-section.dto.ts"
+  ],
+  "sub-section/entities/sub-section.entity.ts": [],
+  "sub-section/sub-section.controller.spec.ts": [
+    "sub-section/entities/sub-section.entity.ts",
+    "sub-section/sub-section.controller.ts",
+    "sub-section/sub-section.service.ts"
+  ],
+  "sub-section/sub-section.controller.ts": [
+    "sub-section/sub-section.service.ts"
+  ],
+  "sub-section/sub-section.module.ts": [
+    "sub-section/entities/sub-section.entity.ts",
+    "sub-section/sub-section.controller.ts",
+    "sub-section/sub-section.service.ts"
+  ],
+  "sub-section/sub-section.service.spec.ts": [
+    "sub-section/entities/sub-section.entity.ts",
+    "sub-section/sub-section.service.ts"
+  ],
+  "sub-section/sub-section.service.ts": [
+    "sub-section/entities/sub-section.entity.ts"
+  ],
+  "tags/dto/create-tag.dto.ts": [],
+  "tags/dto/update-tag.dto.ts": [
+    "tags/dto/create-tag.dto.ts"
+  ],
+  "tags/entities/tags.entity.ts": [],
+  "tags/tags.controller.spec.ts": [
+    "tags/tags.controller.ts",
+    "tags/tags.service.ts"
+  ],
+  "tags/tags.controller.ts": [
+    "tags/dto/create-tag.dto.ts",
+    "tags/dto/update-tag.dto.ts",
+    "tags/tags.service.ts"
+  ],
+  "tags/tags.module.ts": [
+    "tags/entities/tags.entity.ts",
+    "tags/tags.controller.ts",
+    "tags/tags.service.ts"
+  ],
+  "tags/tags.service.spec.ts": [
+    "tags/tags.service.ts"
+  ],
+  "tags/tags.service.ts": [
+    "tags/dto/create-tag.dto.ts",
+    "tags/dto/update-tag.dto.ts",
+    "tags/entities/tags.entity.ts"
+  ],
+  "test-faqs/dto/create-test-faq.dto.ts": [],
+  "test-faqs/dto/update-test-faq.dto.ts": [],
+  "test-faqs/entities/test-faq.entity.ts": [],
+  "test-faqs/test-faqs.controller.spec.ts": [
+    "test-faqs/dto/create-test-faq.dto.ts",
+    "test-faqs/entities/test-faq.entity.ts",
+    "test-faqs/test-faqs.controller.ts",
+    "test-faqs/test-faqs.service.ts"
+  ],
+  "test-faqs/test-faqs.controller.ts": [
+    "test-faqs/dto/create-test-faq.dto.ts",
+    "test-faqs/test-faqs.service.ts"
+  ],
+  "test-faqs/test-faqs.module.ts": [
+    "test-faqs/entities/test-faq.entity.ts",
+    "test-faqs/test-faqs.controller.ts",
+    "test-faqs/test-faqs.service.ts"
+  ],
+  "test-faqs/test-faqs.service.spec.ts": [
+    "test-faqs/dto/create-test-faq.dto.ts",
+    "test-faqs/entities/test-faq.entity.ts",
+    "test-faqs/test-faqs.service.ts"
+  ],
+  "test-faqs/test-faqs.service.ts": [
+    "test-faqs/dto/create-test-faq.dto.ts",
+    "test-faqs/entities/test-faq.entity.ts"
+  ],
+  "time-entry-approval/dto/create-time-entry-approval.dto.ts": [],
+  "time-entry-approval/dto/update-time-entry-approval.dto.ts": [],
+  "time-entry-approval/entities/time-entry-approval.entity.ts": [],
+  "time-entry-approval/time-entry-approval.controller.spec.ts": [
+    "time-entry-approval/dto/update-time-entry-approval.dto.ts",
+    "time-entry-approval/entities/time-entry-approval.entity.ts",
+    "time-entry-approval/time-entry-approval.controller.ts",
+    "time-entry-approval/time-entry-approval.service.ts"
+  ],
+  "time-entry-approval/time-entry-approval.controller.ts": [
+    "time-entry-approval/dto/update-time-entry-approval.dto.ts",
+    "time-entry-approval/time-entry-approval.service.ts"
+  ],
+  "time-entry-approval/time-entry-approval.module.ts": [
+    "time-entry-approval/entities/time-entry-approval.entity.ts",
+    "time-entry-approval/time-entry-approval.controller.ts",
+    "time-entry-approval/time-entry-approval.service.ts"
+  ],
+  "time-entry-approval/time-entry-approval.service.spec.ts": [
+    "time-entry-approval/dto/update-time-entry-approval.dto.ts",
+    "time-entry-approval/entities/time-entry-approval.entity.ts",
+    "time-entry-approval/time-entry-approval.service.ts"
+  ],
+  "time-entry-approval/time-entry-approval.service.ts": [
+    "time-entry-approval/dto/update-time-entry-approval.dto.ts",
+    "time-entry-approval/entities/time-entry-approval.entity.ts"
+  ],
+  "timecard-reject-reason/dto/create-timecard-reject-reason.dto.ts": [],
+  "timecard-reject-reason/dto/update-timecard-reject-reason.dto.ts": [
+    "timecard-reject-reason/dto/create-timecard-reject-reason.dto.ts"
+  ],
+  "timecard-reject-reason/entities/timecard-reject-reason.entity.ts": [],
+  "timecard-reject-reason/timecard-reject-reason.controller.spec.ts": [
+    "timecard-reject-reason/dto/create-timecard-reject-reason.dto.ts",
+    "timecard-reject-reason/dto/update-timecard-reject-reason.dto.ts",
+    "timecard-reject-reason/entities/timecard-reject-reason.entity.ts",
+    "timecard-reject-reason/timecard-reject-reason.controller.ts",
+    "timecard-reject-reason/timecard-reject-reason.service.ts"
+  ],
+  "timecard-reject-reason/timecard-reject-reason.controller.ts": [
+    "timecard-reject-reason/dto/create-timecard-reject-reason.dto.ts",
+    "timecard-reject-reason/dto/update-timecard-reject-reason.dto.ts",
+    "timecard-reject-reason/timecard-reject-reason.service.ts"
+  ],
+  "timecard-reject-reason/timecard-reject-reason.module.ts": [
+    "timecard-reject-reason/entities/timecard-reject-reason.entity.ts",
+    "timecard-reject-reason/timecard-reject-reason.controller.ts",
+    "timecard-reject-reason/timecard-reject-reason.service.ts"
+  ],
+  "timecard-reject-reason/timecard-reject-reason.service.spec.ts": [
+    "timecard-reject-reason/dto/create-timecard-reject-reason.dto.ts",
+    "timecard-reject-reason/dto/update-timecard-reject-reason.dto.ts",
+    "timecard-reject-reason/entities/timecard-reject-reason.entity.ts",
+    "timecard-reject-reason/timecard-reject-reason.service.ts"
+  ],
+  "timecard-reject-reason/timecard-reject-reason.service.ts": [
+    "timecard-reject-reason/dto/create-timecard-reject-reason.dto.ts",
+    "timecard-reject-reason/dto/update-timecard-reject-reason.dto.ts",
+    "timecard-reject-reason/entities/timecard-reject-reason.entity.ts"
+  ],
+  "timecards/dto/create-timecard.dto.ts": [],
+  "timecards/dto/update-timecard.dto.ts": [
+    "timecards/dto/create-timecard.dto.ts"
+  ],
+  "timecards/entities/time-sheets.entity.ts": [
+    "timecards/entities/timecard.entity.ts"
+  ],
+  "timecards/entities/timecard.entity.ts": [
+    "timecards/entities/time-sheets.entity.ts"
+  ],
+  "timecards/timecards.controller.spec.ts": [
+    "timecards/timecards.controller.ts",
+    "timecards/timecards.service.ts"
+  ],
+  "timecards/timecards.controller.ts": [
+    "timecards/timecards.service.ts"
+  ],
+  "timecards/timecards.module.ts": [
+    "timecards/entities/timecard.entity.ts",
+    "timecards/timecards.controller.ts",
+    "timecards/timecards.service.ts"
+  ],
+  "timecards/timecards.service.spec.ts": [
+    "timecards/entities/timecard.entity.ts",
+    "timecards/timecards.service.ts"
+  ],
+  "timecards/timecards.service.ts": [
+    "timecards/entities/timecard.entity.ts"
+  ],
+  "token/dto/create-token.dto.ts": [],
+  "token/dto/update-token.dto.ts": [
+    "token/dto/create-token.dto.ts"
+  ],
+  "token/entities/token.entity.ts": [],
+  "token/token.controller.spec.ts": [
+    "token/entities/token.entity.ts",
+    "token/token.controller.ts",
+    "token/token.service.ts"
+  ],
+  "token/token.controller.ts": [],
+  "token/token.module.ts": [
+    "token/entities/token.entity.ts",
+    "token/token.controller.ts",
+    "token/token.service.ts"
+  ],
+  "token/token.service.spec.ts": [
+    "token/entities/token.entity.ts",
+    "token/token.service.ts"
+  ],
+  "token/token.service.ts": [
+    "token/entities/token.entity.ts"
+  ],
+  "upload/dto/create-upload-validation.ts": [],
+  "upload/dto/delete-image.dto.ts": [],
+  "upload/file-upload-exception.ts": [],
+  "upload/upload.controller.spec.ts": [
+    "upload/dto/create-upload-validation.ts",
+    "upload/dto/delete-image.dto.ts",
+    "upload/upload.controller.ts"
+  ],
+  "upload/upload.controller.ts": [
+    "upload/dto/create-upload-validation.ts",
+    "upload/dto/delete-image.dto.ts"
+  ],
+  "upload/upload.module.ts": [
+    "upload/upload.controller.ts"
+  ],
+  "user-notification/dto/create-user-notification.dto.ts": [],
+  "user-notification/dto/update-user-notification.dto.ts": [
+    "user-notification/dto/create-user-notification.dto.ts"
+  ],
+  "user-notification/entities/provider-notification-setting.entity.ts": [],
+  "user-notification/entities/user-notification.entity.ts": [],
+  "user-notification/user-notification.controller.spec.ts": [
+    "user-notification/entities/user-notification.entity.ts",
+    "user-notification/user-notification.controller.ts",
+    "user-notification/user-notification.service.ts"
+  ],
+  "user-notification/user-notification.controller.ts": [
+    "user-notification/user-notification.service.ts"
+  ],
+  "user-notification/user-notification.module.ts": [
+    "user-notification/entities/user-notification.entity.ts",
+    "user-notification/user-notification.controller.ts",
+    "user-notification/user-notification.service.ts"
+  ],
+  "user-notification/user-notification.service.spec.ts": [
+    "user-notification/entities/user-notification.entity.ts",
+    "user-notification/user-notification.service.ts"
+  ],
+  "user-notification/user-notification.service.ts": [
+    "user-notification/entities/user-notification.entity.ts"
+  ],
+  "webhooks/entity/webhook.entity.ts": [],
+  "webhooks/webhooks.controller.ts": [
+    "webhooks/webhooks.service.ts"
+  ],
+  "webhooks/webhooks.module.ts": [
+    "webhooks/entity/webhook.entity.ts",
+    "webhooks/webhooks.controller.ts",
+    "webhooks/webhooks.service.ts"
+  ],
+  "webhooks/webhooks.service.ts": [
+    "webhooks/entity/webhook.entity.ts"
+  ]
+}
